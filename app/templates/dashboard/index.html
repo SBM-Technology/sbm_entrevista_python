@@ -1,0 +1,121 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Dashboard - Análise de Vendas{% endblock %}
+
+{% block content %}
+<div class="container-fluid py-4">
+    <!-- Filtros -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Filtros</h5>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label for="dataInicio" class="form-label">Data Inicial</label>
+                            <input type="date" class="form-control" id="dataInicio">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="dataFim" class="form-label">Data Final</label>
+                            <input type="date" class="form-control" id="dataFim">
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">&nbsp;</label>
+                            <button class="btn btn-primary d-block w-100" id="aplicarFiltros">Aplicar Filtros</button>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">&nbsp;</label>
+                            <button class="btn btn-secondary d-block w-100" id="limparFiltros">Limpar Filtros</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- KPIs -->
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <div class="card text-white bg-primary">
+                <div class="card-body">
+                    <h6 class="card-title">Receita Total</h6>
+                    <h3 id="kpiReceitaTotal" class="mb-0">R$ 0,00</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-success">
+                <div class="card-body">
+                    <h6 class="card-title">Número de Vendas</h6>
+                    <h3 id="kpiNumVendas" class="mb-0">0</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-info">
+                <div class="card-body">
+                    <h6 class="card-title">Ticket Médio</h6>
+                    <h3 id="kpiTicketMedio" class="mb-0">R$ 0,00</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-warning">
+                <div class="card-body">
+                    <h6 class="card-title">Crescimento</h6>
+                    <h3 id="kpiCrescimento" class="mb-0">0%</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gráficos -->
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Evolução de Vendas ao Longo do Tempo</h5>
+                    <canvas id="chartVendasTempo"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Vendas por Região</h5>
+                    <canvas id="chartVendasRegiao"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Vendas por Categoria</h5>
+                    <canvas id="chartVendasCategoria"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Top 10 Produtos Mais Vendidos</h5>
+                    <canvas id="chartTopProdutos"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+    // Carrega dados ao carregar a página
+    document.addEventListener('DOMContentLoaded', function() {
+        carregarDashboard();
+    });
+</script>
+{% endblock %}
+

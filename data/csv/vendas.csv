@@ -1,0 +1,1001 @@
+data,produto,categoria,quantidade,preco_unitario,regiao,vendedor
+2024-01-01,Chocolate Importado,Alimentos,2,24.74,Sul,Ana Silva
+2024-01-01,Aspirador de Pó,Casa,5,378.59,Oeste,Carlos Santos
+2024-01-02,Jaqueta de Couro,Roupas,8,463.62,Oeste,Patricia Costa
+2024-01-02,Fone de Ouvido Bluetooth,Eletrônicos,1,197.73,Sul,Patricia Costa
+2024-01-02,Fone de Ouvido Bluetooth,Eletrônicos,5,183.77,Oeste,Maria Oliveira
+2024-01-02,Livro de Negócios,Livros,9,63.79,Sul,Fernanda Lima
+2024-01-02,Jogo de Toalhas,Casa,3,91.67,Oeste,Ana Silva
+2024-01-03,Livro de Negócios,Livros,7,64.74,Leste,Carlos Santos
+2024-01-03,Azeite Extra Virgem,Alimentos,8,44.25,Centro,Maria Oliveira
+2024-01-03,Romance Bestseller,Livros,1,53.43,Norte,Ricardo Almeida
+2024-01-03,Jogo de Toalhas,Casa,8,92.9,Oeste,Maria Oliveira
+2024-01-04,Camiseta Básica,Roupas,3,45.7,Sul,Ana Silva
+2024-01-04,Fone de Ouvido Bluetooth,Eletrônicos,5,203.66,Oeste,Paulo Rodrigues
+2024-01-05,Jaqueta de Couro,Roupas,10,530.51,Norte,João Pereira
+2024-01-05,Teclado Mecânico,Eletrônicos,5,336.38,Leste,Paulo Rodrigues
+2024-01-05,Mouse Logitech,Eletrônicos,8,83.27,Sul,Patricia Costa
+2024-01-07,Notebook Dell,Eletrônicos,5,2953.91,Norte,Carlos Santos
+2024-01-08,Aspirador de Pó,Casa,9,388.57,Oeste,Maria Oliveira
+2024-01-08,Fone de Ouvido Bluetooth,Eletrônicos,4,186.58,Centro,Ricardo Almeida
+2024-01-08,Café Premium 500g,Alimentos,9,33.69,Centro,Maria Oliveira
+2024-01-09,Teclado Mecânico,Eletrônicos,5,377.96,Leste,Patricia Costa
+2024-01-09,Café Premium 500g,Alimentos,5,33.38,Sul,Ana Silva
+2024-01-09,Mouse Logitech,Eletrônicos,1,88.36,Leste,João Pereira
+2024-01-09,Fone de Ouvido Bluetooth,Eletrônicos,7,216.89,Sul,Fernanda Lima
+2024-01-10,Jaqueta de Couro,Roupas,9,455.61,Leste,Ana Silva
+2024-01-10,Webcam HD,Eletrônicos,8,282.78,Centro,Ana Silva
+2024-01-11,Aspirador de Pó,Casa,6,386.49,Sul,Fernanda Lima
+2024-01-11,Tênis Esportivo,Roupas,2,293.53,Centro,Paulo Rodrigues
+2024-01-12,Mouse Logitech,Eletrônicos,6,98.8,Sul,Carlos Santos
+2024-01-12,Teclado Mecânico,Eletrônicos,9,384.26,Oeste,Maria Oliveira
+2024-01-13,Café Premium 500g,Alimentos,8,35.47,Leste,Patricia Costa
+2024-01-13,Liquidificador,Casa,3,188.38,Sul,Carlos Santos
+2024-01-13,Camiseta Básica,Roupas,3,53.19,Leste,Ricardo Almeida
+2024-01-14,Notebook Dell,Eletrônicos,8,2700.99,Norte,Maria Oliveira
+2024-01-14,Chocolate Importado,Alimentos,7,25.91,Centro,Fernanda Lima
+2024-01-14,Notebook Dell,Eletrônicos,8,2602.25,Sul,João Pereira
+2024-01-14,Liquidificador,Casa,4,209.82,Leste,Fernanda Lima
+2024-01-15,Liquidificador,Casa,9,198.81,Centro,Ricardo Almeida
+2024-01-15,Jogo de Toalhas,Casa,4,97.14,Oeste,Patricia Costa
+2024-01-15,Chocolate Importado,Alimentos,2,27.81,Leste,Ana Silva
+2024-01-15,Aspirador de Pó,Casa,1,424.37,Norte,Patricia Costa
+2024-01-15,Liquidificador,Casa,8,186.92,Oeste,João Pereira
+2024-01-15,Notebook Dell,Eletrônicos,4,2825.27,Norte,João Pereira
+2024-01-15,Vinho Tinto,Alimentos,7,80.93,Oeste,João Pereira
+2024-01-16,Aspirador de Pó,Casa,10,364.49,Norte,Patricia Costa
+2024-01-18,Notebook Dell,Eletrônicos,2,2523.6,Leste,João Pereira
+2024-01-18,Mouse Logitech,Eletrônicos,10,97.51,Centro,Maria Oliveira
+2024-01-18,Jogo de Panelas,Casa,4,326.76,Oeste,Maria Oliveira
+2024-01-19,Vinho Tinto,Alimentos,8,90.19,Oeste,Fernanda Lima
+2024-01-19,Jaqueta de Couro,Roupas,4,514.2,Sul,Paulo Rodrigues
+2024-01-20,Notebook Dell,Eletrônicos,2,3076.59,Norte,Paulo Rodrigues
+2024-01-20,Webcam HD,Eletrônicos,5,303.43,Sul,João Pereira
+2024-01-21,Livro de Python,Livros,10,79.2,Norte,João Pereira
+2024-01-22,Romance Bestseller,Livros,5,45.03,Leste,Fernanda Lima
+2024-01-22,Tênis Esportivo,Roupas,6,284.84,Norte,Maria Oliveira
+2024-01-22,Jogo de Toalhas,Casa,1,89.5,Oeste,João Pereira
+2024-01-22,Vinho Tinto,Alimentos,3,86.73,Oeste,Ana Silva
+2024-01-23,Fone de Ouvido Bluetooth,Eletrônicos,2,208.88,Centro,Carlos Santos
+2024-01-25,Notebook Dell,Eletrônicos,4,2615.66,Norte,Patricia Costa
+2024-01-25,Calça Jeans,Roupas,4,146.61,Norte,Ana Silva
+2024-01-25,Mouse Logitech,Eletrônicos,10,96.25,Leste,Patricia Costa
+2024-01-25,Webcam HD,Eletrônicos,5,292.42,Centro,Patricia Costa
+2024-01-25,Livro de Negócios,Livros,8,62.19,Oeste,Fernanda Lima
+2024-01-26,Mouse Logitech,Eletrônicos,5,85.78,Centro,Paulo Rodrigues
+2024-01-26,Calça Jeans,Roupas,1,164.25,Leste,Carlos Santos
+2024-01-26,Livro de Python,Livros,6,87.31,Oeste,Carlos Santos
+2024-01-27,Livro de Python,Livros,5,80.63,Sul,Ana Silva
+2024-01-28,Webcam HD,Eletrônicos,4,276.37,Norte,Paulo Rodrigues
+2024-01-28,Jogo de Toalhas,Casa,6,91.12,Oeste,Ricardo Almeida
+2024-01-28,Webcam HD,Eletrônicos,8,278.94,Oeste,Fernanda Lima
+2024-01-28,Jogo de Panelas,Casa,10,307.87,Centro,Fernanda Lima
+2024-01-28,Jogo de Toalhas,Casa,7,91.28,Norte,Ricardo Almeida
+2024-01-29,Webcam HD,Eletrônicos,8,308.27,Oeste,Ana Silva
+2024-01-29,Mouse Logitech,Eletrônicos,2,88.55,Leste,Patricia Costa
+2024-01-29,Aspirador de Pó,Casa,2,361.05,Norte,Ricardo Almeida
+2024-01-29,Jogo de Panelas,Casa,3,327.36,Norte,Fernanda Lima
+2024-01-30,Livro de Python,Livros,8,73.1,Oeste,João Pereira
+2024-01-30,Camiseta Básica,Roupas,3,51.3,Centro,Ricardo Almeida
+2024-01-31,Webcam HD,Eletrônicos,1,305.05,Oeste,João Pereira
+2024-01-31,Mouse Logitech,Eletrônicos,8,81.55,Leste,Fernanda Lima
+2024-01-31,Jogo de Toalhas,Casa,8,95.7,Sul,Paulo Rodrigues
+2024-02-01,Livro de Python,Livros,6,85.95,Norte,Patricia Costa
+2024-02-01,Camiseta Básica,Roupas,5,50.03,Leste,Paulo Rodrigues
+2024-02-01,Teclado Mecânico,Eletrônicos,3,343.17,Sul,Carlos Santos
+2024-02-02,Teclado Mecânico,Eletrônicos,2,371.84,Norte,João Pereira
+2024-02-03,Mouse Logitech,Eletrônicos,5,93.7,Leste,Maria Oliveira
+2024-02-03,Mouse Logitech,Eletrônicos,6,95.12,Oeste,Carlos Santos
+2024-02-03,Mouse Logitech,Eletrônicos,9,86.78,Oeste,Paulo Rodrigues
+2024-02-04,Jaqueta de Couro,Roupas,7,520.48,Sul,Paulo Rodrigues
+2024-02-04,Tênis Esportivo,Roupas,6,269.88,Sul,Patricia Costa
+2024-02-05,Aspirador de Pó,Casa,2,423.15,Sul,Carlos Santos
+2024-02-06,Vinho Tinto,Alimentos,3,88.87,Norte,Patricia Costa
+2024-02-07,Jogo de Toalhas,Casa,10,88.48,Sul,Patricia Costa
+2024-02-08,Camiseta Básica,Roupas,6,52.28,Leste,Carlos Santos
+2024-02-08,Notebook Dell,Eletrônicos,1,2536.57,Leste,Paulo Rodrigues
+2024-02-08,Teclado Mecânico,Eletrônicos,10,382.39,Centro,Fernanda Lima
+2024-02-09,Jogo de Toalhas,Casa,2,91.43,Oeste,Fernanda Lima
+2024-02-09,Jogo de Panelas,Casa,7,280.8,Sul,Fernanda Lima
+2024-02-09,Aspirador de Pó,Casa,4,411.3,Leste,Ricardo Almeida
+2024-02-10,Azeite Extra Virgem,Alimentos,9,44.69,Leste,Patricia Costa
+2024-02-11,Café Premium 500g,Alimentos,10,30.27,Sul,Patricia Costa
+2024-02-12,Livro de Python,Livros,1,79.71,Centro,Carlos Santos
+2024-02-12,Azeite Extra Virgem,Alimentos,9,47.11,Centro,Fernanda Lima
+2024-02-13,Café Premium 500g,Alimentos,3,31.2,Norte,Maria Oliveira
+2024-02-13,Livro de Negócios,Livros,1,66.5,Sul,Fernanda Lima
+2024-02-14,Camiseta Básica,Roupas,6,48.36,Sul,Fernanda Lima
+2024-02-14,Romance Bestseller,Livros,7,45.78,Sul,Carlos Santos
+2024-02-14,Jogo de Panelas,Casa,4,277.46,Oeste,Paulo Rodrigues
+2024-02-17,Jogo de Panelas,Casa,6,284.12,Leste,Patricia Costa
+2024-02-17,Vinho Tinto,Alimentos,8,96.53,Oeste,Paulo Rodrigues
+2024-02-17,Liquidificador,Casa,3,202.57,Leste,João Pereira
+2024-02-18,Jogo de Toalhas,Casa,2,96.36,Norte,João Pereira
+2024-02-18,Mouse Logitech,Eletrônicos,9,85.04,Centro,João Pereira
+2024-02-18,Livro de Negócios,Livros,9,70.05,Oeste,Maria Oliveira
+2024-02-18,Livro de Negócios,Livros,9,58.97,Norte,João Pereira
+2024-02-18,Teclado Mecânico,Eletrônicos,2,339.55,Sul,Paulo Rodrigues
+2024-02-18,Vinho Tinto,Alimentos,6,86.96,Sul,Paulo Rodrigues
+2024-02-18,Café Premium 500g,Alimentos,2,32.94,Oeste,Ana Silva
+2024-02-19,Camiseta Básica,Roupas,2,49.42,Oeste,Patricia Costa
+2024-02-19,Café Premium 500g,Alimentos,2,32.72,Leste,Paulo Rodrigues
+2024-02-19,Teclado Mecânico,Eletrônicos,4,343.92,Centro,Paulo Rodrigues
+2024-02-20,Webcam HD,Eletrônicos,6,290.91,Centro,Ricardo Almeida
+2024-02-20,Livro de Negócios,Livros,8,70.94,Sul,Ricardo Almeida
+2024-02-21,Calça Jeans,Roupas,6,148.13,Oeste,Paulo Rodrigues
+2024-02-21,Vinho Tinto,Alimentos,8,88.39,Oeste,Maria Oliveira
+2024-02-21,Aspirador de Pó,Casa,1,398.88,Norte,Fernanda Lima
+2024-02-22,Jaqueta de Couro,Roupas,5,493.38,Sul,João Pereira
+2024-02-22,Jogo de Toalhas,Casa,2,96.24,Centro,Maria Oliveira
+2024-02-22,Livro de Python,Livros,8,84.14,Centro,Paulo Rodrigues
+2024-02-22,Mouse Logitech,Eletrônicos,5,94.7,Norte,Ana Silva
+2024-02-23,Webcam HD,Eletrônicos,7,305.6,Centro,Patricia Costa
+2024-02-23,Jogo de Toalhas,Casa,1,97.84,Oeste,Carlos Santos
+2024-02-23,Romance Bestseller,Livros,4,53.76,Leste,João Pereira
+2024-02-23,Chocolate Importado,Alimentos,10,25.05,Oeste,Maria Oliveira
+2024-02-23,Azeite Extra Virgem,Alimentos,3,42.76,Oeste,Ricardo Almeida
+2024-02-23,Tênis Esportivo,Roupas,10,276.72,Sul,Patricia Costa
+2024-02-24,Chocolate Importado,Alimentos,10,28.12,Centro,João Pereira
+2024-02-24,Liquidificador,Casa,3,200.13,Norte,Ricardo Almeida
+2024-02-24,Vinho Tinto,Alimentos,6,87.63,Centro,Carlos Santos
+2024-02-24,Livro de Python,Livros,6,77.6,Leste,Maria Oliveira
+2024-02-24,Livro de Negócios,Livros,5,67.8,Sul,Ana Silva
+2024-02-24,Liquidificador,Casa,9,206.42,Leste,Patricia Costa
+2024-02-25,Jaqueta de Couro,Roupas,9,510.63,Centro,Carlos Santos
+2024-02-25,Mouse Logitech,Eletrônicos,8,85.44,Centro,Paulo Rodrigues
+2024-02-26,Aspirador de Pó,Casa,3,425.88,Centro,Ana Silva
+2024-02-26,Notebook Dell,Eletrônicos,7,2705.84,Centro,João Pereira
+2024-02-26,Tênis Esportivo,Roupas,7,313.85,Centro,Ana Silva
+2024-02-27,Mouse Logitech,Eletrônicos,9,82.8,Oeste,Maria Oliveira
+2024-02-28,Fone de Ouvido Bluetooth,Eletrônicos,6,212.71,Leste,Maria Oliveira
+2024-02-28,Vinho Tinto,Alimentos,6,86.43,Centro,Maria Oliveira
+2024-02-28,Jaqueta de Couro,Roupas,3,538.65,Oeste,Carlos Santos
+2024-02-28,Jaqueta de Couro,Roupas,5,542.59,Sul,Carlos Santos
+2024-02-28,Jaqueta de Couro,Roupas,6,492.7,Sul,Patricia Costa
+2024-02-29,Jogo de Panelas,Casa,10,289.34,Sul,Patricia Costa
+2024-02-29,Webcam HD,Eletrônicos,7,297.51,Centro,Patricia Costa
+2024-02-29,Notebook Dell,Eletrônicos,2,2734.1,Leste,João Pereira
+2024-03-01,Chocolate Importado,Alimentos,1,24.05,Norte,Maria Oliveira
+2024-03-01,Mouse Logitech,Eletrônicos,1,86.48,Leste,João Pereira
+2024-03-01,Calça Jeans,Roupas,4,147.99,Oeste,Maria Oliveira
+2024-03-01,Livro de Negócios,Livros,1,70.24,Norte,João Pereira
+2024-03-01,Azeite Extra Virgem,Alimentos,2,41.26,Sul,João Pereira
+2024-03-01,Jaqueta de Couro,Roupas,1,516.52,Norte,Patricia Costa
+2024-03-02,Webcam HD,Eletrônicos,5,297.73,Centro,Ricardo Almeida
+2024-03-02,Notebook Dell,Eletrônicos,10,2792.7,Oeste,Ricardo Almeida
+2024-03-03,Livro de Negócios,Livros,3,63.4,Leste,João Pereira
+2024-03-03,Notebook Dell,Eletrônicos,7,2942.28,Centro,Ana Silva
+2024-03-04,Fone de Ouvido Bluetooth,Eletrônicos,2,194.5,Norte,Maria Oliveira
+2024-03-04,Tênis Esportivo,Roupas,2,289.63,Norte,Fernanda Lima
+2024-03-04,Liquidificador,Casa,3,209.28,Oeste,Maria Oliveira
+2024-03-04,Azeite Extra Virgem,Alimentos,1,44.41,Leste,Maria Oliveira
+2024-03-05,Jogo de Panelas,Casa,1,269.61,Norte,Ricardo Almeida
+2024-03-05,Jogo de Toalhas,Casa,4,91.06,Leste,João Pereira
+2024-03-05,Livro de Negócios,Livros,6,68.04,Norte,Maria Oliveira
+2024-03-05,Romance Bestseller,Livros,3,46.93,Leste,Carlos Santos
+2024-03-06,Livro de Python,Livros,8,79.65,Sul,Carlos Santos
+2024-03-06,Tênis Esportivo,Roupas,9,295.72,Sul,Paulo Rodrigues
+2024-03-06,Notebook Dell,Eletrônicos,9,3051.91,Centro,Carlos Santos
+2024-03-07,Vinho Tinto,Alimentos,3,96.04,Oeste,Fernanda Lima
+2024-03-07,Teclado Mecânico,Eletrônicos,6,364.71,Norte,Maria Oliveira
+2024-03-08,Tênis Esportivo,Roupas,8,281.38,Oeste,Maria Oliveira
+2024-03-08,Vinho Tinto,Alimentos,7,87.46,Norte,Maria Oliveira
+2024-03-08,Jaqueta de Couro,Roupas,1,494.03,Oeste,Maria Oliveira
+2024-03-09,Jaqueta de Couro,Roupas,4,522.6,Centro,Maria Oliveira
+2024-03-09,Tênis Esportivo,Roupas,8,317.8,Centro,Patricia Costa
+2024-03-09,Fone de Ouvido Bluetooth,Eletrônicos,5,188.71,Oeste,Paulo Rodrigues
+2024-03-10,Mouse Logitech,Eletrônicos,1,93.26,Oeste,Patricia Costa
+2024-03-10,Chocolate Importado,Alimentos,7,28.1,Centro,Patricia Costa
+2024-03-10,Vinho Tinto,Alimentos,5,91.78,Oeste,Ana Silva
+2024-03-11,Webcam HD,Eletrônicos,7,284.82,Leste,Ricardo Almeida
+2024-03-11,Tênis Esportivo,Roupas,2,291.52,Oeste,Fernanda Lima
+2024-03-11,Azeite Extra Virgem,Alimentos,5,43.2,Centro,Paulo Rodrigues
+2024-03-11,Romance Bestseller,Livros,4,53.78,Norte,Ana Silva
+2024-03-12,Tênis Esportivo,Roupas,10,283.64,Centro,Patricia Costa
+2024-03-12,Tênis Esportivo,Roupas,1,273.0,Sul,Ricardo Almeida
+2024-03-12,Aspirador de Pó,Casa,2,427.91,Leste,Maria Oliveira
+2024-03-12,Liquidificador,Casa,5,193.83,Centro,João Pereira
+2024-03-12,Vinho Tinto,Alimentos,8,90.41,Centro,Paulo Rodrigues
+2024-03-13,Mouse Logitech,Eletrônicos,5,91.64,Leste,Patricia Costa
+2024-03-13,Liquidificador,Casa,3,192.78,Centro,Paulo Rodrigues
+2024-03-13,Jaqueta de Couro,Roupas,4,465.48,Sul,Carlos Santos
+2024-03-13,Café Premium 500g,Alimentos,6,35.79,Sul,Fernanda Lima
+2024-03-13,Chocolate Importado,Alimentos,2,27.18,Sul,Paulo Rodrigues
+2024-03-14,Livro de Python,Livros,6,85.66,Norte,Ricardo Almeida
+2024-03-14,Azeite Extra Virgem,Alimentos,7,45.8,Centro,João Pereira
+2024-03-14,Teclado Mecânico,Eletrônicos,7,331.21,Oeste,Paulo Rodrigues
+2024-03-14,Vinho Tinto,Alimentos,3,84.49,Centro,Patricia Costa
+2024-03-17,Jogo de Toalhas,Casa,5,91.12,Sul,Patricia Costa
+2024-03-18,Webcam HD,Eletrônicos,2,304.89,Norte,João Pereira
+2024-03-18,Jogo de Panelas,Casa,4,291.58,Centro,Ana Silva
+2024-03-18,Fone de Ouvido Bluetooth,Eletrônicos,4,184.93,Sul,João Pereira
+2024-03-18,Azeite Extra Virgem,Alimentos,3,41.73,Leste,Ricardo Almeida
+2024-03-18,Café Premium 500g,Alimentos,7,34.95,Centro,Paulo Rodrigues
+2024-03-18,Teclado Mecânico,Eletrônicos,8,360.42,Norte,Patricia Costa
+2024-03-19,Vinho Tinto,Alimentos,1,84.96,Leste,Patricia Costa
+2024-03-20,Jaqueta de Couro,Roupas,6,537.23,Leste,Maria Oliveira
+2024-03-20,Chocolate Importado,Alimentos,10,27.4,Sul,Fernanda Lima
+2024-03-20,Livro de Python,Livros,6,74.82,Oeste,Ricardo Almeida
+2024-03-21,Liquidificador,Casa,9,208.22,Sul,Fernanda Lima
+2024-03-22,Azeite Extra Virgem,Alimentos,1,41.39,Leste,Patricia Costa
+2024-03-22,Teclado Mecânico,Eletrônicos,10,383.53,Centro,Patricia Costa
+2024-03-23,Liquidificador,Casa,8,190.09,Sul,Fernanda Lima
+2024-03-23,Aspirador de Pó,Casa,6,384.57,Norte,Paulo Rodrigues
+2024-03-24,Jaqueta de Couro,Roupas,5,475.49,Oeste,Maria Oliveira
+2024-03-24,Chocolate Importado,Alimentos,9,27.14,Sul,Ricardo Almeida
+2024-03-24,Calça Jeans,Roupas,1,151.67,Oeste,Ana Silva
+2024-03-24,Mouse Logitech,Eletrônicos,5,92.37,Norte,Paulo Rodrigues
+2024-03-25,Azeite Extra Virgem,Alimentos,6,41.93,Centro,Patricia Costa
+2024-03-26,Chocolate Importado,Alimentos,6,24.31,Leste,Ana Silva
+2024-03-27,Chocolate Importado,Alimentos,10,25.51,Leste,João Pereira
+2024-03-27,Livro de Python,Livros,4,80.3,Leste,Ricardo Almeida
+2024-03-27,Chocolate Importado,Alimentos,7,23.96,Leste,Fernanda Lima
+2024-03-27,Livro de Python,Livros,6,77.78,Leste,Maria Oliveira
+2024-03-27,Mouse Logitech,Eletrônicos,4,93.73,Centro,Ricardo Almeida
+2024-03-27,Livro de Negócios,Livros,10,71.48,Centro,Ana Silva
+2024-03-27,Jaqueta de Couro,Roupas,6,461.49,Norte,Ana Silva
+2024-03-28,Livro de Negócios,Livros,7,61.87,Sul,Ana Silva
+2024-03-28,Notebook Dell,Eletrônicos,1,2985.79,Norte,Patricia Costa
+2024-03-28,Livro de Negócios,Livros,2,63.31,Norte,Ana Silva
+2024-03-28,Calça Jeans,Roupas,6,155.26,Sul,Carlos Santos
+2024-03-29,Webcam HD,Eletrônicos,8,321.61,Leste,Maria Oliveira
+2024-03-29,Camiseta Básica,Roupas,10,48.61,Leste,Maria Oliveira
+2024-03-29,Livro de Python,Livros,9,83.22,Sul,Paulo Rodrigues
+2024-03-29,Teclado Mecânico,Eletrônicos,4,355.07,Centro,Ana Silva
+2024-03-29,Jogo de Toalhas,Casa,1,96.07,Centro,Carlos Santos
+2024-03-29,Fone de Ouvido Bluetooth,Eletrônicos,10,209.62,Sul,João Pereira
+2024-03-30,Camiseta Básica,Roupas,6,51.28,Norte,Paulo Rodrigues
+2024-03-30,Romance Bestseller,Livros,7,45.32,Leste,Carlos Santos
+2024-03-30,Chocolate Importado,Alimentos,5,28.09,Oeste,Carlos Santos
+2024-03-30,Camiseta Básica,Roupas,5,52.99,Sul,Paulo Rodrigues
+2024-03-31,Chocolate Importado,Alimentos,2,24.6,Leste,Fernanda Lima
+2024-04-01,Webcam HD,Eletrônicos,10,322.21,Centro,Paulo Rodrigues
+2024-04-01,Aspirador de Pó,Casa,10,399.41,Sul,Ricardo Almeida
+2024-04-02,Tênis Esportivo,Roupas,8,325.88,Centro,Patricia Costa
+2024-04-02,Liquidificador,Casa,1,185.02,Norte,Fernanda Lima
+2024-04-02,Livro de Negócios,Livros,3,62.51,Sul,Paulo Rodrigues
+2024-04-02,Jaqueta de Couro,Roupas,6,505.41,Centro,João Pereira
+2024-04-02,Notebook Dell,Eletrônicos,7,2714.89,Leste,Ana Silva
+2024-04-04,Mouse Logitech,Eletrônicos,2,93.4,Sul,Patricia Costa
+2024-04-04,Jogo de Toalhas,Casa,9,98.0,Norte,João Pereira
+2024-04-04,Livro de Python,Livros,9,85.63,Centro,Ricardo Almeida
+2024-04-04,Calça Jeans,Roupas,9,166.0,Centro,João Pereira
+2024-04-05,Teclado Mecânico,Eletrônicos,1,374.91,Norte,Patricia Costa
+2024-04-05,Jogo de Panelas,Casa,10,308.61,Sul,Carlos Santos
+2024-04-05,Mouse Logitech,Eletrônicos,10,93.43,Sul,Patricia Costa
+2024-04-05,Jaqueta de Couro,Roupas,8,465.34,Sul,Maria Oliveira
+2024-04-06,Jogo de Panelas,Casa,8,302.01,Norte,Ana Silva
+2024-04-06,Liquidificador,Casa,5,215.42,Norte,Carlos Santos
+2024-04-06,Jogo de Panelas,Casa,7,297.06,Sul,Patricia Costa
+2024-04-07,Café Premium 500g,Alimentos,4,36.09,Leste,Maria Oliveira
+2024-04-07,Camiseta Básica,Roupas,4,48.12,Sul,João Pereira
+2024-04-08,Livro de Python,Livros,4,80.18,Norte,Paulo Rodrigues
+2024-04-09,Vinho Tinto,Alimentos,10,92.75,Sul,Maria Oliveira
+2024-04-09,Webcam HD,Eletrônicos,7,282.75,Oeste,Ricardo Almeida
+2024-04-10,Livro de Python,Livros,10,87.01,Oeste,Ricardo Almeida
+2024-04-10,Mouse Logitech,Eletrônicos,3,91.37,Leste,Patricia Costa
+2024-04-10,Notebook Dell,Eletrônicos,4,2708.28,Oeste,Carlos Santos
+2024-04-11,Café Premium 500g,Alimentos,1,32.2,Centro,Ana Silva
+2024-04-12,Chocolate Importado,Alimentos,5,25.76,Norte,Fernanda Lima
+2024-04-12,Chocolate Importado,Alimentos,9,28.3,Norte,Ana Silva
+2024-04-12,Aspirador de Pó,Casa,5,430.43,Norte,Maria Oliveira
+2024-04-13,Jogo de Panelas,Casa,5,302.15,Sul,Maria Oliveira
+2024-04-13,Café Premium 500g,Alimentos,4,33.99,Sul,Maria Oliveira
+2024-04-13,Livro de Negócios,Livros,1,62.24,Sul,João Pereira
+2024-04-14,Jogo de Toalhas,Casa,5,83.9,Centro,Patricia Costa
+2024-04-14,Tênis Esportivo,Roupas,8,302.6,Oeste,Fernanda Lima
+2024-04-14,Camiseta Básica,Roupas,10,46.62,Oeste,Patricia Costa
+2024-04-14,Calça Jeans,Roupas,6,154.87,Norte,João Pereira
+2024-04-15,Café Premium 500g,Alimentos,6,35.3,Norte,Ana Silva
+2024-04-16,Webcam HD,Eletrônicos,7,307.35,Leste,Fernanda Lima
+2024-04-16,Notebook Dell,Eletrônicos,9,2635.25,Sul,Paulo Rodrigues
+2024-04-16,Chocolate Importado,Alimentos,4,24.7,Leste,João Pereira
+2024-04-17,Jogo de Toalhas,Casa,2,98.1,Sul,Carlos Santos
+2024-04-17,Café Premium 500g,Alimentos,3,32.88,Centro,Ricardo Almeida
+2024-04-18,Teclado Mecânico,Eletrônicos,6,365.77,Oeste,Paulo Rodrigues
+2024-04-18,Calça Jeans,Roupas,5,171.61,Leste,Ricardo Almeida
+2024-04-18,Jogo de Toalhas,Casa,2,85.81,Oeste,Fernanda Lima
+2024-04-18,Notebook Dell,Eletrônicos,3,2685.64,Sul,Ricardo Almeida
+2024-04-20,Café Premium 500g,Alimentos,7,35.8,Centro,Carlos Santos
+2024-04-20,Azeite Extra Virgem,Alimentos,4,45.3,Sul,Carlos Santos
+2024-04-20,Livro de Negócios,Livros,10,64.46,Oeste,Paulo Rodrigues
+2024-04-20,Camiseta Básica,Roupas,4,46.56,Oeste,Ricardo Almeida
+2024-04-21,Tênis Esportivo,Roupas,2,283.4,Oeste,Fernanda Lima
+2024-04-21,Tênis Esportivo,Roupas,5,280.29,Leste,Ricardo Almeida
+2024-04-21,Fone de Ouvido Bluetooth,Eletrônicos,5,207.52,Centro,Fernanda Lima
+2024-04-21,Jaqueta de Couro,Roupas,2,515.51,Sul,Paulo Rodrigues
+2024-04-21,Teclado Mecânico,Eletrônicos,6,367.95,Leste,Maria Oliveira
+2024-04-21,Fone de Ouvido Bluetooth,Eletrônicos,9,180.13,Norte,Patricia Costa
+2024-04-21,Aspirador de Pó,Casa,8,402.14,Sul,Fernanda Lima
+2024-04-22,Teclado Mecânico,Eletrônicos,6,383.96,Sul,Maria Oliveira
+2024-04-22,Chocolate Importado,Alimentos,6,25.55,Norte,Carlos Santos
+2024-04-23,Notebook Dell,Eletrônicos,6,2897.47,Leste,Ana Silva
+2024-04-23,Café Premium 500g,Alimentos,10,35.88,Sul,Ricardo Almeida
+2024-04-23,Livro de Python,Livros,9,74.99,Oeste,Ana Silva
+2024-04-24,Camiseta Básica,Roupas,3,54.18,Norte,Paulo Rodrigues
+2024-04-24,Calça Jeans,Roupas,8,160.18,Sul,Carlos Santos
+2024-04-24,Tênis Esportivo,Roupas,4,314.2,Leste,Patricia Costa
+2024-04-25,Café Premium 500g,Alimentos,2,34.57,Oeste,Ricardo Almeida
+2024-04-25,Livro de Negócios,Livros,4,62.45,Sul,Carlos Santos
+2024-04-25,Mouse Logitech,Eletrônicos,6,92.61,Sul,Patricia Costa
+2024-04-26,Jogo de Toalhas,Casa,4,83.66,Norte,Ricardo Almeida
+2024-04-26,Chocolate Importado,Alimentos,2,27.98,Oeste,Fernanda Lima
+2024-04-27,Jogo de Toalhas,Casa,6,81.15,Centro,Ricardo Almeida
+2024-04-27,Calça Jeans,Roupas,4,161.1,Norte,Fernanda Lima
+2024-04-28,Jogo de Panelas,Casa,4,311.45,Sul,Fernanda Lima
+2024-04-28,Webcam HD,Eletrônicos,9,278.86,Centro,Patricia Costa
+2024-04-29,Romance Bestseller,Livros,3,47.02,Leste,João Pereira
+2024-04-30,Calça Jeans,Roupas,6,156.38,Centro,João Pereira
+2024-05-01,Teclado Mecânico,Eletrônicos,7,362.04,Leste,Maria Oliveira
+2024-05-01,Livro de Python,Livros,1,75.23,Norte,Ricardo Almeida
+2024-05-01,Jogo de Toalhas,Casa,1,83.72,Sul,Ricardo Almeida
+2024-05-01,Jogo de Panelas,Casa,2,303.13,Leste,Carlos Santos
+2024-05-02,Webcam HD,Eletrônicos,6,283.64,Norte,Fernanda Lima
+2024-05-02,Teclado Mecânico,Eletrônicos,6,339.21,Oeste,João Pereira
+2024-05-03,Jaqueta de Couro,Roupas,3,474.99,Centro,João Pereira
+2024-05-03,Mouse Logitech,Eletrônicos,3,90.01,Norte,Patricia Costa
+2024-05-03,Azeite Extra Virgem,Alimentos,3,46.29,Leste,Ana Silva
+2024-05-03,Livro de Negócios,Livros,7,65.11,Centro,Ana Silva
+2024-05-04,Jogo de Toalhas,Casa,10,90.49,Oeste,Carlos Santos
+2024-05-04,Calça Jeans,Roupas,4,151.74,Sul,Maria Oliveira
+2024-05-05,Webcam HD,Eletrônicos,7,313.32,Leste,Paulo Rodrigues
+2024-05-07,Calça Jeans,Roupas,7,149.54,Sul,Patricia Costa
+2024-05-07,Mouse Logitech,Eletrônicos,8,91.58,Sul,Carlos Santos
+2024-05-07,Liquidificador,Casa,5,194.02,Leste,Carlos Santos
+2024-05-08,Livro de Python,Livros,10,72.6,Norte,Ricardo Almeida
+2024-05-08,Jogo de Panelas,Casa,1,312.22,Sul,Fernanda Lima
+2024-05-09,Jaqueta de Couro,Roupas,1,537.05,Leste,João Pereira
+2024-05-09,Teclado Mecânico,Eletrônicos,1,367.49,Oeste,Ricardo Almeida
+2024-05-09,Teclado Mecânico,Eletrônicos,8,327.36,Norte,Paulo Rodrigues
+2024-05-10,Livro de Negócios,Livros,7,63.75,Sul,Ana Silva
+2024-05-11,Chocolate Importado,Alimentos,9,27.98,Norte,Maria Oliveira
+2024-05-11,Azeite Extra Virgem,Alimentos,7,41.85,Oeste,Ana Silva
+2024-05-11,Camiseta Básica,Roupas,3,54.62,Oeste,Ricardo Almeida
+2024-05-11,Livro de Negócios,Livros,7,63.74,Centro,João Pereira
+2024-05-12,Liquidificador,Casa,6,193.32,Sul,Paulo Rodrigues
+2024-05-12,Azeite Extra Virgem,Alimentos,8,44.69,Norte,Ricardo Almeida
+2024-05-13,Romance Bestseller,Livros,5,51.67,Centro,Ricardo Almeida
+2024-05-13,Webcam HD,Eletrônicos,7,281.74,Norte,João Pereira
+2024-05-14,Jogo de Toalhas,Casa,4,90.29,Sul,Maria Oliveira
+2024-05-14,Livro de Python,Livros,1,73.2,Norte,João Pereira
+2024-05-14,Webcam HD,Eletrônicos,7,282.75,Norte,Carlos Santos
+2024-05-15,Liquidificador,Casa,9,211.3,Oeste,Ricardo Almeida
+2024-05-15,Livro de Negócios,Livros,1,60.81,Centro,Patricia Costa
+2024-05-16,Camiseta Básica,Roupas,3,47.93,Leste,Ricardo Almeida
+2024-05-16,Jogo de Panelas,Casa,4,328.57,Norte,Fernanda Lima
+2024-05-17,Chocolate Importado,Alimentos,9,25.0,Sul,Patricia Costa
+2024-05-17,Notebook Dell,Eletrônicos,5,2973.94,Sul,Carlos Santos
+2024-05-17,Calça Jeans,Roupas,5,173.53,Sul,Maria Oliveira
+2024-05-17,Livro de Python,Livros,4,74.92,Centro,Carlos Santos
+2024-05-17,Fone de Ouvido Bluetooth,Eletrônicos,4,209.99,Centro,Paulo Rodrigues
+2024-05-18,Vinho Tinto,Alimentos,7,81.92,Sul,Ana Silva
+2024-05-18,Jogo de Panelas,Casa,3,274.09,Norte,Fernanda Lima
+2024-05-18,Jogo de Panelas,Casa,8,275.22,Oeste,Maria Oliveira
+2024-05-19,Café Premium 500g,Alimentos,4,30.72,Oeste,Ana Silva
+2024-05-19,Webcam HD,Eletrônicos,4,321.43,Leste,Patricia Costa
+2024-05-19,Fone de Ouvido Bluetooth,Eletrônicos,1,181.53,Leste,João Pereira
+2024-05-19,Calça Jeans,Roupas,5,170.24,Leste,João Pereira
+2024-05-20,Liquidificador,Casa,4,213.79,Centro,Maria Oliveira
+2024-05-20,Livro de Python,Livros,6,76.39,Norte,João Pereira
+2024-05-20,Livro de Python,Livros,5,75.74,Oeste,Paulo Rodrigues
+2024-05-21,Chocolate Importado,Alimentos,8,25.42,Leste,Maria Oliveira
+2024-05-21,Livro de Python,Livros,2,85.77,Oeste,Carlos Santos
+2024-05-21,Fone de Ouvido Bluetooth,Eletrônicos,7,215.4,Leste,Ricardo Almeida
+2024-05-22,Mouse Logitech,Eletrônicos,2,82.93,Centro,Ana Silva
+2024-05-22,Liquidificador,Casa,9,196.07,Oeste,Maria Oliveira
+2024-05-23,Tênis Esportivo,Roupas,1,282.68,Centro,Fernanda Lima
+2024-05-23,Jogo de Panelas,Casa,9,324.51,Centro,Fernanda Lima
+2024-05-24,Webcam HD,Eletrônicos,4,310.66,Norte,Fernanda Lima
+2024-05-24,Teclado Mecânico,Eletrônicos,2,330.35,Norte,Fernanda Lima
+2024-05-24,Tênis Esportivo,Roupas,5,326.59,Centro,Patricia Costa
+2024-05-24,Livro de Python,Livros,5,76.47,Leste,Patricia Costa
+2024-05-25,Vinho Tinto,Alimentos,8,92.14,Sul,Patricia Costa
+2024-05-25,Livro de Python,Livros,10,86.55,Centro,João Pereira
+2024-05-25,Jogo de Panelas,Casa,2,323.12,Leste,Ana Silva
+2024-05-25,Tênis Esportivo,Roupas,4,297.48,Centro,Maria Oliveira
+2024-05-25,Mouse Logitech,Eletrônicos,3,82.14,Centro,Maria Oliveira
+2024-05-26,Chocolate Importado,Alimentos,3,23.61,Oeste,Maria Oliveira
+2024-05-26,Fone de Ouvido Bluetooth,Eletrônicos,10,202.41,Oeste,João Pereira
+2024-05-26,Livro de Negócios,Livros,4,61.22,Oeste,Patricia Costa
+2024-05-27,Tênis Esportivo,Roupas,6,324.23,Norte,Ana Silva
+2024-05-27,Teclado Mecânico,Eletrônicos,9,334.22,Sul,Paulo Rodrigues
+2024-05-27,Aspirador de Pó,Casa,7,394.71,Centro,João Pereira
+2024-05-28,Jaqueta de Couro,Roupas,3,539.29,Centro,Maria Oliveira
+2024-05-28,Tênis Esportivo,Roupas,9,275.46,Norte,Ana Silva
+2024-05-28,Aspirador de Pó,Casa,8,427.5,Norte,Ana Silva
+2024-05-28,Mouse Logitech,Eletrônicos,3,95.26,Leste,Maria Oliveira
+2024-05-28,Livro de Python,Livros,6,83.08,Norte,Carlos Santos
+2024-05-29,Livro de Negócios,Livros,6,65.95,Norte,Carlos Santos
+2024-05-29,Tênis Esportivo,Roupas,6,327.68,Centro,Maria Oliveira
+2024-05-29,Livro de Python,Livros,5,77.59,Centro,Patricia Costa
+2024-05-30,Jaqueta de Couro,Roupas,9,535.47,Leste,João Pereira
+2024-05-30,Tênis Esportivo,Roupas,8,269.47,Centro,Maria Oliveira
+2024-05-31,Liquidificador,Casa,2,190.66,Centro,Ricardo Almeida
+2024-05-31,Livro de Python,Livros,1,74.9,Leste,Maria Oliveira
+2024-05-31,Liquidificador,Casa,4,211.85,Oeste,Paulo Rodrigues
+2024-05-31,Livro de Negócios,Livros,8,64.2,Centro,Paulo Rodrigues
+2024-06-02,Teclado Mecânico,Eletrônicos,7,352.76,Norte,João Pereira
+2024-06-03,Romance Bestseller,Livros,9,51.13,Oeste,Paulo Rodrigues
+2024-06-03,Fone de Ouvido Bluetooth,Eletrônicos,6,182.13,Leste,Paulo Rodrigues
+2024-06-03,Teclado Mecânico,Eletrônicos,1,315.73,Oeste,Paulo Rodrigues
+2024-06-04,Tênis Esportivo,Roupas,8,307.45,Leste,Ana Silva
+2024-06-04,Livro de Python,Livros,6,87.56,Oeste,Ricardo Almeida
+2024-06-05,Chocolate Importado,Alimentos,7,27.99,Centro,Patricia Costa
+2024-06-06,Vinho Tinto,Alimentos,9,82.06,Centro,Maria Oliveira
+2024-06-06,Liquidificador,Casa,8,186.39,Oeste,Ricardo Almeida
+2024-06-06,Vinho Tinto,Alimentos,3,98.7,Norte,Carlos Santos
+2024-06-06,Tênis Esportivo,Roupas,8,317.34,Sul,Fernanda Lima
+2024-06-06,Camiseta Básica,Roupas,7,53.44,Oeste,Ana Silva
+2024-06-06,Teclado Mecânico,Eletrônicos,8,384.99,Centro,Ricardo Almeida
+2024-06-07,Camiseta Básica,Roupas,3,45.7,Norte,Carlos Santos
+2024-06-07,Camiseta Básica,Roupas,5,49.17,Centro,Ricardo Almeida
+2024-06-08,Mouse Logitech,Eletrônicos,6,82.15,Centro,Fernanda Lima
+2024-06-08,Livro de Negócios,Livros,3,65.03,Norte,Ana Silva
+2024-06-08,Liquidificador,Casa,7,186.37,Norte,Ana Silva
+2024-06-08,Notebook Dell,Eletrônicos,9,2933.45,Centro,João Pereira
+2024-06-09,Aspirador de Pó,Casa,1,380.74,Centro,João Pereira
+2024-06-10,Tênis Esportivo,Roupas,3,280.51,Sul,Paulo Rodrigues
+2024-06-11,Fone de Ouvido Bluetooth,Eletrônicos,2,216.91,Norte,Carlos Santos
+2024-06-11,Aspirador de Pó,Casa,10,386.77,Oeste,Ricardo Almeida
+2024-06-12,Fone de Ouvido Bluetooth,Eletrônicos,3,200.82,Centro,Maria Oliveira
+2024-06-12,Romance Bestseller,Livros,7,45.89,Oeste,Carlos Santos
+2024-06-12,Liquidificador,Casa,7,184.32,Centro,Patricia Costa
+2024-06-13,Calça Jeans,Roupas,9,162.93,Centro,Maria Oliveira
+2024-06-13,Chocolate Importado,Alimentos,7,23.71,Oeste,Ricardo Almeida
+2024-06-14,Livro de Negócios,Livros,3,69.4,Oeste,João Pereira
+2024-06-15,Fone de Ouvido Bluetooth,Eletrônicos,2,190.03,Leste,Carlos Santos
+2024-06-15,Romance Bestseller,Livros,2,53.68,Oeste,Patricia Costa
+2024-06-15,Teclado Mecânico,Eletrônicos,10,346.4,Oeste,Paulo Rodrigues
+2024-06-15,Jogo de Panelas,Casa,6,310.94,Sul,João Pereira
+2024-06-17,Tênis Esportivo,Roupas,7,318.08,Oeste,Ana Silva
+2024-06-17,Teclado Mecânico,Eletrônicos,9,316.99,Oeste,Ana Silva
+2024-06-17,Mouse Logitech,Eletrônicos,5,95.53,Sul,Paulo Rodrigues
+2024-06-17,Camiseta Básica,Roupas,5,44.91,Norte,João Pereira
+2024-06-18,Webcam HD,Eletrônicos,8,325.6,Sul,Fernanda Lima
+2024-06-18,Liquidificador,Casa,6,183.91,Leste,Patricia Costa
+2024-06-19,Mouse Logitech,Eletrônicos,5,93.24,Leste,Fernanda Lima
+2024-06-19,Jogo de Panelas,Casa,4,314.01,Norte,Ricardo Almeida
+2024-06-19,Notebook Dell,Eletrônicos,10,2963.83,Centro,Patricia Costa
+2024-06-20,Aspirador de Pó,Casa,9,438.9,Sul,Ana Silva
+2024-06-21,Romance Bestseller,Livros,4,45.93,Sul,Carlos Santos
+2024-06-21,Vinho Tinto,Alimentos,6,98.26,Oeste,João Pereira
+2024-06-21,Teclado Mecânico,Eletrônicos,1,340.66,Norte,Patricia Costa
+2024-06-22,Aspirador de Pó,Casa,5,404.97,Leste,Maria Oliveira
+2024-06-23,Tênis Esportivo,Roupas,6,281.09,Norte,Ana Silva
+2024-06-23,Chocolate Importado,Alimentos,10,27.8,Leste,Patricia Costa
+2024-06-24,Romance Bestseller,Livros,8,53.51,Oeste,Patricia Costa
+2024-06-24,Café Premium 500g,Alimentos,9,34.15,Oeste,Ana Silva
+2024-06-24,Calça Jeans,Roupas,7,172.7,Centro,Paulo Rodrigues
+2024-06-24,Vinho Tinto,Alimentos,4,88.91,Norte,Patricia Costa
+2024-06-25,Jaqueta de Couro,Roupas,10,523.63,Leste,Maria Oliveira
+2024-06-25,Notebook Dell,Eletrônicos,10,2916.95,Centro,Fernanda Lima
+2024-06-25,Camiseta Básica,Roupas,6,45.67,Oeste,Carlos Santos
+2024-06-26,Calça Jeans,Roupas,6,167.29,Centro,João Pereira
+2024-06-26,Camiseta Básica,Roupas,8,46.9,Sul,Carlos Santos
+2024-06-27,Livro de Python,Livros,2,81.55,Centro,Carlos Santos
+2024-06-27,Liquidificador,Casa,10,203.02,Oeste,Ricardo Almeida
+2024-06-27,Chocolate Importado,Alimentos,5,27.79,Centro,Patricia Costa
+2024-06-28,Aspirador de Pó,Casa,5,363.03,Centro,Paulo Rodrigues
+2024-06-28,Aspirador de Pó,Casa,9,435.58,Leste,Maria Oliveira
+2024-06-29,Romance Bestseller,Livros,8,48.1,Oeste,Patricia Costa
+2024-06-30,Tênis Esportivo,Roupas,5,276.8,Leste,Maria Oliveira
+2024-06-30,Jogo de Toalhas,Casa,2,88.6,Oeste,João Pereira
+2024-07-01,Mouse Logitech,Eletrônicos,4,94.19,Oeste,Maria Oliveira
+2024-07-01,Webcam HD,Eletrônicos,3,274.32,Oeste,Carlos Santos
+2024-07-01,Jogo de Panelas,Casa,3,276.07,Leste,Carlos Santos
+2024-07-02,Livro de Python,Livros,10,73.49,Leste,Patricia Costa
+2024-07-02,Mouse Logitech,Eletrônicos,8,83.95,Norte,Maria Oliveira
+2024-07-02,Vinho Tinto,Alimentos,1,90.29,Sul,Maria Oliveira
+2024-07-02,Livro de Python,Livros,6,78.51,Oeste,Paulo Rodrigues
+2024-07-02,Café Premium 500g,Alimentos,2,30.71,Sul,Paulo Rodrigues
+2024-07-03,Notebook Dell,Eletrônicos,4,3014.53,Sul,Ana Silva
+2024-07-03,Jogo de Toalhas,Casa,9,96.9,Sul,Carlos Santos
+2024-07-04,Aspirador de Pó,Casa,9,435.39,Norte,Carlos Santos
+2024-07-04,Aspirador de Pó,Casa,7,370.38,Centro,Fernanda Lima
+2024-07-04,Vinho Tinto,Alimentos,10,81.15,Oeste,Ricardo Almeida
+2024-07-05,Aspirador de Pó,Casa,4,391.73,Leste,Maria Oliveira
+2024-07-06,Vinho Tinto,Alimentos,6,82.25,Sul,Carlos Santos
+2024-07-07,Liquidificador,Casa,7,210.69,Leste,Ricardo Almeida
+2024-07-07,Jogo de Toalhas,Casa,10,83.37,Norte,Paulo Rodrigues
+2024-07-08,Calça Jeans,Roupas,8,156.71,Leste,Ricardo Almeida
+2024-07-08,Fone de Ouvido Bluetooth,Eletrônicos,4,207.69,Norte,Ana Silva
+2024-07-08,Tênis Esportivo,Roupas,4,311.0,Leste,Patricia Costa
+2024-07-08,Romance Bestseller,Livros,9,50.65,Norte,João Pereira
+2024-07-08,Teclado Mecânico,Eletrônicos,5,347.4,Norte,João Pereira
+2024-07-08,Liquidificador,Casa,7,213.74,Sul,Fernanda Lima
+2024-07-09,Livro de Negócios,Livros,9,68.24,Norte,Ricardo Almeida
+2024-07-09,Webcam HD,Eletrônicos,1,301.81,Norte,Paulo Rodrigues
+2024-07-09,Vinho Tinto,Alimentos,2,98.52,Leste,João Pereira
+2024-07-09,Calça Jeans,Roupas,8,146.61,Leste,Fernanda Lima
+2024-07-10,Notebook Dell,Eletrônicos,10,2784.09,Sul,Paulo Rodrigues
+2024-07-10,Notebook Dell,Eletrônicos,5,2672.41,Leste,Ricardo Almeida
+2024-07-10,Fone de Ouvido Bluetooth,Eletrônicos,1,211.45,Centro,João Pereira
+2024-07-10,Jogo de Panelas,Casa,5,272.09,Oeste,Maria Oliveira
+2024-07-10,Teclado Mecânico,Eletrônicos,10,323.32,Sul,Patricia Costa
+2024-07-10,Jogo de Panelas,Casa,1,307.76,Sul,Ricardo Almeida
+2024-07-10,Vinho Tinto,Alimentos,6,96.85,Oeste,Patricia Costa
+2024-07-11,Aspirador de Pó,Casa,5,415.6,Leste,Patricia Costa
+2024-07-12,Romance Bestseller,Livros,3,49.45,Leste,Paulo Rodrigues
+2024-07-12,Jaqueta de Couro,Roupas,10,464.39,Sul,João Pereira
+2024-07-12,Notebook Dell,Eletrônicos,6,2929.89,Centro,Ana Silva
+2024-07-12,Fone de Ouvido Bluetooth,Eletrônicos,5,191.24,Norte,Patricia Costa
+2024-07-13,Teclado Mecânico,Eletrônicos,4,348.06,Norte,Ana Silva
+2024-07-13,Jogo de Toalhas,Casa,4,82.96,Oeste,João Pereira
+2024-07-13,Livro de Negócios,Livros,10,68.77,Oeste,Ana Silva
+2024-07-13,Azeite Extra Virgem,Alimentos,3,43.81,Leste,João Pereira
+2024-07-13,Café Premium 500g,Alimentos,9,35.09,Norte,Paulo Rodrigues
+2024-07-14,Calça Jeans,Roupas,4,156.95,Norte,Maria Oliveira
+2024-07-14,Livro de Python,Livros,1,79.52,Oeste,Ana Silva
+2024-07-14,Romance Bestseller,Livros,8,47.28,Leste,Carlos Santos
+2024-07-15,Romance Bestseller,Livros,7,47.57,Sul,Paulo Rodrigues
+2024-07-15,Vinho Tinto,Alimentos,8,95.07,Norte,Patricia Costa
+2024-07-15,Jogo de Toalhas,Casa,1,85.31,Sul,Maria Oliveira
+2024-07-16,Café Premium 500g,Alimentos,3,30.24,Oeste,João Pereira
+2024-07-17,Romance Bestseller,Livros,5,48.42,Norte,Ricardo Almeida
+2024-07-17,Fone de Ouvido Bluetooth,Eletrônicos,4,209.48,Leste,Ana Silva
+2024-07-17,Jogo de Toalhas,Casa,1,90.19,Oeste,João Pereira
+2024-07-18,Notebook Dell,Eletrônicos,3,2963.4,Sul,Patricia Costa
+2024-07-19,Azeite Extra Virgem,Alimentos,6,46.89,Norte,Ana Silva
+2024-07-20,Teclado Mecânico,Eletrônicos,10,361.11,Sul,Ricardo Almeida
+2024-07-20,Jaqueta de Couro,Roupas,4,548.83,Oeste,Fernanda Lima
+2024-07-22,Chocolate Importado,Alimentos,8,25.8,Centro,Ana Silva
+2024-07-22,Livro de Negócios,Livros,9,65.2,Norte,Patricia Costa
+2024-07-22,Calça Jeans,Roupas,7,149.16,Norte,Maria Oliveira
+2024-07-23,Jogo de Panelas,Casa,10,300.52,Leste,Ana Silva
+2024-07-24,Aspirador de Pó,Casa,5,433.76,Norte,Carlos Santos
+2024-07-24,Jogo de Toalhas,Casa,6,95.36,Oeste,Paulo Rodrigues
+2024-07-24,Calça Jeans,Roupas,9,171.77,Oeste,Maria Oliveira
+2024-07-24,Notebook Dell,Eletrônicos,2,2964.69,Norte,João Pereira
+2024-07-25,Romance Bestseller,Livros,3,50.18,Oeste,Fernanda Lima
+2024-07-26,Teclado Mecânico,Eletrônicos,10,343.0,Leste,Fernanda Lima
+2024-07-26,Azeite Extra Virgem,Alimentos,9,45.17,Oeste,Ana Silva
+2024-07-26,Jogo de Panelas,Casa,10,299.41,Centro,Ricardo Almeida
+2024-07-26,Romance Bestseller,Livros,9,45.82,Oeste,João Pereira
+2024-07-26,Azeite Extra Virgem,Alimentos,7,41.89,Norte,Paulo Rodrigues
+2024-07-27,Jaqueta de Couro,Roupas,6,516.96,Leste,Paulo Rodrigues
+2024-07-27,Liquidificador,Casa,6,200.49,Sul,Fernanda Lima
+2024-07-27,Mouse Logitech,Eletrônicos,7,97.56,Sul,Ana Silva
+2024-07-27,Jogo de Toalhas,Casa,7,81.97,Norte,Maria Oliveira
+2024-07-28,Chocolate Importado,Alimentos,1,24.48,Sul,João Pereira
+2024-07-28,Jogo de Panelas,Casa,6,307.5,Sul,Ana Silva
+2024-07-28,Notebook Dell,Eletrônicos,2,2757.72,Norte,João Pereira
+2024-07-29,Café Premium 500g,Alimentos,3,33.73,Norte,Ricardo Almeida
+2024-07-29,Liquidificador,Casa,2,197.47,Leste,Paulo Rodrigues
+2024-07-29,Azeite Extra Virgem,Alimentos,2,48.85,Leste,João Pereira
+2024-07-29,Vinho Tinto,Alimentos,4,96.56,Centro,Ana Silva
+2024-07-30,Jogo de Panelas,Casa,2,281.35,Norte,Fernanda Lima
+2024-07-30,Tênis Esportivo,Roupas,9,278.96,Centro,João Pereira
+2024-07-30,Notebook Dell,Eletrônicos,4,3054.49,Sul,Fernanda Lima
+2024-07-30,Mouse Logitech,Eletrônicos,8,81.53,Oeste,Carlos Santos
+2024-07-30,Mouse Logitech,Eletrônicos,3,89.13,Sul,Ana Silva
+2024-07-30,Chocolate Importado,Alimentos,2,24.56,Norte,Patricia Costa
+2024-07-31,Vinho Tinto,Alimentos,8,85.43,Norte,Carlos Santos
+2024-07-31,Vinho Tinto,Alimentos,7,83.1,Centro,Ana Silva
+2024-07-31,Notebook Dell,Eletrônicos,4,2922.77,Leste,Carlos Santos
+2024-07-31,Jogo de Panelas,Casa,6,272.46,Norte,Patricia Costa
+2024-08-01,Aspirador de Pó,Casa,3,381.38,Norte,João Pereira
+2024-08-02,Teclado Mecânico,Eletrônicos,1,384.1,Centro,Maria Oliveira
+2024-08-03,Fone de Ouvido Bluetooth,Eletrônicos,6,218.11,Centro,Carlos Santos
+2024-08-03,Jogo de Toalhas,Casa,9,95.06,Leste,Fernanda Lima
+2024-08-03,Webcam HD,Eletrônicos,9,320.57,Sul,Carlos Santos
+2024-08-03,Jogo de Toalhas,Casa,1,96.11,Leste,Maria Oliveira
+2024-08-04,Azeite Extra Virgem,Alimentos,8,42.94,Norte,Paulo Rodrigues
+2024-08-04,Notebook Dell,Eletrônicos,2,2684.2,Oeste,Ana Silva
+2024-08-05,Romance Bestseller,Livros,2,47.24,Oeste,Patricia Costa
+2024-08-05,Livro de Python,Livros,10,87.7,Leste,Maria Oliveira
+2024-08-06,Camiseta Básica,Roupas,5,49.56,Centro,Ana Silva
+2024-08-07,Camiseta Básica,Roupas,4,46.91,Oeste,Fernanda Lima
+2024-08-07,Teclado Mecânico,Eletrônicos,3,372.63,Oeste,Ricardo Almeida
+2024-08-08,Romance Bestseller,Livros,3,48.6,Centro,Maria Oliveira
+2024-08-08,Tênis Esportivo,Roupas,6,286.74,Oeste,Carlos Santos
+2024-08-08,Fone de Ouvido Bluetooth,Eletrônicos,3,212.11,Centro,Carlos Santos
+2024-08-08,Liquidificador,Casa,6,181.83,Leste,Maria Oliveira
+2024-08-08,Liquidificador,Casa,8,213.22,Sul,Patricia Costa
+2024-08-09,Mouse Logitech,Eletrônicos,8,93.23,Oeste,Maria Oliveira
+2024-08-09,Calça Jeans,Roupas,5,153.54,Centro,João Pereira
+2024-08-10,Camiseta Básica,Roupas,9,47.92,Sul,Paulo Rodrigues
+2024-08-11,Jogo de Toalhas,Casa,2,83.72,Sul,Fernanda Lima
+2024-08-11,Jaqueta de Couro,Roupas,3,520.99,Oeste,Ricardo Almeida
+2024-08-11,Fone de Ouvido Bluetooth,Eletrônicos,3,190.8,Sul,Ana Silva
+2024-08-11,Jaqueta de Couro,Roupas,2,449.56,Sul,Fernanda Lima
+2024-08-11,Livro de Python,Livros,10,77.62,Leste,Patricia Costa
+2024-08-11,Tênis Esportivo,Roupas,10,315.2,Sul,Paulo Rodrigues
+2024-08-11,Fone de Ouvido Bluetooth,Eletrônicos,6,201.63,Leste,Patricia Costa
+2024-08-12,Vinho Tinto,Alimentos,2,89.63,Centro,Carlos Santos
+2024-08-12,Tênis Esportivo,Roupas,1,322.49,Leste,Carlos Santos
+2024-08-14,Camiseta Básica,Roupas,9,47.29,Oeste,Paulo Rodrigues
+2024-08-14,Camiseta Básica,Roupas,4,52.39,Centro,Ricardo Almeida
+2024-08-15,Azeite Extra Virgem,Alimentos,9,45.25,Norte,João Pereira
+2024-08-15,Jogo de Toalhas,Casa,7,83.9,Oeste,Paulo Rodrigues
+2024-08-15,Camiseta Básica,Roupas,8,49.82,Oeste,João Pereira
+2024-08-15,Notebook Dell,Eletrônicos,7,3069.21,Leste,João Pereira
+2024-08-15,Jogo de Toalhas,Casa,7,94.81,Leste,Patricia Costa
+2024-08-15,Fone de Ouvido Bluetooth,Eletrônicos,2,211.15,Sul,João Pereira
+2024-08-15,Jogo de Toalhas,Casa,8,96.74,Leste,Fernanda Lima
+2024-08-17,Notebook Dell,Eletrônicos,6,2932.02,Centro,Ana Silva
+2024-08-18,Fone de Ouvido Bluetooth,Eletrônicos,7,183.16,Sul,Ricardo Almeida
+2024-08-19,Notebook Dell,Eletrônicos,3,2647.97,Sul,Ricardo Almeida
+2024-08-19,Café Premium 500g,Alimentos,2,33.79,Centro,Ricardo Almeida
+2024-08-20,Calça Jeans,Roupas,1,172.82,Oeste,João Pereira
+2024-08-20,Calça Jeans,Roupas,9,147.69,Norte,João Pereira
+2024-08-20,Liquidificador,Casa,10,194.61,Oeste,Fernanda Lima
+2024-08-20,Mouse Logitech,Eletrônicos,8,96.99,Leste,Fernanda Lima
+2024-08-21,Liquidificador,Casa,3,218.61,Norte,Patricia Costa
+2024-08-21,Jaqueta de Couro,Roupas,6,540.36,Sul,Ana Silva
+2024-08-21,Chocolate Importado,Alimentos,6,25.18,Leste,Paulo Rodrigues
+2024-08-21,Fone de Ouvido Bluetooth,Eletrônicos,9,197.47,Sul,Fernanda Lima
+2024-08-21,Aspirador de Pó,Casa,6,414.74,Norte,Patricia Costa
+2024-08-23,Notebook Dell,Eletrônicos,4,2608.6,Sul,João Pereira
+2024-08-24,Café Premium 500g,Alimentos,10,31.48,Oeste,Carlos Santos
+2024-08-25,Calça Jeans,Roupas,9,146.09,Sul,Paulo Rodrigues
+2024-08-26,Romance Bestseller,Livros,2,50.23,Leste,Ricardo Almeida
+2024-08-26,Camiseta Básica,Roupas,10,47.19,Oeste,João Pereira
+2024-08-26,Calça Jeans,Roupas,7,146.06,Leste,Ana Silva
+2024-08-27,Fone de Ouvido Bluetooth,Eletrônicos,9,217.58,Centro,Maria Oliveira
+2024-08-27,Jogo de Toalhas,Casa,10,88.31,Oeste,Maria Oliveira
+2024-08-27,Calça Jeans,Roupas,10,156.81,Leste,Ana Silva
+2024-08-28,Azeite Extra Virgem,Alimentos,6,46.98,Sul,Patricia Costa
+2024-08-28,Teclado Mecânico,Eletrônicos,8,357.29,Oeste,Ana Silva
+2024-08-28,Notebook Dell,Eletrônicos,3,3017.45,Sul,João Pereira
+2024-08-28,Fone de Ouvido Bluetooth,Eletrônicos,4,194.97,Norte,Patricia Costa
+2024-08-28,Mouse Logitech,Eletrônicos,3,86.92,Oeste,Patricia Costa
+2024-08-28,Mouse Logitech,Eletrônicos,1,88.93,Centro,Maria Oliveira
+2024-08-29,Jogo de Toalhas,Casa,5,87.08,Norte,Ricardo Almeida
+2024-08-29,Notebook Dell,Eletrônicos,4,2792.8,Sul,Patricia Costa
+2024-08-29,Jogo de Panelas,Casa,7,306.3,Norte,Maria Oliveira
+2024-09-01,Liquidificador,Casa,7,206.87,Oeste,Ana Silva
+2024-09-01,Jaqueta de Couro,Roupas,10,499.1,Oeste,Carlos Santos
+2024-09-01,Camiseta Básica,Roupas,6,51.25,Norte,João Pereira
+2024-09-02,Chocolate Importado,Alimentos,4,28.04,Centro,Paulo Rodrigues
+2024-09-02,Romance Bestseller,Livros,7,46.63,Leste,Carlos Santos
+2024-09-02,Tênis Esportivo,Roupas,1,278.28,Centro,Ana Silva
+2024-09-02,Vinho Tinto,Alimentos,3,85.78,Oeste,Ana Silva
+2024-09-03,Romance Bestseller,Livros,4,53.76,Sul,Ricardo Almeida
+2024-09-03,Livro de Python,Livros,5,84.75,Centro,Paulo Rodrigues
+2024-09-03,Café Premium 500g,Alimentos,4,32.38,Leste,Ricardo Almeida
+2024-09-04,Romance Bestseller,Livros,9,51.45,Centro,Ricardo Almeida
+2024-09-05,Jogo de Panelas,Casa,5,309.65,Oeste,Fernanda Lima
+2024-09-06,Aspirador de Pó,Casa,8,375.63,Norte,Ana Silva
+2024-09-07,Livro de Negócios,Livros,1,66.02,Leste,Ana Silva
+2024-09-07,Aspirador de Pó,Casa,4,384.74,Centro,João Pereira
+2024-09-07,Azeite Extra Virgem,Alimentos,4,49.1,Leste,Ricardo Almeida
+2024-09-07,Livro de Python,Livros,4,74.8,Sul,Carlos Santos
+2024-09-07,Camiseta Básica,Roupas,8,50.58,Norte,Ricardo Almeida
+2024-09-08,Aspirador de Pó,Casa,8,359.39,Norte,Fernanda Lima
+2024-09-08,Camiseta Básica,Roupas,8,50.58,Centro,Fernanda Lima
+2024-09-08,Mouse Logitech,Eletrônicos,5,96.27,Oeste,Fernanda Lima
+2024-09-09,Jogo de Panelas,Casa,3,298.51,Sul,Paulo Rodrigues
+2024-09-09,Chocolate Importado,Alimentos,10,25.49,Norte,Ricardo Almeida
+2024-09-09,Camiseta Básica,Roupas,5,45.77,Norte,Ricardo Almeida
+2024-09-10,Chocolate Importado,Alimentos,7,23.38,Leste,Paulo Rodrigues
+2024-09-10,Romance Bestseller,Livros,8,54.07,Centro,João Pereira
+2024-09-10,Café Premium 500g,Alimentos,7,29.78,Oeste,Ricardo Almeida
+2024-09-11,Webcam HD,Eletrônicos,4,314.43,Leste,Ricardo Almeida
+2024-09-11,Notebook Dell,Eletrônicos,9,2971.17,Leste,Patricia Costa
+2024-09-12,Chocolate Importado,Alimentos,8,24.47,Norte,Carlos Santos
+2024-09-12,Notebook Dell,Eletrônicos,6,2556.18,Oeste,Fernanda Lima
+2024-09-13,Calça Jeans,Roupas,1,145.13,Sul,Ricardo Almeida
+2024-09-13,Webcam HD,Eletrônicos,7,295.42,Norte,Fernanda Lima
+2024-09-13,Romance Bestseller,Livros,8,49.71,Centro,Ricardo Almeida
+2024-09-14,Vinho Tinto,Alimentos,9,81.4,Leste,Fernanda Lima
+2024-09-14,Calça Jeans,Roupas,6,165.09,Sul,Ana Silva
+2024-09-14,Fone de Ouvido Bluetooth,Eletrônicos,6,194.5,Norte,Ana Silva
+2024-09-14,Chocolate Importado,Alimentos,9,25.5,Leste,Maria Oliveira
+2024-09-14,Azeite Extra Virgem,Alimentos,8,45.92,Norte,Ricardo Almeida
+2024-09-14,Café Premium 500g,Alimentos,1,34.4,Oeste,Maria Oliveira
+2024-09-15,Tênis Esportivo,Roupas,6,270.35,Leste,Ana Silva
+2024-09-15,Jogo de Toalhas,Casa,4,95.33,Sul,João Pereira
+2024-09-15,Jogo de Toalhas,Casa,9,94.97,Norte,João Pereira
+2024-09-15,Calça Jeans,Roupas,9,150.55,Centro,Carlos Santos
+2024-09-15,Vinho Tinto,Alimentos,6,94.95,Oeste,João Pereira
+2024-09-15,Vinho Tinto,Alimentos,1,84.82,Centro,Carlos Santos
+2024-09-16,Mouse Logitech,Eletrônicos,4,82.71,Centro,Ana Silva
+2024-09-16,Teclado Mecânico,Eletrônicos,3,348.93,Sul,Carlos Santos
+2024-09-16,Tênis Esportivo,Roupas,1,285.62,Leste,Carlos Santos
+2024-09-17,Romance Bestseller,Livros,7,52.26,Oeste,Ricardo Almeida
+2024-09-17,Liquidificador,Casa,9,205.5,Centro,Maria Oliveira
+2024-09-17,Jogo de Toalhas,Casa,7,95.32,Sul,Fernanda Lima
+2024-09-18,Notebook Dell,Eletrônicos,7,3006.99,Norte,Ricardo Almeida
+2024-09-20,Romance Bestseller,Livros,3,50.72,Oeste,Carlos Santos
+2024-09-21,Fone de Ouvido Bluetooth,Eletrônicos,6,197.26,Sul,Ana Silva
+2024-09-21,Webcam HD,Eletrônicos,9,319.92,Centro,Ricardo Almeida
+2024-09-21,Fone de Ouvido Bluetooth,Eletrônicos,9,211.96,Oeste,João Pereira
+2024-09-21,Livro de Python,Livros,1,76.48,Centro,Fernanda Lima
+2024-09-21,Notebook Dell,Eletrônicos,6,2703.18,Centro,Fernanda Lima
+2024-09-22,Vinho Tinto,Alimentos,4,89.48,Sul,Carlos Santos
+2024-09-22,Webcam HD,Eletrônicos,10,313.59,Sul,João Pereira
+2024-09-23,Jogo de Panelas,Casa,5,277.18,Centro,João Pereira
+2024-09-23,Romance Bestseller,Livros,9,52.25,Norte,Maria Oliveira
+2024-09-23,Livro de Negócios,Livros,3,68.74,Centro,Carlos Santos
+2024-09-24,Camiseta Básica,Roupas,2,50.74,Sul,Ricardo Almeida
+2024-09-24,Vinho Tinto,Alimentos,6,81.63,Sul,Ana Silva
+2024-09-24,Camiseta Básica,Roupas,6,48.47,Centro,Ricardo Almeida
+2024-09-25,Notebook Dell,Eletrônicos,1,2703.89,Norte,Ricardo Almeida
+2024-09-25,Azeite Extra Virgem,Alimentos,7,42.32,Leste,Ricardo Almeida
+2024-09-25,Chocolate Importado,Alimentos,3,25.92,Leste,Fernanda Lima
+2024-09-25,Jogo de Panelas,Casa,6,286.95,Leste,Fernanda Lima
+2024-09-26,Livro de Negócios,Livros,7,71.4,Leste,Carlos Santos
+2024-09-27,Romance Bestseller,Livros,3,46.78,Norte,Patricia Costa
+2024-09-27,Livro de Negócios,Livros,2,60.67,Norte,Fernanda Lima
+2024-09-27,Calça Jeans,Roupas,5,160.36,Oeste,Patricia Costa
+2024-09-27,Azeite Extra Virgem,Alimentos,8,43.07,Sul,Patricia Costa
+2024-09-28,Livro de Negócios,Livros,8,69.56,Sul,João Pereira
+2024-09-28,Teclado Mecânico,Eletrônicos,4,384.01,Oeste,Fernanda Lima
+2024-09-28,Fone de Ouvido Bluetooth,Eletrônicos,8,205.91,Oeste,Maria Oliveira
+2024-09-29,Camiseta Básica,Roupas,4,54.4,Norte,Maria Oliveira
+2024-09-29,Vinho Tinto,Alimentos,4,88.6,Sul,Maria Oliveira
+2024-09-29,Fone de Ouvido Bluetooth,Eletrônicos,2,211.23,Norte,Patricia Costa
+2024-09-30,Café Premium 500g,Alimentos,4,32.29,Leste,Ricardo Almeida
+2024-09-30,Webcam HD,Eletrônicos,9,276.55,Leste,Ricardo Almeida
+2024-10-01,Café Premium 500g,Alimentos,8,34.95,Leste,Ricardo Almeida
+2024-10-01,Jaqueta de Couro,Roupas,7,502.89,Oeste,Maria Oliveira
+2024-10-01,Azeite Extra Virgem,Alimentos,3,48.2,Centro,Ricardo Almeida
+2024-10-01,Azeite Extra Virgem,Alimentos,5,47.03,Centro,Maria Oliveira
+2024-10-01,Liquidificador,Casa,6,210.89,Sul,João Pereira
+2024-10-02,Notebook Dell,Eletrônicos,10,2628.08,Leste,João Pereira
+2024-10-02,Notebook Dell,Eletrônicos,6,2698.71,Oeste,João Pereira
+2024-10-02,Jogo de Panelas,Casa,4,275.71,Norte,Ana Silva
+2024-10-02,Romance Bestseller,Livros,9,47.95,Centro,Ricardo Almeida
+2024-10-02,Livro de Negócios,Livros,4,62.41,Oeste,Fernanda Lima
+2024-10-02,Fone de Ouvido Bluetooth,Eletrônicos,8,204.84,Norte,Ricardo Almeida
+2024-10-02,Jogo de Panelas,Casa,8,283.93,Oeste,Paulo Rodrigues
+2024-10-03,Livro de Negócios,Livros,6,63.83,Sul,João Pereira
+2024-10-04,Livro de Negócios,Livros,8,59.56,Sul,Paulo Rodrigues
+2024-10-04,Livro de Negócios,Livros,7,64.41,Oeste,João Pereira
+2024-10-05,Liquidificador,Casa,8,185.23,Sul,Fernanda Lima
+2024-10-05,Livro de Python,Livros,3,82.61,Sul,Ricardo Almeida
+2024-10-05,Aspirador de Pó,Casa,4,373.54,Sul,Patricia Costa
+2024-10-06,Aspirador de Pó,Casa,6,435.31,Oeste,Ana Silva
+2024-10-06,Tênis Esportivo,Roupas,4,299.23,Centro,João Pereira
+2024-10-06,Jaqueta de Couro,Roupas,4,496.25,Centro,Paulo Rodrigues
+2024-10-06,Aspirador de Pó,Casa,1,360.43,Oeste,João Pereira
+2024-10-06,Café Premium 500g,Alimentos,5,30.09,Leste,Paulo Rodrigues
+2024-10-06,Livro de Negócios,Livros,2,58.65,Centro,Ricardo Almeida
+2024-10-06,Café Premium 500g,Alimentos,6,31.69,Oeste,João Pereira
+2024-10-07,Livro de Python,Livros,10,85.69,Oeste,João Pereira
+2024-10-07,Camiseta Básica,Roupas,9,44.97,Sul,Patricia Costa
+2024-10-07,Jogo de Panelas,Casa,7,276.55,Oeste,João Pereira
+2024-10-07,Vinho Tinto,Alimentos,6,82.73,Oeste,Ricardo Almeida
+2024-10-07,Vinho Tinto,Alimentos,2,90.16,Norte,João Pereira
+2024-10-08,Webcam HD,Eletrônicos,1,303.16,Sul,Ricardo Almeida
+2024-10-08,Jogo de Toalhas,Casa,1,95.86,Leste,Maria Oliveira
+2024-10-08,Chocolate Importado,Alimentos,4,25.44,Leste,Ricardo Almeida
+2024-10-09,Teclado Mecânico,Eletrônicos,3,325.86,Sul,Ana Silva
+2024-10-09,Webcam HD,Eletrônicos,5,277.24,Sul,Carlos Santos
+2024-10-09,Azeite Extra Virgem,Alimentos,3,47.8,Centro,Ricardo Almeida
+2024-10-10,Jaqueta de Couro,Roupas,10,526.9,Oeste,Fernanda Lima
+2024-10-11,Camiseta Básica,Roupas,9,50.35,Oeste,Ana Silva
+2024-10-12,Livro de Python,Livros,8,77.66,Leste,Patricia Costa
+2024-10-12,Romance Bestseller,Livros,10,48.54,Centro,Maria Oliveira
+2024-10-12,Tênis Esportivo,Roupas,5,280.14,Centro,Patricia Costa
+2024-10-13,Camiseta Básica,Roupas,6,51.74,Leste,Ana Silva
+2024-10-14,Jogo de Toalhas,Casa,7,85.94,Oeste,Paulo Rodrigues
+2024-10-14,Fone de Ouvido Bluetooth,Eletrônicos,5,210.2,Centro,Ricardo Almeida
+2024-10-14,Liquidificador,Casa,4,205.56,Leste,Patricia Costa
+2024-10-15,Camiseta Básica,Roupas,9,46.45,Sul,Patricia Costa
+2024-10-15,Calça Jeans,Roupas,1,150.62,Oeste,Fernanda Lima
+2024-10-15,Jogo de Panelas,Casa,8,322.5,Oeste,Ana Silva
+2024-10-16,Vinho Tinto,Alimentos,1,82.58,Sul,Carlos Santos
+2024-10-16,Camiseta Básica,Roupas,10,45.29,Sul,Fernanda Lima
+2024-10-17,Jogo de Toalhas,Casa,9,85.72,Centro,Fernanda Lima
+2024-10-17,Tênis Esportivo,Roupas,7,277.72,Centro,Maria Oliveira
+2024-10-18,Café Premium 500g,Alimentos,9,35.8,Leste,Fernanda Lima
+2024-10-19,Camiseta Básica,Roupas,6,46.83,Sul,Paulo Rodrigues
+2024-10-19,Fone de Ouvido Bluetooth,Eletrônicos,7,186.05,Centro,Fernanda Lima
+2024-10-20,Liquidificador,Casa,9,218.11,Norte,Patricia Costa
+2024-10-20,Tênis Esportivo,Roupas,10,299.7,Centro,Carlos Santos
+2024-10-20,Camiseta Básica,Roupas,3,50.32,Leste,Fernanda Lima
+2024-10-20,Chocolate Importado,Alimentos,5,25.68,Leste,Patricia Costa
+2024-10-20,Jogo de Toalhas,Casa,1,89.96,Norte,João Pereira
+2024-10-20,Liquidificador,Casa,7,212.77,Sul,Ana Silva
+2024-10-21,Liquidificador,Casa,6,195.13,Norte,Carlos Santos
+2024-10-21,Tênis Esportivo,Roupas,1,297.03,Sul,Paulo Rodrigues
+2024-10-21,Webcam HD,Eletrônicos,8,309.83,Norte,Ricardo Almeida
+2024-10-21,Livro de Python,Livros,2,86.48,Leste,João Pereira
+2024-10-22,Chocolate Importado,Alimentos,8,24.24,Sul,Fernanda Lima
+2024-10-22,Chocolate Importado,Alimentos,2,26.7,Centro,Ana Silva
+2024-10-22,Chocolate Importado,Alimentos,9,27.37,Oeste,Paulo Rodrigues
+2024-10-22,Camiseta Básica,Roupas,4,48.39,Oeste,João Pereira
+2024-10-23,Café Premium 500g,Alimentos,7,32.8,Centro,Maria Oliveira
+2024-10-24,Aspirador de Pó,Casa,7,374.17,Leste,Maria Oliveira
+2024-10-24,Vinho Tinto,Alimentos,10,82.11,Centro,Ana Silva
+2024-10-24,Jogo de Toalhas,Casa,8,84.91,Leste,Fernanda Lima
+2024-10-25,Livro de Negócios,Livros,3,67.13,Norte,Carlos Santos
+2024-10-25,Calça Jeans,Roupas,2,149.46,Sul,João Pereira
+2024-10-25,Jaqueta de Couro,Roupas,10,525.99,Norte,Maria Oliveira
+2024-10-25,Café Premium 500g,Alimentos,2,30.6,Leste,Ana Silva
+2024-10-25,Teclado Mecânico,Eletrônicos,7,332.99,Sul,Carlos Santos
+2024-10-25,Livro de Python,Livros,3,85.15,Centro,Ricardo Almeida
+2024-10-25,Livro de Negócios,Livros,8,66.18,Sul,Patricia Costa
+2024-10-26,Azeite Extra Virgem,Alimentos,1,44.35,Centro,Paulo Rodrigues
+2024-10-27,Livro de Python,Livros,1,84.17,Leste,Ana Silva
+2024-10-27,Azeite Extra Virgem,Alimentos,4,41.56,Oeste,Ricardo Almeida
+2024-10-27,Vinho Tinto,Alimentos,3,93.14,Sul,Patricia Costa
+2024-10-27,Romance Bestseller,Livros,10,49.77,Oeste,Fernanda Lima
+2024-10-27,Liquidificador,Casa,3,200.64,Leste,Ana Silva
+2024-10-28,Livro de Python,Livros,6,82.72,Sul,João Pereira
+2024-10-28,Livro de Python,Livros,2,72.81,Centro,Maria Oliveira
+2024-10-28,Livro de Negócios,Livros,5,65.96,Leste,Maria Oliveira
+2024-10-28,Jaqueta de Couro,Roupas,10,521.99,Oeste,Patricia Costa
+2024-10-28,Camiseta Básica,Roupas,5,51.9,Sul,Ana Silva
+2024-10-28,Jaqueta de Couro,Roupas,10,462.9,Leste,Paulo Rodrigues
+2024-10-29,Notebook Dell,Eletrônicos,3,2933.22,Leste,João Pereira
+2024-10-29,Notebook Dell,Eletrônicos,1,3016.58,Centro,Ana Silva
+2024-10-29,Romance Bestseller,Livros,6,51.67,Sul,Ricardo Almeida
+2024-10-29,Vinho Tinto,Alimentos,5,91.94,Sul,Patricia Costa
+2024-10-29,Vinho Tinto,Alimentos,3,92.42,Oeste,Maria Oliveira
+2024-10-30,Tênis Esportivo,Roupas,6,292.97,Sul,Fernanda Lima
+2024-10-31,Jogo de Toalhas,Casa,8,93.2,Oeste,Paulo Rodrigues
+2024-10-31,Camiseta Básica,Roupas,8,47.6,Sul,Carlos Santos
+2024-10-31,Liquidificador,Casa,7,216.3,Sul,João Pereira
+2024-11-01,Fone de Ouvido Bluetooth,Eletrônicos,10,216.72,Sul,João Pereira
+2024-11-02,Liquidificador,Casa,10,214.57,Sul,Paulo Rodrigues
+2024-11-02,Café Premium 500g,Alimentos,8,30.69,Oeste,Ricardo Almeida
+2024-11-02,Aspirador de Pó,Casa,8,409.86,Oeste,Ana Silva
+2024-11-02,Mouse Logitech,Eletrônicos,2,93.94,Oeste,Paulo Rodrigues
+2024-11-03,Jogo de Panelas,Casa,9,314.51,Oeste,Ricardo Almeida
+2024-11-03,Calça Jeans,Roupas,1,149.46,Oeste,Fernanda Lima
+2024-11-04,Fone de Ouvido Bluetooth,Eletrônicos,4,214.72,Leste,Maria Oliveira
+2024-11-04,Livro de Negócios,Livros,10,66.49,Centro,Maria Oliveira
+2024-11-05,Teclado Mecânico,Eletrônicos,7,357.42,Oeste,Maria Oliveira
+2024-11-05,Livro de Python,Livros,10,83.77,Centro,João Pereira
+2024-11-05,Romance Bestseller,Livros,7,54.06,Leste,Carlos Santos
+2024-11-06,Camiseta Básica,Roupas,9,51.51,Oeste,João Pereira
+2024-11-07,Romance Bestseller,Livros,1,51.7,Oeste,Carlos Santos
+2024-11-07,Liquidificador,Casa,5,184.83,Norte,Fernanda Lima
+2024-11-07,Café Premium 500g,Alimentos,8,35.31,Leste,Ana Silva
+2024-11-07,Jogo de Toalhas,Casa,8,91.68,Sul,Maria Oliveira
+2024-11-08,Jaqueta de Couro,Roupas,7,543.04,Leste,Ana Silva
+2024-11-08,Webcam HD,Eletrônicos,3,314.03,Leste,Ricardo Almeida
+2024-11-09,Jaqueta de Couro,Roupas,4,481.79,Oeste,Patricia Costa
+2024-11-09,Tênis Esportivo,Roupas,5,309.31,Centro,Fernanda Lima
+2024-11-09,Fone de Ouvido Bluetooth,Eletrônicos,7,217.96,Sul,Patricia Costa
+2024-11-09,Notebook Dell,Eletrônicos,9,2575.05,Centro,Paulo Rodrigues
+2024-11-10,Tênis Esportivo,Roupas,10,285.7,Oeste,Carlos Santos
+2024-11-10,Fone de Ouvido Bluetooth,Eletrônicos,2,216.08,Leste,Carlos Santos
+2024-11-10,Notebook Dell,Eletrônicos,1,3031.41,Leste,Ana Silva
+2024-11-10,Liquidificador,Casa,6,194.85,Sul,João Pereira
+2024-11-10,Webcam HD,Eletrônicos,6,300.65,Sul,João Pereira
+2024-11-10,Teclado Mecânico,Eletrônicos,8,382.56,Sul,Carlos Santos
+2024-11-11,Teclado Mecânico,Eletrônicos,10,338.08,Oeste,João Pereira
+2024-11-11,Fone de Ouvido Bluetooth,Eletrônicos,4,210.57,Leste,Ricardo Almeida
+2024-11-11,Jogo de Panelas,Casa,2,326.72,Leste,João Pereira
+2024-11-11,Camiseta Básica,Roupas,5,49.79,Norte,Maria Oliveira
+2024-11-11,Fone de Ouvido Bluetooth,Eletrônicos,1,192.71,Oeste,Ricardo Almeida
+2024-11-12,Chocolate Importado,Alimentos,3,27.78,Sul,Patricia Costa
+2024-11-13,Notebook Dell,Eletrônicos,5,2885.65,Oeste,Paulo Rodrigues
+2024-11-13,Chocolate Importado,Alimentos,9,25.4,Centro,Carlos Santos
+2024-11-14,Azeite Extra Virgem,Alimentos,10,43.28,Leste,Ana Silva
+2024-11-14,Livro de Negócios,Livros,6,62.82,Centro,Carlos Santos
+2024-11-14,Jaqueta de Couro,Roupas,7,519.17,Oeste,Ana Silva
+2024-11-14,Notebook Dell,Eletrônicos,2,2751.78,Sul,Fernanda Lima
+2024-11-15,Livro de Negócios,Livros,6,64.53,Sul,Ricardo Almeida
+2024-11-15,Teclado Mecânico,Eletrônicos,10,371.39,Oeste,Fernanda Lima
+2024-11-16,Jaqueta de Couro,Roupas,8,524.1,Centro,Ana Silva
+2024-11-16,Jaqueta de Couro,Roupas,6,481.29,Centro,Patricia Costa
+2024-11-16,Livro de Negócios,Livros,6,61.07,Centro,Patricia Costa
+2024-11-16,Fone de Ouvido Bluetooth,Eletrônicos,5,214.89,Oeste,Paulo Rodrigues
+2024-11-16,Camiseta Básica,Roupas,2,49.5,Sul,Patricia Costa
+2024-11-17,Livro de Negócios,Livros,10,67.27,Oeste,Carlos Santos
+2024-11-17,Webcam HD,Eletrônicos,5,293.14,Leste,Patricia Costa
+2024-11-17,Livro de Negócios,Livros,10,61.87,Centro,Maria Oliveira
+2024-11-18,Camiseta Básica,Roupas,2,46.54,Oeste,Fernanda Lima
+2024-11-19,Vinho Tinto,Alimentos,8,88.33,Norte,Fernanda Lima
+2024-11-19,Café Premium 500g,Alimentos,6,33.46,Centro,João Pereira
+2024-11-19,Mouse Logitech,Eletrônicos,9,93.3,Norte,Maria Oliveira
+2024-11-19,Jogo de Toalhas,Casa,4,85.14,Sul,Ana Silva
+2024-11-20,Vinho Tinto,Alimentos,1,86.99,Oeste,Ana Silva
+2024-11-20,Jogo de Toalhas,Casa,7,81.97,Oeste,Fernanda Lima
+2024-11-21,Camiseta Básica,Roupas,3,50.2,Sul,Maria Oliveira
+2024-11-21,Camiseta Básica,Roupas,8,49.46,Oeste,João Pereira
+2024-11-21,Liquidificador,Casa,2,215.3,Leste,Carlos Santos
+2024-11-21,Calça Jeans,Roupas,8,150.46,Leste,Patricia Costa
+2024-11-22,Camiseta Básica,Roupas,6,45.16,Sul,Paulo Rodrigues
+2024-11-22,Fone de Ouvido Bluetooth,Eletrônicos,2,208.15,Sul,Ana Silva
+2024-11-22,Aspirador de Pó,Casa,6,404.66,Sul,Paulo Rodrigues
+2024-11-22,Chocolate Importado,Alimentos,5,25.47,Norte,Ana Silva
+2024-11-22,Liquidificador,Casa,6,188.02,Sul,Carlos Santos
+2024-11-23,Livro de Negócios,Livros,9,68.55,Centro,Paulo Rodrigues
+2024-11-23,Vinho Tinto,Alimentos,2,98.6,Centro,João Pereira
+2024-11-23,Chocolate Importado,Alimentos,1,23.68,Sul,Patricia Costa
+2024-11-23,Liquidificador,Casa,9,191.27,Leste,Ricardo Almeida
+2024-11-23,Notebook Dell,Eletrônicos,7,2807.88,Centro,Ricardo Almeida
+2024-11-23,Chocolate Importado,Alimentos,8,26.31,Leste,Ricardo Almeida
+2024-11-23,Chocolate Importado,Alimentos,10,23.59,Norte,Ana Silva
+2024-11-24,Liquidificador,Casa,4,200.89,Oeste,Ricardo Almeida
+2024-11-24,Fone de Ouvido Bluetooth,Eletrônicos,8,197.9,Centro,Ricardo Almeida
+2024-11-24,Café Premium 500g,Alimentos,3,31.11,Oeste,Maria Oliveira
+2024-11-24,Azeite Extra Virgem,Alimentos,3,49.11,Centro,Paulo Rodrigues
+2024-11-25,Café Premium 500g,Alimentos,2,35.7,Leste,Ricardo Almeida
+2024-11-25,Mouse Logitech,Eletrônicos,8,90.19,Sul,Patricia Costa
+2024-11-25,Camiseta Básica,Roupas,10,54.4,Oeste,Ricardo Almeida
+2024-11-25,Jogo de Toalhas,Casa,8,92.87,Centro,João Pereira
+2024-11-26,Notebook Dell,Eletrônicos,5,3054.87,Leste,Patricia Costa
+2024-11-26,Azeite Extra Virgem,Alimentos,10,49.1,Centro,Fernanda Lima
+2024-11-26,Jaqueta de Couro,Roupas,10,490.35,Norte,Maria Oliveira
+2024-11-27,Calça Jeans,Roupas,5,170.66,Oeste,Ricardo Almeida
+2024-11-27,Vinho Tinto,Alimentos,9,84.8,Sul,Fernanda Lima
+2024-11-28,Vinho Tinto,Alimentos,3,89.46,Sul,Ricardo Almeida
+2024-11-29,Camiseta Básica,Roupas,2,53.68,Leste,Paulo Rodrigues
+2024-11-29,Café Premium 500g,Alimentos,1,35.8,Centro,Fernanda Lima
+2024-11-29,Jogo de Toalhas,Casa,1,97.99,Norte,Patricia Costa
+2024-11-30,Liquidificador,Casa,1,188.1,Norte,Ana Silva
+2024-11-30,Camiseta Básica,Roupas,6,53.52,Norte,Patricia Costa
+2024-11-30,Aspirador de Pó,Casa,10,408.43,Oeste,Maria Oliveira
+2024-11-30,Camiseta Básica,Roupas,2,47.32,Sul,Ricardo Almeida
+2024-12-01,Webcam HD,Eletrônicos,7,320.6,Oeste,Carlos Santos
+2024-12-02,Azeite Extra Virgem,Alimentos,4,49.29,Centro,João Pereira
+2024-12-02,Aspirador de Pó,Casa,8,364.99,Leste,Patricia Costa
+2024-12-03,Teclado Mecânico,Eletrônicos,9,355.51,Oeste,Carlos Santos
+2024-12-03,Livro de Negócios,Livros,5,68.69,Norte,Ana Silva
+2024-12-03,Jaqueta de Couro,Roupas,10,533.01,Sul,Carlos Santos
+2024-12-03,Liquidificador,Casa,4,191.14,Centro,Paulo Rodrigues
+2024-12-03,Tênis Esportivo,Roupas,9,290.33,Centro,Carlos Santos
+2024-12-04,Jogo de Panelas,Casa,8,305.79,Norte,João Pereira
+2024-12-04,Mouse Logitech,Eletrônicos,6,88.19,Oeste,Maria Oliveira
+2024-12-05,Aspirador de Pó,Casa,10,404.32,Sul,Paulo Rodrigues
+2024-12-05,Mouse Logitech,Eletrônicos,10,82.32,Oeste,Maria Oliveira
+2024-12-06,Camiseta Básica,Roupas,9,53.34,Oeste,Patricia Costa
+2024-12-06,Azeite Extra Virgem,Alimentos,1,45.14,Sul,Ana Silva
+2024-12-07,Jogo de Panelas,Casa,5,314.51,Oeste,Carlos Santos
+2024-12-07,Teclado Mecânico,Eletrônicos,5,373.47,Sul,Ana Silva
+2024-12-07,Azeite Extra Virgem,Alimentos,7,43.44,Centro,Maria Oliveira
+2024-12-07,Romance Bestseller,Livros,8,51.32,Sul,Patricia Costa
+2024-12-08,Camiseta Básica,Roupas,2,54.18,Oeste,Ricardo Almeida
+2024-12-08,Jogo de Panelas,Casa,7,303.9,Leste,Carlos Santos
+2024-12-08,Webcam HD,Eletrônicos,1,275.7,Oeste,Fernanda Lima
+2024-12-08,Azeite Extra Virgem,Alimentos,3,41.85,Leste,Ricardo Almeida
+2024-12-09,Azeite Extra Virgem,Alimentos,2,46.49,Norte,Paulo Rodrigues
+2024-12-09,Aspirador de Pó,Casa,2,393.52,Centro,Patricia Costa
+2024-12-09,Calça Jeans,Roupas,8,153.19,Centro,Ana Silva
+2024-12-10,Jaqueta de Couro,Roupas,4,526.94,Leste,Ricardo Almeida
+2024-12-11,Webcam HD,Eletrônicos,7,291.65,Norte,Paulo Rodrigues
+2024-12-12,Jaqueta de Couro,Roupas,10,497.88,Norte,Carlos Santos
+2024-12-12,Webcam HD,Eletrônicos,3,307.99,Centro,João Pereira
+2024-12-12,Fone de Ouvido Bluetooth,Eletrônicos,2,183.63,Sul,Carlos Santos
+2024-12-12,Jogo de Panelas,Casa,5,306.92,Sul,Ricardo Almeida
+2024-12-13,Café Premium 500g,Alimentos,1,34.62,Norte,Paulo Rodrigues
+2024-12-13,Livro de Negócios,Livros,3,64.03,Norte,Fernanda Lima
+2024-12-13,Webcam HD,Eletrônicos,2,304.75,Leste,Paulo Rodrigues
+2024-12-14,Livro de Python,Livros,2,82.66,Centro,Paulo Rodrigues
+2024-12-14,Aspirador de Pó,Casa,6,434.02,Leste,Maria Oliveira
+2024-12-14,Mouse Logitech,Eletrônicos,1,95.65,Sul,Ana Silva
+2024-12-15,Livro de Python,Livros,1,73.89,Oeste,Paulo Rodrigues
+2024-12-15,Tênis Esportivo,Roupas,8,315.1,Centro,Fernanda Lima
+2024-12-15,Chocolate Importado,Alimentos,4,23.66,Norte,Patricia Costa
+2024-12-16,Calça Jeans,Roupas,1,165.97,Norte,Paulo Rodrigues
+2024-12-16,Jogo de Toalhas,Casa,1,89.79,Sul,Ricardo Almeida
+2024-12-17,Vinho Tinto,Alimentos,1,98.5,Oeste,Patricia Costa
+2024-12-18,Webcam HD,Eletrônicos,4,305.71,Leste,Ricardo Almeida
+2024-12-18,Azeite Extra Virgem,Alimentos,8,40.96,Norte,Fernanda Lima
+2024-12-18,Jaqueta de Couro,Roupas,1,455.4,Sul,Patricia Costa
+2024-12-19,Liquidificador,Casa,10,208.84,Oeste,Fernanda Lima
+2024-12-19,Romance Bestseller,Livros,6,51.84,Leste,Ana Silva
+2024-12-19,Teclado Mecânico,Eletrônicos,1,338.79,Centro,Maria Oliveira
+2024-12-19,Liquidificador,Casa,6,192.3,Centro,João Pereira
+2024-12-20,Vinho Tinto,Alimentos,2,90.46,Oeste,Ricardo Almeida
+2024-12-20,Notebook Dell,Eletrônicos,2,2835.87,Norte,Paulo Rodrigues
+2024-12-20,Livro de Negócios,Livros,5,69.44,Norte,Ana Silva
+2024-12-20,Jogo de Toalhas,Casa,5,87.03,Sul,João Pereira
+2024-12-21,Azeite Extra Virgem,Alimentos,6,41.62,Oeste,Ana Silva
+2024-12-21,Tênis Esportivo,Roupas,7,290.24,Oeste,Ricardo Almeida
+2024-12-21,Fone de Ouvido Bluetooth,Eletrônicos,10,193.81,Norte,Patricia Costa
+2024-12-21,Café Premium 500g,Alimentos,4,32.49,Norte,Maria Oliveira
+2024-12-22,Aspirador de Pó,Casa,6,402.93,Sul,Paulo Rodrigues
+2024-12-22,Café Premium 500g,Alimentos,1,30.89,Centro,Ana Silva
+2024-12-22,Romance Bestseller,Livros,4,48.28,Centro,Ricardo Almeida
+2024-12-23,Livro de Python,Livros,9,76.93,Oeste,João Pereira
+2024-12-24,Azeite Extra Virgem,Alimentos,7,41.37,Centro,Maria Oliveira
+2024-12-25,Livro de Negócios,Livros,1,65.83,Centro,Ana Silva
+2024-12-25,Mouse Logitech,Eletrônicos,1,92.31,Leste,Paulo Rodrigues
+2024-12-27,Liquidificador,Casa,5,190.67,Sul,Fernanda Lima
+2024-12-27,Fone de Ouvido Bluetooth,Eletrônicos,10,184.23,Oeste,Ricardo Almeida
+2024-12-27,Tênis Esportivo,Roupas,6,313.95,Sul,Maria Oliveira
+2024-12-28,Mouse Logitech,Eletrônicos,2,89.42,Leste,Paulo Rodrigues
+2024-12-28,Jaqueta de Couro,Roupas,2,495.5,Sul,Ricardo Almeida
+2024-12-31,Jogo de Toalhas,Casa,5,89.55,Norte,João Pereira
+2024-12-31,Chocolate Importado,Alimentos,3,27.68,Norte,Maria Oliveira
+2024-12-31,Notebook Dell,Eletrônicos,1,2836.63,Leste,Paulo Rodrigues
+2024-12-31,Tênis Esportivo,Roupas,3,315.65,Centro,Maria Oliveira
+2024-12-31,Liquidificador,Casa,6,192.18,Leste,Ricardo Almeida
+2024-12-31,Chocolate Importado,Alimentos,10,27.52,Leste,João Pereira

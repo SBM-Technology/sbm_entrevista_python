@@ -1,0 +1,21 @@
+produto,categoria,custo_unitario,data_atualizacao
+Notebook Dell,Eletrônicos,2200.0,2024-01-01
+Mouse Logitech,Eletrônicos,45.0,2024-01-01
+Teclado Mecânico,Eletrônicos,180.0,2024-01-01
+Fone de Ouvido Bluetooth,Eletrônicos,120.0,2024-01-01
+Webcam HD,Eletrônicos,150.0,2024-01-01
+Camiseta Básica,Roupas,25.0,2024-01-01
+Calça Jeans,Roupas,80.0,2024-01-01
+Tênis Esportivo,Roupas,150.0,2024-01-01
+Jaqueta de Couro,Roupas,250.0,2024-01-01
+Café Premium 500g,Alimentos,18.0,2024-01-01
+Chocolate Importado,Alimentos,12.0,2024-01-01
+Azeite Extra Virgem,Alimentos,22.0,2024-01-01
+Vinho Tinto,Alimentos,45.0,2024-01-01
+Livro de Python,Livros,40.0,2024-01-01
+Romance Bestseller,Livros,25.0,2024-01-01
+Livro de Negócios,Livros,32.0,2024-01-01
+Jogo de Panelas,Casa,150.0,2024-01-01
+Aspirador de Pó,Casa,200.0,2024-01-01
+Liquidificador,Casa,100.0,2024-01-01
+Jogo de Toalhas,Casa,45.0,2024-01-01

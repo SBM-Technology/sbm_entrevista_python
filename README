@@ -1,0 +1,439 @@
+# Teste Python - Nível Pleno (Flask + Dashboard + Dados)
+
+## Objetivo
+Avaliar competências técnicas de desenvolvedor Python Pleno com foco em Flask, criação de dashboards, visualização de dados, tratamento de dados e coleta de informações.
+
+---
+
+## Cenários Propostos para Discussão
+
+### 🎯 Cenário 1: Dashboard de Vendas com Coleta e Visualização
+**Objetivo:** Avaliar conhecimento completo em Flask, coleta de dados, processamento e visualização.
+
+**Descrição:**
+Desenvolver um dashboard web que:
+- **Coleta de dados:**
+  - Upload de planilhas CSV/Excel com dados de vendas
+  - Integração com API externa (ex: API pública de dados de vendas ou mock)
+  - Formulário para inserção manual de vendas
+- **Tratamento de dados:**
+  - Processamento e limpeza dos dados coletados
+  - Validação de dados (campos obrigatórios, tipos, consistência)
+  - Agregações (vendas por período, por produto, por vendedor)
+  - Cálculo de métricas (total, média, crescimento)
+- **Visualização:**
+  - Dashboard com múltiplos gráficos (Chart.js, Plotly ou similar)
+  - Gráfico de linhas: evolução de vendas ao longo do tempo
+  - Gráfico de barras: vendas por produto/categoria
+  - Gráfico de pizza: distribuição por região
+  - Tabela interativa com filtros e ordenação
+  - Cards com KPI's principais (total vendas, ticket médio, etc.)
+- **Funcionalidades:**
+  - Filtros por período (data inicial/final)
+  - Exportação de relatórios (PDF ou CSV)
+  - Histórico de uploads de arquivos
+  - Armazenamento em banco de dados (SQLite ou PostgreSQL)
+
+**Pontos de avaliação:**
+- Estruturação do projeto Flask (blueprints, templates, static)
+- Processamento eficiente de dados (pandas, agregações)
+- Manipulação de arquivos (CSV, Excel)
+- Integração com APIs externas (requests)
+- Validação e tratamento de erros
+- Criação de visualizações interativas
+- Queries otimizadas no banco
+- Interface responsiva e intuitiva
+- Performance no processamento de grandes volumes
+
+**Complexidade:** Média-Alta
+
+**Tecnologias esperadas:**
+- Flask, SQLAlchemy, pandas
+- Chart.js ou Plotly.js (client-side) ou Plotly Python (server-side)
+- openpyxl ou pandas para Excel
+- Jinja2 templates
+
+---
+
+### 🎯 Cenário 2: Sistema de Monitoramento de Indicadores com Web Scraping
+**Objetivo:** Avaliar web scraping, tratamento de dados não estruturados e dashboards em tempo real.
+
+**Descrição:**
+Sistema que monitora e exibe indicadores coletados automaticamente:
+- **Coleta de dados:**
+  - Web scraping de sites públicos (ex: preços de produtos, cotações, clima)
+  - Agendamento de coletas (APScheduler ou Celery Beat)
+  - Múltiplas fontes de dados simultâneas
+  - API REST para coleta manual via endpoint
+- **Tratamento:**
+  - Parsing de HTML/XML (BeautifulSoup, lxml)
+  - Normalização de dados de diferentes fontes
+  - Detecção de mudanças significativas (alertas)
+  - Limpeza de dados malformados
+- **Visualização:**
+  - Dashboard em tempo real (atualização automática)
+  - Gráfico de séries temporais mostrando evolução
+  - Comparação entre diferentes fontes
+  - Alertas visuais quando valores excedem limites
+  - Tabela de histórico com timestamps
+  - Gráfico de tendência (regressão simples)
+- **Funcionalidades:**
+  - Configuração de fontes de dados via interface
+  - Logs de coletas (sucesso/falha)
+  - Sistema de alertas por e-mail (opcional)
+  - Exportação de dados coletados
+
+**Pontos de avaliação:**
+- Web scraping eficiente e ético (headers, delays)
+- Tratamento de HTML malformado
+- Agendamento de tarefas
+- Processamento assíncrono (quando necessário)
+- Armazenamento de dados temporais
+- Visualizações em tempo real (WebSockets ou polling)
+- Tratamento de exceções em scraping
+- Rate limiting e respeito a robots.txt
+
+**Complexidade:** Alta
+
+**Tecnologias esperadas:**
+- Flask, SQLAlchemy
+- BeautifulSoup4, requests, selenium (se necessário)
+- APScheduler ou Celery
+- Chart.js, Plotly ou D3.js
+- Flask-SocketIO (opcional, para real-time)
+
+---
+
+### 🎯 Cenário 3: Dashboard Analítico com Múltiplas Fontes de Dados
+**Objetivo:** Avaliar ETL completo, integração de múltiplas fontes e análise de dados complexa.
+
+**Descrição:**
+Dashboard que integra e analisa dados de diferentes origens:
+- **Coleta:**
+  - Importação de arquivos (CSV, JSON, Excel)
+  - Integração com API REST externa
+  - Conexão com banco de dados externo (read-only)
+  - Formulário web para entrada de dados
+- **Tratamento e Análise:**
+  - Join/integração de dados de múltiplas fontes
+  - Normalização e padronização
+  - Cálculo de métricas avançadas (correlações, médias móveis)
+  - Análise estatística básica (desvio padrão, quartis)
+  - Agregações complexas (group by múltiplos campos)
+- **Visualização:**
+  - Painel com múltiplos gráficos correlacionados
+  - Heatmap de correlações
+  - Gráfico de dispersão com múltiplas dimensões
+  - Treemap para hierarquias
+  - Filtros interativos que atualizam todos os gráficos
+  - Drill-down (clicar em gráfico para detalhar)
+- **Funcionalidades:**
+  - Configuração de conexões de dados
+  - Cache de resultados de análises pesadas
+  - Agendamento de atualizações automáticas
+  - Comparação de períodos (mês anterior, ano anterior)
+  - Relatórios comparativos (PDF)
+
+**Pontos de avaliação:**
+- Arquitetura de ETL bem estruturada
+- Manipulação eficiente de grandes volumes
+- Join e merge de datasets
+- Análise estatística (pandas, numpy)
+- Performance em queries complexas
+- Cache e otimização
+- Interface interativa e responsiva
+- Tratamento de dados inconsistentes
+- Documentação de transformações
+
+**Complexidade:** Alta
+
+**Tecnologias esperadas:**
+- Flask, SQLAlchemy
+- pandas, numpy
+- Plotly (Dash ou integração)
+- Redis ou Flask-Caching (cache)
+- scipy (análise estatística, opcional)
+
+---
+
+### 🎯 Cenário 4: Plataforma de Análise de Dados de Tráfego Web
+**Objetivo:** Avaliar processamento de logs, análise de comportamento e dashboards interativos.
+
+**Descrição:**
+Sistema para análise de logs de acesso web:
+- **Coleta:**
+  - Upload de arquivos de log (Apache, Nginx ou formato customizado)
+  - API para receber logs em tempo real (webhook)
+  - Parsing de diferentes formatos de log
+- **Tratamento:**
+  - Parsing e estruturação de logs não estruturados
+  - Extração de métricas (IP, user-agent, status code, path, timestamp)
+  - Identificação de padrões (picos de tráfego, erros)
+  - Detecção de anomalias básicas
+  - Agregação por períodos (hora, dia, semana)
+- **Visualização:**
+  - Dashboard com métricas principais (requisições/minuto, status codes)
+  - Gráfico de linhas: tráfego ao longo do tempo
+  - Gráfico de barras: páginas mais acessadas (top 10)
+  - Mapa de calor temporal (heatmap por hora do dia)
+  - Distribuição geográfica (se houver dados de IP/geolocalização)
+  - Gráfico de status codes (4xx, 5xx)
+  - Filtros por IP, path, status code
+- **Funcionalidades:**
+  - Busca avançada nos logs
+  - Exportação de análises
+  - Alertas para picos de erro
+  - Comparação entre períodos
+  - Retenção configurável de histórico
+
+**Pontos de avaliação:**
+- Parsing eficiente de arquivos grandes
+- Regex e parsing de strings complexas
+- Processamento streaming (para logs grandes)
+- Agregações temporais
+- Visualizações apropriadas para dados temporais
+- Performance com grandes volumes
+- Tratamento de logs malformados
+- Análise de padrões
+
+**Complexidade:** Média-Alta
+
+**Tecnologias esperadas:**
+- Flask, SQLAlchemy
+- pandas para processamento
+- Regex (re module)
+- Chart.js ou Plotly
+- Geopy (opcional, para geolocalização)
+
+---
+
+### 🎯 Cenário 5: Dashboard de Métricas de Produto com Formulários Dinâmicos
+**Objetivo:** Avaliar coleta via formulários complexos, validação avançada e visualizações contextuais.
+
+**Descrição:**
+Sistema para coletar e visualizar métricas de produto/serviço:
+- **Coleta:**
+  - Formulários dinâmicos (campos aparecem condicionalmente)
+  - Upload de arquivos com dados estruturados
+  - Importação de CSV com múltiplos formatos
+  - API para integração externa
+  - Validações complexas (regras de negócio)
+- **Tratamento:**
+  - Enriquecimento de dados (lookups, cálculos derivados)
+  - Validação cruzada entre campos
+  - Normalização de unidades (moedas, datas, medidas)
+  - Deduplicação de registros
+  - Cálculo de índices e scores compostos
+- **Visualização:**
+  - Dashboard executivo (visão geral com KPIs)
+  - Gráficos interativos com tooltips detalhados
+  - Comparação de múltiplas séries no mesmo gráfico
+  - Dashboard responsivo (mobile-friendly)
+  - Exportação de gráficos como imagens
+  - Filtros avançados (múltipla seleção, ranges)
+- **Funcionalidades:**
+  - Formulários multi-step
+  - Autocomplete em campos
+  - Validação client-side e server-side
+  - Histórico de alterações (auditoria)
+  - Compartilhamento de dashboards (links com filtros salvos)
+  - Agendamento de relatórios automáticos
+
+**Pontos de avaliação:**
+- Formulários dinâmicos e validação complexa
+- Processamento de diferentes formatos de entrada
+- Cálculos e transformações de dados
+- Visualizações contextualmente apropriadas
+- UX/UI bem pensada
+- Performance em formulários complexos
+- Segurança (XSS, CSRF)
+- Auditoria e rastreabilidade
+
+**Complexidade:** Média-Alta
+
+**Tecnologias esperadas:**
+- Flask, SQLAlchemy
+- WTForms ou Flask-WTF
+- pandas
+- Chart.js ou Plotly
+- JavaScript vanilla ou jQuery (para interatividade)
+
+---
+
+### 🎯 Cenário 6: Dashboard de Coleta e Análise de Feedback/Reviews
+**Objetivo:** Avaliar coleta de dados de texto, análise de sentimento básica e visualização de dados qualitativos.
+
+**Descrição:**
+Plataforma para coletar e analisar feedback de clientes:
+- **Coleta:**
+  - Web scraping de reviews de sites (ex: Google Reviews, App Store)
+  - API para receber feedback
+  - Formulário de pesquisa/NPS
+  - Importação de CSV com reviews
+- **Tratamento:**
+  - Análise de sentimento básica (polaridade positiva/negativa/neutra)
+  - Extração de palavras-chave/tópicos principais
+  - Categorização automática (se possível)
+  - Contagem de menções
+  - Filtragem de spam/ruído
+- **Visualização:**
+  - Gráfico de sentimento ao longo do tempo
+  - Word cloud (nuvem de palavras)
+  - Distribuição de sentimentos (pie chart)
+  - Gráfico de barras: tópicos mais mencionados
+  - Tabela de reviews com filtros e busca
+  - Score de NPS visual (gauge chart)
+- **Funcionalidades:**
+  - Filtros por período, sentimento, categoria
+  - Exportação de análises
+  - Alertas para picos de feedback negativo
+  - Comparação de períodos
+  - Busca textual nos reviews
+
+**Pontos de avaliação:**
+- Web scraping ético
+- Processamento de texto (NLP básico)
+- Análise de sentimento (TextBlob, VADER ou similar)
+- Visualização de dados qualitativos
+- Performance em grandes volumes de texto
+- Tratamento de diferentes idiomas (opcional)
+- Limpeza de texto (remover HTML, normalizar)
+
+**Complexidade:** Média-Alta
+
+**Tecnologias esperadas:**
+- Flask, SQLAlchemy
+- BeautifulSoup4, requests
+- TextBlob, VADER ou NLTK (análise de sentimento)
+- wordcloud (biblioteca Python)
+- Chart.js ou Plotly
+
+---
+
+## 🔧 Stack Tecnológica Recomendada
+
+### Core
+- **Framework:** Flask 2.x+
+- **ORM:** SQLAlchemy
+- **Banco de Dados:** PostgreSQL ou SQLite (para testes)
+- **Templates:** Jinja2
+
+### Dados
+- **Processamento:** pandas, numpy
+- **Arquivos:** openpyxl (Excel), csv module
+- **APIs:** requests, httpx
+- **Web Scraping:** BeautifulSoup4, selenium (se necessário)
+
+### Visualização
+- **Client-side:** Chart.js, Plotly.js, D3.js
+- **Server-side (opcional):** Plotly Python, matplotlib
+- **Gráficos avançados:** Plotly Dash (integrado com Flask)
+
+### Utilidades
+- **Validação:** WTForms, Pydantic
+- **Agendamento:** APScheduler, Celery
+- **Cache:** Flask-Caching, Redis
+- **Análise de Texto:** TextBlob, NLTK, VADER
+- **Testes:** pytest
+
+---
+
+## 📋 Critérios de Avaliação Geral
+
+### Coleta de Dados
+- [ ] Implementação eficiente e ética de web scraping
+- [ ] Tratamento adequado de diferentes formatos de entrada
+- [ ] Validação de dados na coleta
+- [ ] Tratamento de erros e falhas na coleta
+- [ ] Rate limiting e respeito a termos de uso
+
+### Tratamento de Dados
+- [ ] Limpeza e normalização de dados
+- [ ] Validação robusta
+- [ ] Agregações e transformações corretas
+- [ ] Performance com grandes volumes
+- [ ] Tratamento de dados inconsistentes/malformados
+- [ ] Deduplicação quando necessário
+
+### Visualização
+- [ ] Escolha apropriada de tipos de gráficos
+- [ ] Interface intuitiva e responsiva
+- [ ] Interatividade (filtros, tooltips, drill-down)
+- [ ] Performance de renderização
+- [ ] Acessibilidade básica
+
+### Flask e Arquitetura
+- [ ] Estruturação do projeto (blueprints, organização)
+- [ ] Separação de responsabilidades (MVC/MVT)
+- [ ] Templates reutilizáveis
+- [ ] Rotas bem organizadas
+- [ ] Tratamento de erros global
+
+### Código
+- [ ] Type hints e docstrings
+- [ ] Clean code e boas práticas Python
+- [ ] Testes unitários e de integração
+- [ ] Performance considerada
+- [ ] Segurança (validação de entrada, XSS, CSRF)
+
+---
+
+## 📝 Observações para Discussão
+
+1. **Tempo estimado:** Cada cenário pode levar 6-12 horas (dashboard completo)
+2. **Nível de detalhe:** Definir se é MVP funcional ou mais completo
+3. **Bibliotecas de visualização:** Definir se Chart.js (mais simples) ou Plotly (mais avançado)
+4. **Dados de exemplo:** Fornecer datasets ou o candidato deve criar/mockar?
+5. **Deploy:** Avaliar se precisa considerar deploy (Docker, Heroku, etc.)?
+6. **Design:** Definir se avaliação inclui CSS/UI ou foco apenas em funcionalidade
+
+---
+
+## 🎯 Recomendações
+
+Para avaliar um **Python Pleno** focado em dashboard e dados, sugeriria:
+
+### Opção 1: Cenário Completo
+- **Cenário 1** (Dashboard de Vendas) - cobre coleta, tratamento e visualização de forma completa
+
+### Opção 2: Combinação de Cenários
+- **Cenário 2** (Web Scraping) - para avaliar coleta avançada
+- **Cenário 4** (Análise de Logs) - para avaliar tratamento e visualização
+
+### Opção 3: Cenário + Discussão
+- Um cenário simplificado + perguntas técnicas sobre:
+  - Decisões de arquitetura
+  - Escolha de bibliotecas de visualização
+  - Otimização de performance
+  - Tratamento de dados em escala
+
+---
+
+## 💡 Cenário Simplificado (Sugestão para Teste Prático)
+
+### Dashboard de Vendas Simplificado
+**Coleta:**
+- Upload de CSV com vendas
+- API mock para simular vendas
+
+**Tratamento:**
+- Agregações por mês, produto
+- Cálculo de total, média, crescimento
+
+**Visualização:**
+- 3 gráficos: linha (evolução), barra (por produto), pizza (por região)
+- Tabela com dados
+- Filtros de data
+
+**Tempo estimado:** 4-6 horas
+
+---
+
+## 💬 Próximos Passos
+
+1. Selecionar cenário(s) para o teste
+2. Criar estrutura base do projeto (template)
+3. Definir critérios de aceitação específicos
+4. Preparar datasets de exemplo (ou instruções para criar)
+5. Definir ambiente de avaliação
+6. Criar checklist de avaliação detalhado
