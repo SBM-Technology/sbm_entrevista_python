@@ -1,23 +1,60 @@
-# 🎯 Desafio: Dashboard Analítico com Múltiplas Fontes de Dados
+# 🎯 Desafio: Dashboard Analítico - Python Pleno
 
-## 📋 Descrição do Desafio
+## 📋 Sobre o Desafio
 
-Você deve desenvolver um **Dashboard Analítico** em Flask que integra dados de múltiplas fontes, realiza análises estatísticas e apresenta visualizações interativas.
+Este é um teste prático para **desenvolvedores Python Pleno** focado em:
 
-O dashboard deve coletar, processar e exibir dados sobre **vendas de produtos e indicadores econômicos**, permitindo análises correlacionadas entre as diferentes fontes de dados.
+### 🎯 Competências Avaliadas
+
+**1. Python e Manipulação de Dados (Principal)**
+- Processamento eficiente de dados com pandas
+- Agregações e transformações complexas
+- Validação e limpeza de dados
+- ETL (Extract, Transform, Load)
+- Queries otimizadas
+
+**2. Visualização de Dados (Principal)**
+- Criação de dashboards interativos
+- Escolha adequada de gráficos
+- Interface intuitiva e responsiva
+- Apresentação clara de informações
+
+**3. Flask e Arquitetura (Secundário)**
+- Estruturação de projeto
+- Boas práticas Python
+- Integração com APIs
+- Organização do código
 
 ---
 
-## 🎯 Objetivos
+## ⏱️ Tempo Estimado
 
-Avaliar suas competências em:
-- ✅ Coleta de dados de múltiplas fontes (CSV, APIs, banco de dados)
-- ✅ Tratamento e normalização de dados heterogêneos
-- ✅ ETL (Extract, Transform, Load)
-- ✅ Análise estatística e agregações complexas
-- ✅ Visualização de dados com gráficos interativos
-- ✅ Arquitetura Flask bem estruturada
-- ✅ Performance e otimização
+**6-10 horas** (pode ser feito em etapas)
+
+---
+
+## 🏁 O Que Já Está Pronto
+
+Para facilitar, este repositório JÁ possui:
+
+✅ **Estrutura Flask completa** (blueprints, models, services)  
+✅ **Banco de dados populado** (1.320 registros)  
+✅ **Frontend básico** (Bootstrap + Chart.js)  
+✅ **4 gráficos funcionando** (linha, barras, pizza, horizontal)  
+✅ **Filtros de data** implementados  
+✅ **APIs públicas** configuradas (AwesomeAPI, Brasil API)  
+
+**Você pode:**
+- ✅ Usar como está e apenas adicionar features
+- ✅ Melhorar o que já existe
+- ✅ Refatorar e reorganizar
+- ✅ Adicionar novas análises
+
+---
+
+## 🎯 O Que Você Deve Fazer
+
+Escolha **pelo menos 3 itens** de cada categoria:
 
 ---
 
@@ -77,105 +114,73 @@ Contém o custo de cada produto para cálculo de margem de lucro.
 
 ---
 
-## 🚀 Funcionalidades Obrigatórias
+## 📊 Tarefas do Desafio
 
-### 1. **Coleta de Dados**
+### Categoria A: Manipulação e Análise de Dados (Escolha 3+)
 
-#### 1.1 Importação de CSV
-- [ ] Upload manual de arquivos CSV via interface web
-- [ ] Validação de formato e colunas obrigatórias
-- [ ] Processamento de arquivos grandes (usar chunks/streaming)
-- [ ] Feedback de progresso durante upload
-- [ ] Histórico de uploads realizados
+- [ ] **A1:** Calcular margem de lucro (vendas - custos) e exibir no dashboard
+- [ ] **A2:** Implementar comparação com metas (% atingido por categoria/região)
+- [ ] **A3:** Criar análise de tendências (crescimento mês a mês)
+- [ ] **A4:** Adicionar média móvel de vendas (7 dias e 30 dias)
+- [ ] **A5:** Implementar ranking de vendedores com métricas de performance
+- [ ] **A6:** Criar análise de sazonalidade (vendas por dia da semana)
+- [ ] **A7:** Adicionar análise de correlação (vendas × cotação do dólar)
+- [ ] **A8:** Implementar cálculo de desvio padrão e outliers
 
-#### 1.2 Integração com APIs
-- [ ] Consumir API de cotações (AwesomeAPI)
-- [ ] Consumir API de taxas (Brasil API)
-- [ ] Armazenar histórico de cotações no banco
-- [ ] Agendamento de coletas periódicas (opcional: APScheduler)
-- [ ] Tratamento de erros e retry
-- [ ] Cache de resultados (5-10 minutos)
+### Categoria B: Visualizações e Dashboard (Escolha 3+)
 
-#### 1.3 Importação de JSON
-- [ ] Leitura do arquivo de metas
-- [ ] Validação de estrutura
-- [ ] Armazenamento no banco de dados
+- [ ] **B1:** Adicionar novo gráfico de desempenho por vendedor
+- [ ] **B2:** Criar heatmap de vendas (hora do dia × dia da semana)
+- [ ] **B3:** Implementar gráfico de funil de vendas por categoria
+- [ ] **B4:** Adicionar gráfico de linha comparando múltiplos períodos
+- [ ] **B5:** Criar tabela interativa com ordenação e busca
+- [ ] **B6:** Adicionar drill-down (clicar em categoria para ver produtos)
+- [ ] **B7:** Implementar gráfico de área (área empilhada de categorias)
+- [ ] **B8:** Melhorar responsividade mobile
 
-### 2. **Tratamento e Análise de Dados**
+### Categoria C: Integrações e Funcionalidades (Escolha 2+)
 
-#### 2.1 Processamento
-- [ ] Normalização de datas (timezone, formato)
-- [ ] Validação de dados (valores negativos, campos vazios)
-- [ ] Cálculo de valores derivados:
-  - Valor total da venda (quantidade × preço_unitario)
-  - Margem de lucro (preço - custo)
-  - Percentual de lucro
-- [ ] Join de dados de diferentes fontes:
-  - Vendas + Custos (por produto)
-  - Vendas + Metas (por categoria/região/período)
-  - Vendas + Cotações (para análise de impacto cambial)
+- [ ] **C1:** Melhorar validação do upload de CSV (validar todos os campos)
+- [ ] **C2:** Adicionar exportação de relatório em PDF
+- [ ] **C3:** Implementar coleta automática de cotações (via API)
+- [ ] **C4:** Criar sistema de alertas (quando vendas < meta)
+- [ ] **C5:** Adicionar filtros avançados (múltipla seleção de categorias)
+- [ ] **C6:** Implementar cache Redis para otimizar consultas
+- [ ] **C7:** Criar histórico de uploads com status e logs
 
-#### 2.2 Agregações
-- [ ] Vendas totais por período (dia, semana, mês)
-- [ ] Vendas por produto/categoria/região/vendedor
-- [ ] Média, máximo, mínimo de vendas
-- [ ] Crescimento percentual (comparação com período anterior)
-- [ ] Atingimento de metas (percentual)
-- [ ] Produtos mais vendidos (top 10)
-- [ ] Regiões com melhor desempenho
+### Categoria D: Código e Qualidade (Escolha 2+)
 
-#### 2.3 Análise Estatística
-- [ ] Correlação entre volume de vendas e cotação do dólar
-- [ ] Média móvel de vendas (7 dias, 30 dias)
-- [ ] Desvio padrão de vendas por produto
-- [ ] Identificação de tendências (crescimento/declínio)
+- [ ] **D1:** Refatorar código existente para melhor organização
+- [ ] **D2:** Adicionar type hints em todas as funções principais
+- [ ] **D3:** Documentar funções com docstrings detalhadas
+- [ ] **D4:** Otimizar queries do banco de dados (índices, joins)
+- [ ] **D5:** Implementar tratamento de erros robusto
+- [ ] **D6:** Adicionar logging apropriado
+- [ ] **D7:** Criar documentação de API (endpoints)
 
-### 3. **Visualizações no Dashboard**
+---
 
-#### 3.1 KPIs Principais (Cards no topo)
-- [ ] Receita total do período
-- [ ] Número de vendas
-- [ ] Ticket médio
-- [ ] Margem de lucro média
-- [ ] Crescimento vs. período anterior (%)
+## ✅ Mínimo Esperado
 
-#### 3.2 Gráficos Obrigatórios
-1. **Gráfico de Linhas:** Evolução de vendas ao longo do tempo
-   - Múltiplas séries (receita, quantidade, cotação dólar)
-   - Filtro de período
+Para considerar o desafio completo, você deve:
 
-2. **Gráfico de Barras:** Vendas por categoria
-   - Comparação com meta
-   - Ordenação por valor
+✅ Escolher e implementar **pelo menos 10 itens** no total  
+✅ Incluir pelo menos **3 da Categoria A** (Dados)  
+✅ Incluir pelo menos **3 da Categoria B** (Visualização)  
+✅ Dashboard funcional e responsivo  
+✅ Código organizado com boas práticas Python  
+✅ README atualizado com suas alterações  
 
-3. **Gráfico de Pizza/Donut:** Distribuição de vendas por região
-   - Percentuais
-   - Legenda interativa
+---
 
-4. **Gráfico de Barras Horizontal:** Top 10 produtos mais vendidos
-   - Ordenado por valor ou quantidade
+## 🌟 Extras (Não obrigatório, mas valorizado)
 
-5. **Heatmap/Tabela:** Desempenho por vendedor × categoria
-   - Cores indicando performance
-
-6. **Gráfico de Dispersão:** Correlação entre vendas e cotação do dólar
-   - Eixo X: cotação
-   - Eixo Y: volume de vendas
-
-#### 3.3 Interatividade
-- [ ] Filtros de período (data inicial/final, mês, ano)
-- [ ] Filtros por categoria, região, vendedor
-- [ ] Todos os gráficos atualizam ao mudar filtros
-- [ ] Tooltips informativos nos gráficos
-- [ ] Drill-down (clicar em gráfico para detalhar) - opcional
-
-### 4. **Funcionalidades Adicionais**
-
-- [ ] Exportação de relatórios (CSV ou PDF)
-- [ ] Tabela de dados com paginação, ordenação e busca
-- [ ] Comparação entre períodos (mês anterior, ano anterior)
-- [ ] Indicadores visuais (cores) para metas atingidas/não atingidas
-- [ ] Responsividade (mobile-friendly)
+- ⭐ Análises estatísticas avançadas (correlações, regressão)
+- ⭐ Visualizações criativas e informativas
+- ⭐ Performance otimizada (cache, queries eficientes)
+- ⭐ Interface bonita e intuitiva
+- ⭐ Documentação clara e detalhada
+- ⭐ Testes unitários (opcional)
 
 ---
 
@@ -207,11 +212,14 @@ Contém o custo de cada produto para cálculo de margem de lucro.
 - [ ] Validação de dados de entrada
 - [ ] Logging apropriado
 
-### Testes (Opcional, mas valorizado)
-- [ ] Testes unitários (pytest)
-- [ ] Testes de integração
-- [ ] Cobertura mínima de 50%
-- [ ] Fixtures para dados de teste
+### Qualidade do Código
+- [ ] Code limpo e organizado
+- [ ] Boas práticas Python (PEP 8)
+- [ ] Type hints nas funções principais
+- [ ] Docstrings explicativas
+- [ ] Tratamento de erros apropriado
+
+*Nota: Testes unitários são opcionais - foque em funcionalidade e qualidade*
 
 ---
 
@@ -344,36 +352,90 @@ id, nome_arquivo, tipo, status, num_registros, created_at
 
 ## ✅ Critérios de Avaliação
 
-### 1. Funcionalidade (40%)
-- [ ] Todas as funcionalidades obrigatórias implementadas
-- [ ] Sistema funciona sem erros críticos
-- [ ] Tratamento adequado de casos edge
+### 1. Python e Manipulação de Dados (40%)
 
-### 2. Código e Arquitetura (30%)
-- [ ] Estrutura organizada e clara
-- [ ] Código limpo e legível
-- [ ] Boas práticas Python
-- [ ] Separação de responsabilidades
-- [ ] Type hints e documentação
+**O que vamos avaliar:**
+- ✅ Domínio de pandas e manipulação de dados
+- ✅ Agregações e transformações eficientes
+- ✅ Validação e limpeza de dados
+- ✅ ETL bem estruturado
+- ✅ Queries otimizadas no banco
+- ✅ Tratamento de casos edge e erros
 
-### 3. Dados e Análises (20%)
-- [ ] ETL bem implementado
-- [ ] Análises estatísticas corretas
-- [ ] Agregações eficientes
-- [ ] Tratamento de dados inconsistentes
+**Como demonstrar:**
+- Implemente cálculos complexos (margem, crescimento, médias)
+- Faça joins e agregações de múltiplas tabelas
+- Trate dados inconsistentes e faltantes
+- Otimize processamento de grandes volumes
 
-### 4. Interface e Visualizações (10%)
-- [ ] Gráficos apropriados e informativos
-- [ ] Interface intuitiva
-- [ ] Responsividade básica
-- [ ] Filtros funcionais
+### 2. Visualização e Dashboard (30%)
 
-### Bônus (+10%)
-- [ ] Testes automatizados
-- [ ] Cache implementado
-- [ ] Agendamento de coletas
-- [ ] Documentação completa
-- [ ] Deploy configurado (Docker, etc.)
+**O que vamos avaliar:**
+- ✅ Escolha apropriada de gráficos
+- ✅ Clareza na apresentação de informações
+- ✅ Interface intuitiva e responsiva
+- ✅ Interatividade (filtros, drill-down)
+- ✅ Design pensado (cores, layout, UX)
+
+**Como demonstrar:**
+- Adicione gráficos informativos e bem formatados
+- Implemente filtros que funcionem bem
+- Crie uma interface agradável de usar
+- Pense na experiência do usuário
+
+### 3. Código e Arquitetura (20%)
+
+**O que vamos avaliar:**
+- ✅ Organização e estrutura do código
+- ✅ Boas práticas Python (PEP 8)
+- ✅ Type hints e docstrings
+- ✅ Separação de responsabilidades
+- ✅ Código limpo e legível
+
+**Como demonstrar:**
+- Mantenha código organizado em services/models
+- Use type hints nas funções importantes
+- Adicione docstrings explicativas
+- Siga convenções Python
+
+### 4. Funcionalidade (10%)
+
+**O que vamos avaliar:**
+- ✅ Features funcionando corretamente
+- ✅ Integração com APIs
+- ✅ Upload e processamento de arquivos
+- ✅ Sistema rodando sem erros
+
+**Como demonstrar:**
+- Implemente features que funcionem bem
+- Teste antes de entregar
+- Trate erros apropriadamente
+
+---
+
+## 🌟 Diferenciais (Bônus)
+
+Itens que fazem você se destacar:
+
+⭐ **Análises Avançadas:** Correlações, tendências, previsões  
+⭐ **Visualizações Criativas:** Gráficos únicos e informativos  
+⭐ **Performance:** Cache, otimizações, queries eficientes  
+⭐ **UX Excepcional:** Interface muito bem pensada  
+⭐ **Documentação:** README detalhado, código bem documentado  
+⭐ **Extras:** Features além do solicitado  
+
+---
+
+## ❌ Não é Necessário
+
+Para focar no essencial, você **NÃO precisa**:
+
+❌ Criar testes unitários (opcional)  
+❌ Deploy em produção  
+❌ Autenticação de usuários  
+❌ CI/CD  
+❌ Docker (a menos que queira)  
+❌ Frontend framework (React, Vue, etc.)
 
 ---
 

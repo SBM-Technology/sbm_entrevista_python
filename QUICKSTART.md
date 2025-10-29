@@ -11,17 +11,22 @@ source venv/bin/activate  # Linux/Mac
 pip install -r requirements.txt
 ```
 
-### 2. Importe os Dados
+### 2. Crie o Diretório do Banco (se necessário)
+```bash
+mkdir -p instance
+```
+
+### 3. Importe os Dados
 ```bash
 python3.11 scripts/import_initial_data.py
 ```
 
-### 3. Execute a Aplicação
+### 4. Execute a Aplicação
 ```bash
 python3.11 app.py
 ```
 
-### 4. Acesse o Dashboard
+### 5. Acesse o Dashboard
 Abra seu navegador em: **http://localhost:5000**
 
 ---

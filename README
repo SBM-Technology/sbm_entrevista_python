@@ -1,15 +1,46 @@
 # 📊 Dashboard Analítico - Teste Python Pleno
 
-Este é um projeto de teste técnico para avaliar competências em Python, Flask, manipulação de dados e visualizações.
+## 🎯 Sobre Este Teste
 
-## 📋 Sobre o Projeto
+Este é um **teste técnico para desenvolvedores Python Pleno** focado em:
+- ✅ **Python avançado** - Manipulação de dados, estruturas, lógica
+- ✅ **Visualização de dados** - Criação de dashboards interativos
+- ✅ **Tratamento de dados** - ETL, agregações, análises
+- ✅ **Flask** - Desenvolvimento web com Python
+- ✅ **Integração** - Coleta de dados de múltiplas fontes
 
-Dashboard analítico que integra dados de múltiplas fontes (CSV, APIs públicas, JSON) para análise de vendas, apresentando:
-- KPIs principais (receita, ticket médio, número de vendas)
-- Gráficos interativos (linhas, barras, pizza)
-- Integração com APIs de cotações e dados econômicos
-- Sistema de upload de arquivos CSV
-- Filtros por período
+**Não é necessário:** Criar testes unitários (foco em funcionalidade e qualidade do código)
+
+---
+
+## 📋 O Que Já Está Pronto
+
+Este repositório contém uma **estrutura base completa** para você começar:
+
+✅ **Backend Flask funcional**
+- 5 Models (Venda, Custo, Cotação, Meta, Upload)
+- Blueprints organizados
+- Services para coleta e processamento
+
+✅ **Dados de exemplo**
+- 1.000 vendas ao longo de 2024
+- 20 produtos em 5 categorias
+- 300 metas por região/categoria
+
+✅ **Frontend básico**
+- Template Bootstrap 5
+- 4 gráficos funcionais (Chart.js)
+- Filtros de período
+
+✅ **APIs públicas configuradas**
+- AwesomeAPI (cotações)
+- Brasil API (taxas)
+
+---
+
+## 🎯 O Que Você Deve Fazer
+
+Veja o arquivo **`DESAFIO.md`** para detalhes completos do que deve ser implementado/melhorado.
 
 ---
 
@@ -153,44 +184,19 @@ flask import-data
 
 ## 🏃 Executando a Aplicação
 
-### Modo Desenvolvimento
+### ⚠️ IMPORTANTE: Use o run.py
 
 ```bash
-python3.11 app.py
+python3.11 run.py
 ```
 
-Ou usando Flask CLI:
+**Não use** `python3.11 app.py` (causa problemas com o watchdog)
 
-```bash
-flask run
-```
-
-A aplicação estará disponível em: **http://localhost:5000**
-
-### Modo Debug (com auto-reload)
-
-```bash
-export FLASK_ENV=development  # Linux/Mac
-set FLASK_ENV=development     # Windows
-
-flask run --debug
-```
+A aplicação estará disponível em: **http://localhost:5100**
 
 ---
 
 ## 🧪 Testando a Aplicação
-
-### Testes Automatizados (quando implementados)
-
-```bash
-pytest
-```
-
-Com cobertura:
-
-```bash
-pytest --cov=app tests/
-```
 
 ### Teste Manual
 
@@ -403,15 +409,45 @@ Para dúvidas sobre o desafio, entre em contato com o recrutador.
 
 ## 🎯 Critérios de Avaliação
 
-Este projeto será avaliado nos seguintes aspectos:
+### O que será avaliado:
 
-- ✅ **Funcionalidade:** Todas as features implementadas e funcionando
-- ✅ **Código:** Organização, clareza, boas práticas Python
-- ✅ **Arquitetura:** Separação de responsabilidades, estrutura do projeto
-- ✅ **Dados:** Processamento eficiente, análises corretas
-- ✅ **Interface:** Visualizações apropriadas, usabilidade
-- ✅ **Documentação:** README claro, código documentado
-- ✅ **Extras:** Testes, cache, otimizações, criatividade
+**1. Python e Manipulação de Dados (40%)**
+- Processamento eficiente de dados (pandas, agregações)
+- Validação e limpeza de dados
+- ETL bem implementado
+- Queries otimizadas
+- Tratamento de erros
+
+**2. Visualização e Dashboard (30%)**
+- Gráficos apropriados e informativos
+- Interface intuitiva e responsiva
+- Filtros funcionando corretamente
+- Escolha adequada de visualizações
+- UX/UI pensada
+
+**3. Código e Arquitetura (20%)**
+- Organização clara do código
+- Boas práticas Python (PEP 8)
+- Type hints e docstrings
+- Separação de responsabilidades
+- Estrutura do projeto
+
+**4. Funcionalidade (10%)**
+- Features funcionando corretamente
+- Integração com APIs
+- Upload de arquivos
+- Tratamento de casos edge
+
+**Extras (Bônus):**
+- Cache implementado
+- Análises estatísticas avançadas
+- Documentação detalhada
+- Otimizações de performance
+
+**❌ Não é necessário:**
+- Testes unitários (opcional)
+- Deploy em produção
+- Autenticação de usuários
 
 ---
 

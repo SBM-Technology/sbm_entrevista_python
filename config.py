@@ -5,7 +5,7 @@ import os
 from pathlib import Path
 
 # Base directory
-BASE_DIR = Path(__file__).parent
+BASE_DIR = Path(__file__).parent.resolve()
 
 
 class Config:
@@ -17,11 +17,15 @@ class Config:
     TESTING = False
     
     # Database
+    # Usa caminho absoluto para evitar problemas
     SQLALCHEMY_DATABASE_URI = os.getenv(
         'DATABASE_URL',
-        f'sqlite:///{BASE_DIR / "instance" / "dashboard.db"}'
+        f'sqlite:///{BASE_DIR.absolute() / "instance" / "dashboard.db"}'
     )
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    
+    # Print para debug (remover depois)
+    _DB_PATH = BASE_DIR.absolute() / "instance" / "dashboard.db"
     
     # Upload
     UPLOAD_FOLDER = BASE_DIR / 'data' / 'uploads'
@@ -62,9 +66,11 @@ class ProductionConfig(Config):
     CACHE_REDIS_PORT = int(os.getenv('REDIS_PORT', 6379))
     CACHE_REDIS_DB = int(os.getenv('REDIS_DB', 0))
     
-    # Database deve vir de variável de ambiente
-    if not os.getenv('DATABASE_URL'):
-        raise ValueError("DATABASE_URL deve estar definida em produção")
+    # Database - sobrescreve se DATABASE_URL estiver definida
+    SQLALCHEMY_DATABASE_URI = os.getenv(
+        'DATABASE_URL',
+        Config.SQLALCHEMY_DATABASE_URI  # fallback para SQLite
+    )
 
 
 class TestingConfig(Config):

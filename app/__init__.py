@@ -30,16 +30,17 @@ def create_app(config_name='default'):
     # Cria diretórios necessários
     app.config['UPLOAD_FOLDER'].mkdir(parents=True, exist_ok=True)
     
+    # Cria diretório instance para o banco de dados SQLite
+    from pathlib import Path
+    instance_path = Path(app.instance_path)
+    instance_path.mkdir(parents=True, exist_ok=True)
+    
     # Registra blueprints
     from app.blueprints.dashboard import dashboard_bp
     from app.blueprints.api import api_bp
     
     app.register_blueprint(dashboard_bp)
     app.register_blueprint(api_bp, url_prefix='/api')
-    
-    # Cria tabelas (em desenvolvimento)
-    with app.app_context():
-        db.create_all()
     
     return app
 
