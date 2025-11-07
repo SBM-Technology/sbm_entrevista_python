@@ -37,7 +37,7 @@ class Analytics:
             'ticket_medio': float(resultado.ticket_medio or 0)
         }
     
-    def vendas_ao_longo_tempo(self, data_inicio=None, data_fim=None):
+    def pvendas_ao_longo_tempo(self, data_inicio=None, data_fim=None):
         """
         Retorna série temporal de vendas.
         

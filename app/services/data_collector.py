@@ -10,55 +10,34 @@ from app.models import Cotacao
 
 class DataCollector:
     """Coleta dados de APIs externas."""
+
+    def __init__(self):
+        self.awesome_api_url = current_app.config['AWESOMEAPI_BASE_URL']
+        self.brasil_api_url = current_app.config['BRASILAPI_BASE_URL']
     
     @cache.cached(timeout=300, key_prefix='cotacoes_usd_brl')
-    def coletar_cotacoes(self):
+    def coletar_cotacoes(self) -> int:
         """
         Coleta cotações de moedas da AwesomeAPI.
         
         Returns:
             int: Número de cotações coletadas
         """
-        base_url = current_app.config['AWESOMEAPI_BASE_URL']
         
         try:
             # Coleta USD-BRL e EUR-BRL
-            response = requests.get(f'{base_url}/last/USD-BRL,EUR-BRL', timeout=10)
+            response = requests.get(f'{self.awesome_api_url}/last/USD-BRL,EUR-BRL', timeout=10)
             response.raise_for_status()
             
             dados = response.json()
-            num_cotacoes = 0
-            
-            # Processa USD
-            if 'USDBRL' in dados:
-                usd_data = dados['USDBRL']
-                cotacao = Cotacao(
-                    moeda='USD',
-                    valor=float(usd_data['bid']),
-                    data_hora=datetime.fromtimestamp(int(usd_data['timestamp']))
-                )
-                db.session.add(cotacao)
-                num_cotacoes += 1
-            
-            # Processa EUR
-            if 'EURBRL' in dados:
-                eur_data = dados['EURBRL']
-                cotacao = Cotacao(
-                    moeda='EUR',
-                    valor=float(eur_data['bid']),
-                    data_hora=datetime.fromtimestamp(int(eur_data['timestamp']))
-                )
-                db.session.add(cotacao)
-                num_cotacoes += 1
-            
-            db.session.commit()
+            num_cotacoes = self._processa_salva_cotacao(dados)
             return num_cotacoes
             
         except requests.RequestException as e:
             current_app.logger.error(f"Erro ao coletar cotações: {e}")
             raise
     
-    def coletar_historico_cotacoes(self, moeda='USD', dias=30):
+    def coletar_historico_cotacoes(self, moeda='USD', dias=30) -> list[Cotacao]:
         """
         Coleta histórico de cotações.
         
@@ -69,11 +48,10 @@ class DataCollector:
         Returns:
             list: Lista de cotações históricas
         """
-        base_url = current_app.config['AWESOMEAPI_BASE_URL']
         
         try:
             response = requests.get(
-                f'{base_url}/json/daily/{moeda}-BRL/{dias}',
+                f'{self.awesome_api_url}/json/daily/{moeda}-BRL/{dias}',
                 timeout=10
             )
             response.raise_for_status()
@@ -87,17 +65,9 @@ class DataCollector:
                     valor=float(item['bid']),
                     data_hora=datetime.fromtimestamp(int(item['timestamp']))
                 )
-                cotacoes.append(cotacao)
-            
-            # Adiciona ao banco (verificar duplicatas)
-            for cotacao in cotacoes:
-                # Verifica se já existe
-                existe = Cotacao.query.filter_by(
-                    moeda=cotacao.moeda,
-                    data_hora=cotacao.data_hora
-                ).first()
-                
-                if not existe:
+
+                if not self._existe_cotacao(cotacao):
+                    cotacoes.append(cotacao)
                     db.session.add(cotacao)
             
             db.session.commit()
@@ -108,17 +78,15 @@ class DataCollector:
             raise
     
     @cache.cached(timeout=3600, key_prefix='taxas_brasil')
-    def coletar_taxas_brasil(self):
+    def coletar_taxas_brasil(self) -> list[dict[str, any]]:
         """
         Coleta taxas de juros da Brasil API.
         
         Returns:
             dict: Dados das taxas
         """
-        base_url = current_app.config['BRASILAPI_BASE_URL']
-        
         try:
-            response = requests.get(f'{base_url}/taxas/v1', timeout=10)
+            response = requests.get(f'{self.brasil_api_url}/taxas/v1', timeout=10)
             response.raise_for_status()
             
             return response.json()
@@ -127,3 +95,36 @@ class DataCollector:
             current_app.logger.error(f"Erro ao coletar taxas: {e}")
             raise
 
+    def _existe_cotacao(cotacao: Cotacao) -> bool:
+        return Cotacao.query.filter_by(
+            moeda=cotacao.moeda,
+            data_hora=cotacao.data_hora
+        ).first() is not None
+    
+    def _processa_salva_cotacao(self, dados: dict[str, any]) -> int:
+        num_cotacoes = 0
+            
+        # Processa USD
+        if 'USDBRL' in dados:
+            usd_data = dados['USDBRL']
+            cotacao = Cotacao(
+                moeda='USD',
+                valor=float(usd_data['bid']),
+                data_hora=datetime.fromtimestamp(int(usd_data['timestamp']))
+            )
+            db.session.add(cotacao)
+            num_cotacoes += 1
+        
+        # Processa EUR
+        if 'EURBRL' in dados:
+            eur_data = dados['EURBRL']
+            cotacao = Cotacao(
+                moeda='EUR',
+                valor=float(eur_data['bid']),
+                data_hora=datetime.fromtimestamp(int(eur_data['timestamp']))
+            )
+            db.session.add(cotacao)
+            num_cotacoes += 1
+        
+        db.session.commit()
+        return num_cotacoes
