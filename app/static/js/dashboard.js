@@ -252,6 +252,7 @@ function carregarGraficoTopProdutos(dataInicio, dataFim) {
         .catch(error => console.error('Erro ao carregar gráfico:', error));
 }
 
+// Carrega gráfico de margem de lucro
 function carregarGraficoMargemLucro(dataInicio, dataFim) {
     let url = '/data/calcular-margem-lucro';
     const params = new URLSearchParams();
@@ -279,7 +280,7 @@ function carregarGraficoMargemLucro(dataInicio, dataFim) {
                     }]
                 },
                 options: {
-                    indexAxis: 'y', // gráfico horizontal
+                    indexAxis: 'y',
                     responsive: true,
                     plugins: {
                         legend: { display: false },
