@@ -18,11 +18,7 @@ function carregarDashboard() {
 // Carrega KPIs
 function carregarKPIs(dataInicio, dataFim) {
     let url = '/data/kpis';
-    const params = new URLSearchParams();
-    if (dataInicio) params.append('data_inicio', dataInicio);
-    if (dataFim) params.append('data_fim', dataFim);
-    if (params.toString()) url += '?' + params.toString();
-    
+    url = buildUrl(url, dataInicio, dataFim);
     fetch(url)
         .then(response => response.json())
         .then(data => {
@@ -39,10 +35,7 @@ function carregarKPIs(dataInicio, dataFim) {
 // Carrega gráfico de vendas ao longo do tempo
 function carregarGraficoVendasTempo(dataInicio, dataFim) {
     let url = '/data/vendas-tempo';
-    const params = new URLSearchParams();
-    if (dataInicio) params.append('data_inicio', dataInicio);
-    if (dataFim) params.append('data_fim', dataFim);
-    if (params.toString()) url += '?' + params.toString();
+    url = buildUrl(url, dataInicio, dataFim);
     
     fetch(url)
         .then(response => response.json())
@@ -114,13 +107,9 @@ function carregarGraficoVendasTempo(dataInicio, dataFim) {
 // Carrega gráfico de vendas por categoria
 function carregarGraficoVendasCategoria(dataInicio, dataFim) {
     let url = '/data/vendas-categoria';
-    const params = new URLSearchParams();
-    if (dataInicio) params.append('data_inicio', dataInicio);
-    if (dataFim) params.append('data_fim', dataFim);
-    if (params.toString()) url += '?' + params.toString();
+    url = buildUrl(url, dataInicio, dataFim)
     
-    fetch(url)
-        .then(response => response.json())
+    fetchJson(url)
         .then(data => {
             const ctx = document.getElementById('chartVendasCategoria').getContext('2d');
             
@@ -170,13 +159,9 @@ function carregarGraficoVendasCategoria(dataInicio, dataFim) {
 // Carrega gráfico de vendas por região
 function carregarGraficoVendasRegiao(dataInicio, dataFim) {
     let url = '/data/vendas-regiao';
-    const params = new URLSearchParams();
-    if (dataInicio) params.append('data_inicio', dataInicio);
-    if (dataFim) params.append('data_fim', dataFim);
-    if (params.toString()) url += '?' + params.toString();
+    url = buildUrl(url, dataInicio, dataFim)
     
-    fetch(url)
-        .then(response => response.json())
+    fetchJson(url)
         .then(data => {
             const ctx = document.getElementById('chartVendasRegiao').getContext('2d');
             
@@ -231,8 +216,7 @@ function carregarGraficoTopProdutos(dataInicio, dataFim) {
     params.append('limite', '10');
     url += '&' + params.toString();
     
-    fetch(url)
-        .then(response => response.json())
+    fetchJson(url)
         .then(data => {
             const ctx = document.getElementById('chartTopProdutos').getContext('2d');
             
@@ -277,13 +261,9 @@ function carregarGraficoTopProdutos(dataInicio, dataFim) {
 // Carrega gráfico de margem de lucro
 function carregarGraficoMargemLucro(dataInicio, dataFim) {
     let url = '/data/vendas-margem-lucro';
-    const params = new URLSearchParams();
-    if (dataInicio) params.append('data_inicio', dataInicio);
-    if (dataFim) params.append('data_fim', dataFim);
-    if (params.toString()) url += '?' + params.toString();
+    url = buildUrl(url, dataInicio, dataFim)
 
-    fetch(url)
-        .then(response => response.json())
+    fetchJson(url)
         .then(data => {
             const ctx = document.getElementById('chartMargemLucro').getContext('2d');
 
@@ -340,13 +320,9 @@ function carregarGraficoMargemLucro(dataInicio, dataFim) {
 
 function carregarGraficoVendasDiaSemana(dataInicio, dataFim) {
     let url = '/data/vendas-dia-semana';
-    const params = new URLSearchParams();
-    if (dataInicio) params.append('data_inicio', dataInicio);
-    if (dataFim) params.append('data_fim', dataFim);
-    if (params.toString()) url += '?' + params.toString();
+    url = buildUrl(url, dataInicio, dataFim)
 
-    fetch(url)
-        .then(response => response.json())
+    fetchJson(url)
         .then(data => {
             const ctx = document.getElementById('chartVendasDiaSemana').getContext('2d');
             
@@ -417,6 +393,26 @@ function carregarGraficoVendasDiaSemana(dataInicio, dataFim) {
             });
         })
         .catch(error => console.error('Erro ao carregar gráfico:', error));
+}
+
+
+function buildUrl(url, dataInicio, dataFim) {
+    const params = new URLSearchParams();
+    if (dataInicio) params.append('data_inicio', dataInicio);
+    if (dataFim) params.append('data_fim', dataFim);
+    if (params.toString()) url += '?' + params.toString();
+    return url;
+}
+
+// Helper: fetch JSON com montagem de URL e tratamento básico de erro HTTP
+function fetchJson(baseUrl, dataInicio, dataFim) {
+    const url = buildUrl(baseUrl, dataInicio, dataFim);
+    return fetch(url).then(resp => {
+        if (!resp.ok) {
+            throw new Error(`HTTP ${resp.status} em ${url}`);
+        }
+        return resp.json();
+    });
 }
 
 // Event listeners

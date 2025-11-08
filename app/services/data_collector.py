@@ -65,9 +65,9 @@ class DataCollector:
                     valor=float(item['bid']),
                     data_hora=datetime.fromtimestamp(int(item['timestamp']))
                 )
+                cotacoes.append(cotacao)
 
                 if not self._existe_cotacao(cotacao):
-                    cotacoes.append(cotacao)
                     db.session.add(cotacao)
             
             db.session.commit()
