@@ -54,11 +54,25 @@ class Analytics:
         query = query.group_by(Venda.data).order_by(Venda.data)
         
         resultados = query.all()
-        
+        labels = [r.data.strftime('%Y-%m-%d') for r in resultados]
+        valores = [float(r.valor) for r in resultados]
+        quantidades = [int(r.quantidade) for r in resultados]
+
+        # Médias móveis 7 e 30 dias (linhas quebradas para períodos insuficientes)
+        try:
+            s = pd.Series(valores, index=pd.to_datetime(labels))
+            mm7 = s.rolling(window=7).mean().round(2).tolist()
+            mm30 = s.rolling(window=30).mean().round(2).tolist()
+        except Exception:
+            mm7 = [None] * len(valores)
+            mm30 = [None] * len(valores)
+
         return {
-            'labels': [r.data.strftime('%Y-%m-%d') for r in resultados],
-            'valores': [float(r.valor) for r in resultados],
-            'quantidades': [int(r.quantidade) for r in resultados]
+            'labels': labels,
+            'valores': valores,
+            'quantidades': quantidades,
+            'media_movel_7': [float(x) if x == x else None for x in mm7],
+            'media_movel_30': [float(x) if x == x else None for x in mm30],
         }
     
     def vendas_por_categoria(self, data_inicio: str | None = None, data_fim: str | None = None):
@@ -108,6 +122,37 @@ class Analytics:
             'valores': [float(r.valor) for r in resultados],
             'percentuais': [round((r.valor / total * 100), 2) if total > 0 else 0 for r in resultados]
         }
+
+    def vendas_por_dia_semana(self, data_inicio: str | None = None, data_fim: str | None = None):
+        """
+        Retorna vendas agregadas por dia da semana (0=Domingo .. 6=Sábado).
+        
+        Returns:
+            dict: Dados para gráfico de barras horizontal
+        """
+        # strftime('%w') retorna 0..6 onde 0=Domingo no SQLite/Postgres compatível via func
+        query = db.session.query(
+            func.strftime('%w', Venda.data).label('dow'),
+            func.sum(Venda.valor_total).label('valor'),
+            func.sum(Venda.quantidade).label('quantidade')
+        )
+        query = self._aplicar_filtro_data(query, Venda, data_inicio, data_fim)
+        query = query.group_by('dow')
+        resultados = query.all()
+
+        mapa_dias = {str(i): {'valor': 0.0, 'quantidade': 0} for i in range(7)}
+        for r in resultados:
+            k = str(r.dow)
+            mapa_dias[k] = {
+                'valor': float(r.valor or 0),
+                'quantidade': int(r.quantidade or 0)
+            }
+
+        return {
+            'labels': ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'],
+            'valores': [mapa_dias[str(i)]['valor'] for i in range(7)],
+            'quantidades': [mapa_dias[str(i)]['quantidade'] for i in range(7)],
+        }
     
     def top_produtos(self, data_inicio: str | None = None, data_fim: str | None = None, limite: int = 10):
         """
@@ -137,7 +182,12 @@ class Analytics:
         }
     
     def vendas_margem_lucro(self, data_inicio: str | None, data_fim: str | None) -> dict:
-        """Calcula a margem de lucro e acordo com Vendas e Custos"""
+        """
+        Retorna a margem de lucro entre as Vendas
+
+        Returns:
+            dict: Dados para gráfico de barras horizontal
+        """
 
         query = db.session.query(
             Venda.produto,
@@ -147,6 +197,12 @@ class Analytics:
         query = self._aplicar_filtro_data(query, Venda, data_inicio, data_fim)
         query = query.group_by(Venda.produto)
 
+        #ordernar por margem (lucro/receita) descrecente
+        query = query.order_by(
+            (func.sum((Venda.preco_unitario - Custo.custo_unitario) * Venda.quantidade) /
+            func.nullif(func.sum(Venda.preco_unitario * Venda.quantidade), 0)
+            ).desc()
+        )
         resultados = query.all()
 
         return {

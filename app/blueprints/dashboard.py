@@ -81,13 +81,25 @@ def get_top_produtos() -> Response:
     return jsonify(dados)
 
 
-@dashboard_bp.route('/data/calcular-margem-lucro')
+@dashboard_bp.route('/data/vendas-margem-lucro')
 def get_margem_lucro() -> Response:
     """Retorna a margem de lucro e receita entre os produtos vendidos"""
     data_inicio = request.args.get('data_inicio')
     data_fim = request.args.get('data_fim')
 
-    analitycis = Analytics()
-    dados = analitycis.vendas_margem_lucro(data_inicio, data_fim)
+    analytics = Analytics()
+    dados = analytics.vendas_margem_lucro(data_inicio, data_fim)
+
+    return jsonify(dados)
+
+
+@dashboard_bp.route('/data/vendas-dia-semana')
+def get_vendas_dia_semana() -> Response:
+    """Retorna vendas agregadas por dia da semana."""
+    data_inicio = request.args.get('data_inicio')
+    data_fim = request.args.get('data_fim')
+
+    analytics = Analytics()
+    dados = analytics.vendas_por_dia_semana(data_inicio, data_fim)
 
     return jsonify(dados)

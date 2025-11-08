@@ -1,5 +1,5 @@
 // Variáveis globais para os gráficos
-let chartVendasTempo, chartVendasCategoria, chartVendasRegiao, chartTopProdutos, chartMargemLucro;
+let chartVendasTempo, chartVendasCategoria, chartVendasRegiao, chartTopProdutos, chartMargemLucro, chartVendasDiaSemana;
 
 // Função principal para carregar dashboard
 function carregarDashboard() {
@@ -12,6 +12,7 @@ function carregarDashboard() {
     carregarGraficoVendasRegiao(dataInicio, dataFim);
     carregarGraficoTopProdutos(dataInicio, dataFim);
     carregarGraficoMargemLucro(dataInicio, dataFim);
+    carregarGraficoVendasDiaSemana(dataInicio, dataFim);
 }
 
 // Carrega KPIs
@@ -56,13 +57,34 @@ function carregarGraficoVendasTempo(dataInicio, dataFim) {
                 type: 'line',
                 data: {
                     labels: data.labels,
-                    datasets: [{
-                        label: 'Valor (R$)',
-                        data: data.valores,
-                        borderColor: 'rgb(13, 110, 253)',
-                        backgroundColor: 'rgba(13, 110, 253, 0.1)',
-                        tension: 0.4
-                    }]
+                    datasets: [
+                        {
+                            label: 'Valor (R$)',
+                            data: data.valores,
+                            borderColor: 'rgb(13, 110, 253)',
+                            backgroundColor: 'rgba(13, 110, 253, 0.1)',
+                            tension: 0.3,
+                            pointRadius: 0
+                        },
+                        {
+                            label: 'Média Móvel 7d',
+                            data: data.media_movel_7,
+                            borderColor: 'rgba(25, 135, 84, 0.9)',
+                            backgroundColor: 'transparent',
+                            borderWidth: 2,
+                            tension: 0.2,
+                            pointRadius: 0
+                        },
+                        {
+                            label: 'Média Móvel 30d',
+                            data: data.media_movel_30,
+                            borderColor: 'rgba(255, 193, 7, 0.9)',
+                            backgroundColor: 'transparent',
+                            borderWidth: 2,
+                            tension: 0.2,
+                            pointRadius: 0
+                        }
+                    ]
                 },
                 options: {
                     responsive: true,
@@ -254,7 +276,7 @@ function carregarGraficoTopProdutos(dataInicio, dataFim) {
 
 // Carrega gráfico de margem de lucro
 function carregarGraficoMargemLucro(dataInicio, dataFim) {
-    let url = '/data/calcular-margem-lucro';
+    let url = '/data/vendas-margem-lucro';
     const params = new URLSearchParams();
     if (dataInicio) params.append('data_inicio', dataInicio);
     if (dataFim) params.append('data_fim', dataFim);
@@ -308,6 +330,87 @@ function carregarGraficoMargemLucro(dataInicio, dataFim) {
                                 callback: function(value) { return value + '%' }
                             },
                             title: { display: true, text: 'Margem (%)' }
+                        }
+                    }
+                }
+            });
+        })
+        .catch(error => console.error('Erro ao carregar gráfico:', error));
+}
+
+function carregarGraficoVendasDiaSemana(dataInicio, dataFim) {
+    let url = '/data/vendas-dia-semana';
+    const params = new URLSearchParams();
+    if (dataInicio) params.append('data_inicio', dataInicio);
+    if (dataFim) params.append('data_fim', dataFim);
+    if (params.toString()) url += '?' + params.toString();
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            const ctx = document.getElementById('chartVendasDiaSemana').getContext('2d');
+            
+            if (chartVendasDiaSemana) {
+                chartVendasDiaSemana.destroy();
+            }
+            
+            chartVendasDiaSemana = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: data.labels,
+                    datasets: [
+                        {
+                            label: 'Vendas (R$)',
+                            data: data.valores,
+                            backgroundColor: 'rgba(13, 110, 253, 0.8)',
+                            yAxisID: 'yValor'
+                        },
+                        {
+                            label: 'Quantidades',
+                            data: data.quantidades,
+                            backgroundColor: 'rgba(25, 135, 84, 0.7)',
+                            yAxisID: 'yQtd'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: { display: true },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    if (context.dataset.yAxisID === 'yValor') {
+                                        return `${context.dataset.label}: ${formatarMoeda(context.parsed.y ?? context.parsed)}`;
+                                    }
+                                    const v = context.parsed.y ?? context.parsed;
+                                    return `${context.dataset.label}: ${Number(v).toLocaleString('pt-BR')}`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        yValor: {
+                            type: 'linear',
+                            position: 'left',
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) { return 'R$ ' + value.toLocaleString('pt-BR'); }
+                            },
+                            title: { display: true, text: 'Vendas (R$)' }
+                        },
+                        yQtd: {
+                            type: 'linear',
+                            position: 'right',
+                            beginAtZero: true,
+                            grid: { drawOnChartArea: false },
+                            ticks: {
+                                callback: function(value) { return value.toLocaleString('pt-BR'); }
+                            },
+                            title: { display: true, text: 'Quantidades' }
+                        },
+                        x: {
+                            title: { display: true, text: 'Dia da Semana' }
                         }
                     }
                 }
