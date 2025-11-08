@@ -4,14 +4,14 @@ Serviço de análises e agregações.
 import pandas as pd
 from datetime import datetime, timedelta
 from sqlalchemy import func, extract
+from sqlalchemy.orm import Query
 from app import db
 from app.models import Venda, Custo, Meta, Cotacao
-
 
 class Analytics:
     """Realiza análises estatísticas e agregações."""
     
-    def calcular_kpis(self, data_inicio=None, data_fim=None):
+    def calcular_kpis(self, data_inicio: str | None = None, data_fim: str | None = None):
         """
         Calcula KPIs principais.
         
@@ -34,10 +34,10 @@ class Analytics:
         return {
             'receita_total': float(resultado.receita_total or 0),
             'num_vendas': int(resultado.num_vendas or 0),
-            'ticket_medio': float(resultado.ticket_medio or 0)
+            'ticket_medio': float(resultado.ticket_medio or 0),
         }
     
-    def pvendas_ao_longo_tempo(self, data_inicio=None, data_fim=None):
+    def vendas_ao_longo_tempo(self, data_inicio: str | None = None, data_fim: str | None = None):
         """
         Retorna série temporal de vendas.
         
@@ -61,7 +61,7 @@ class Analytics:
             'quantidades': [int(r.quantidade) for r in resultados]
         }
     
-    def vendas_por_categoria(self, data_inicio=None, data_fim=None):
+    def vendas_por_categoria(self, data_inicio: str | None = None, data_fim: str | None = None):
         """
         Retorna vendas agregadas por categoria.
         
@@ -85,7 +85,7 @@ class Analytics:
             'quantidades': [int(r.quantidade) for r in resultados]
         }
     
-    def vendas_por_regiao(self, data_inicio=None, data_fim=None):
+    def vendas_por_regiao(self, data_inicio: str | None = None, data_fim: str | None = None):
         """
         Retorna vendas agregadas por região.
         
@@ -109,7 +109,7 @@ class Analytics:
             'percentuais': [round((r.valor / total * 100), 2) if total > 0 else 0 for r in resultados]
         }
     
-    def top_produtos(self, data_inicio=None, data_fim=None, limite=10):
+    def top_produtos(self, data_inicio: str | None = None, data_fim: str | None = None, limite: int = 10):
         """
         Retorna top produtos mais vendidos.
         
@@ -136,7 +136,27 @@ class Analytics:
             'quantidades': [int(r.quantidade) for r in resultados]
         }
     
-    def _aplicar_filtro_data(self, query, model, data_inicio=None, data_fim=None):
+    def vendas_margem_lucro(self, data_inicio: str | None, data_fim: str | None) -> dict:
+        """Calcula a margem de lucro e acordo com Vendas e Custos"""
+
+        query = db.session.query(
+            Venda.produto,
+            func.sum((Venda.preco_unitario - Custo.custo_unitario) * Venda.quantidade).label("lucro"),
+            func.sum(Venda.preco_unitario * Venda.quantidade).label("receita")
+        ).join(Custo, Venda.produto == Custo.produto)
+        query = self._aplicar_filtro_data(query, Venda, data_inicio, data_fim)
+        query = query.group_by(Venda.produto)
+
+        resultados = query.all()
+
+        return {
+            'labels': [r.produto for r in resultados],
+            'lucro': [float(r.lucro)  for r in resultados],
+            'receita': [float(r.receita) for r in resultados],
+            'margem': [float(r.lucro) / float(r.receita) * 100 if r.receita else 0 for r in resultados ]
+        }
+
+    def _aplicar_filtro_data(self, query: Query, model: Venda, data_inicio: str | None = None, data_fim: str | None = None) -> Query:
         """Aplica filtros de data na query."""
         if data_inicio:
             try:
@@ -153,4 +173,3 @@ class Analytics:
                 pass
         
         return query
-

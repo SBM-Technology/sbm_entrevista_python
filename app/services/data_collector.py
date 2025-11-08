@@ -37,7 +37,7 @@ class DataCollector:
             current_app.logger.error(f"Erro ao coletar cotações: {e}")
             raise
     
-    def coletar_historico_cotacoes(self, moeda='USD', dias=30) -> list[Cotacao]:
+    def coletar_historico_cotacoes(self, moeda: str='USD', dias: int=30) -> list[Cotacao]:
         """
         Coleta histórico de cotações.
         

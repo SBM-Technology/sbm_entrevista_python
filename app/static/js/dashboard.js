@@ -1,5 +1,5 @@
 // Variáveis globais para os gráficos
-let chartVendasTempo, chartVendasCategoria, chartVendasRegiao, chartTopProdutos;
+let chartVendasTempo, chartVendasCategoria, chartVendasRegiao, chartTopProdutos, chartMargemLucro;
 
 // Função principal para carregar dashboard
 function carregarDashboard() {
@@ -11,6 +11,7 @@ function carregarDashboard() {
     carregarGraficoVendasCategoria(dataInicio, dataFim);
     carregarGraficoVendasRegiao(dataInicio, dataFim);
     carregarGraficoTopProdutos(dataInicio, dataFim);
+    carregarGraficoMargemLucro(dataInicio, dataFim);
 }
 
 // Carrega KPIs
@@ -243,6 +244,69 @@ function carregarGraficoTopProdutos(dataInicio, dataFim) {
                                     return 'R$ ' + value.toLocaleString('pt-BR');
                                 }
                             }
+                        }
+                    }
+                }
+            });
+        })
+        .catch(error => console.error('Erro ao carregar gráfico:', error));
+}
+
+function carregarGraficoMargemLucro(dataInicio, dataFim) {
+    let url = '/data/calcular-margem-lucro';
+    const params = new URLSearchParams();
+    if (dataInicio) params.append('data_inicio', dataInicio);
+    if (dataFim) params.append('data_fim', dataFim);
+    if (params.toString()) url += '?' + params.toString();
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            const ctx = document.getElementById('chartMargemLucro').getContext('2d');
+
+            if (chartMargemLucro) {
+                chartMargemLucro.destroy();
+            }
+
+            chartMargemLucro = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: data.labels,
+                    datasets: [{
+                        label: 'Margem de Lucro (%)',
+                        data: data.margem,
+                        backgroundColor: 'rgba(54, 162, 235, 0.7)'
+                    }]
+                },
+                options: {
+                    indexAxis: 'y', // gráfico horizontal
+                    responsive: true,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const i = context.dataIndex;
+                                    const lucro = data.lucro[i] || 0;
+                                    const receita = data.receita[i] || 0;
+                                    const margem = data.margem[i] || 0;
+                                    return [
+                                        `Lucro: R$ ${lucro.toLocaleString('pt-BR')}`,
+                                        `Receita: R$ ${receita.toLocaleString('pt-BR')}`,
+                                        `Margem: ${Number(margem).toFixed(2)}%`
+                                    ];
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: {
+                                callback: function(value) { return value + '%' }
+                            },
+                            title: { display: true, text: 'Margem (%)' }
                         }
                     }
                 }

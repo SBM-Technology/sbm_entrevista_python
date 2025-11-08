@@ -76,6 +76,7 @@ class DataProcessor:
             )
         
     def _processa_salva_registros(df: pd.DataFrame) -> int:
+        """Processa e salva os registros no banco de dados"""
         # Processa cada linha
         registros_processados = 0
         for _, row in df.iterrows():
