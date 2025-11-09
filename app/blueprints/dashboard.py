@@ -2,7 +2,6 @@
 Blueprint do dashboard principal.
 """
 from flask import Blueprint, render_template, request, jsonify, Response
-from app.services.data_processor import DataProcessor
 from app.services.analytics.analytics import Analytics
 
 dashboard_bp = Blueprint('dashboard', __name__)

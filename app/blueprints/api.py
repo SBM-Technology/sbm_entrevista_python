@@ -6,8 +6,8 @@ from werkzeug.utils import secure_filename
 from werkzeug.datastructures import FileStorage
 from app import db
 from app.models import Upload
-from app.services.data_processor import DataProcessor
-from app.services.data_collector import DataCollector
+from app.services.processors.data_processor import DataProcessor
+from app.services.collectors.data_collector import DataCollector
 
 api_bp = Blueprint('api', __name__)
 

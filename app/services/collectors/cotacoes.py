@@ -1,6 +1,4 @@
-"""
-Serviço de coleta de dados de APIs externas.
-"""
+from typing import Dict, List, Any
 import requests
 from datetime import datetime
 from flask import current_app
@@ -8,21 +6,16 @@ from app import db, cache
 from app.models import Cotacao
 
 
-class DataCollector:
+class Cotacoes:
     """Coleta dados de APIs externas."""
-
+    
     def __init__(self):
+        """Url da API externa de cotacoes."""
         self.awesome_api_url = current_app.config['AWESOMEAPI_BASE_URL']
-        self.brasil_api_url = current_app.config['BRASILAPI_BASE_URL']
     
     @cache.cached(timeout=300, key_prefix='cotacoes_usd_brl')
-    def coletar_cotacoes(self) -> int:
-        """
-        Coleta cotações de moedas da AwesomeAPI.
-        
-        Returns:
-            int: Número de cotações coletadas
-        """
+    def cotacoes(self) -> int:
+        """Coleta cotações de moedas da AwesomeAPI."""
         
         try:
             # Coleta USD-BRL e EUR-BRL
@@ -36,19 +29,10 @@ class DataCollector:
         except requests.RequestException as e:
             current_app.logger.error(f"Erro ao coletar cotações: {e}")
             raise
+
     
-    def coletar_historico_cotacoes(self, moeda: str='USD', dias: int=30) -> list[Cotacao]:
-        """
-        Coleta histórico de cotações.
-        
-        Args:
-            moeda: Código da moeda (USD, EUR)
-            dias: Número de dias de histórico
-            
-        Returns:
-            list: Lista de cotações históricas
-        """
-        
+    def historico_cotacoes(self, moeda: str='USD', dias: int=30) -> List[Cotacao]:
+        """Coleta histórico de cotações."""
         try:
             response = requests.get(
                 f'{self.awesome_api_url}/json/daily/{moeda}-BRL/{dias}',
@@ -76,34 +60,16 @@ class DataCollector:
         except requests.RequestException as e:
             current_app.logger.error(f"Erro ao coletar histórico: {e}")
             raise
-    
-    @cache.cached(timeout=3600, key_prefix='taxas_brasil')
-    def coletar_taxas_brasil(self) -> list[dict[str, any]]:
-        """
-        Coleta taxas de juros da Brasil API.
-        
-        Returns:
-            dict: Dados das taxas
-        """
-        try:
-            response = requests.get(f'{self.brasil_api_url}/taxas/v1', timeout=10)
-            response.raise_for_status()
-            
-            return response.json()
-            
-        except requests.RequestException as e:
-            current_app.logger.error(f"Erro ao coletar taxas: {e}")
-            raise
 
-    def _existe_cotacao(cotacao: Cotacao) -> bool:
+    def _existe_cotacao(self, cotacao: Cotacao) -> bool:
         return Cotacao.query.filter_by(
             moeda=cotacao.moeda,
             data_hora=cotacao.data_hora
         ).first() is not None
-    
-    def _processa_salva_cotacao(self, dados: dict[str, any]) -> int:
+
+    def _processa_salva_cotacao(self, dados: Dict[str, Any]) -> int:
         num_cotacoes = 0
-            
+        
         # Processa USD
         if 'USDBRL' in dados:
             usd_data = dados['USDBRL']

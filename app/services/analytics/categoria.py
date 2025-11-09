@@ -7,9 +7,7 @@ from .utils import aplicar_filtro_data
 class Categoria:
     
     def calcular_vendas_categoria(self, data_inicio: str | None = None, data_fim: str | None = None):
-        """
-        Retorna a categoria mais vendida
-        """
+        """Retorna top vendas por categoria."""
         query = db.session.query(
             Venda.categoria,
             func.sum(Venda.valor_total).label('valor'),
