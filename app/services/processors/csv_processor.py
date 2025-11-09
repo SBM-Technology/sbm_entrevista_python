@@ -2,7 +2,7 @@ from typing import List
 import pandas as pd
 from flask import current_app
 from werkzeug.datastructures import FileStorage
-from app import app, db
+from app import db
 from app.models import Venda
 
 class CsvProcessor:
@@ -82,7 +82,7 @@ class CsvProcessor:
 
     def contem_ext_csv_ou_similar(self, file: FileStorage) -> bool:
         """Valida se o arquivo enviado é um csv ou similar"""
-        if file.filename.split(".")[-1] in app.config['ALLOWED_EXTENSIONS']:
+        if file.filename.split(".")[-1] in current_app.config['ALLOWED_EXTENSIONS']:
             return True
         return False
     

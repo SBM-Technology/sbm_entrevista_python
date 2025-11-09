@@ -14,6 +14,7 @@ function carregarDashboard() {
     carregarGraficoMargemLucro(dataInicio, dataFim);
     carregarGraficoVendasDiaSemana(dataInicio, dataFim);
     carregarGraficoVendasVendedor(dataInicio, dataFim);
+    carregarTabelaVendedores(dataInicio, dataFim);
 }
 
 
@@ -75,6 +76,54 @@ function carregarGraficoVendasVendedor(dataInicio, dataFim) {
             });
         })
         .catch(error => console.error('Erro ao carregar gráfico de vendedores:', error));
+}
+
+// B5 simples: tabela de vendedores com filtro de texto (sem ordenação)
+let _vendorsCache = [];
+function carregarTabelaVendedores(dataInicio, dataFim) {
+    const baseUrl = '/data/vendas-vendedor?limite=50';
+    fetchJson(baseUrl, dataInicio, dataFim)
+        .then(data => {
+            _vendorsCache = (data.labels || []).map((v, i) => ({
+                ranking: (data.ranking && data.ranking[i]) || (i + 1),
+                vendedor: v,
+                valores: data.valores?.[i] || 0,
+                quantidades: data.quantidades?.[i] || 0,
+                ticket_medio: data.ticket_medio?.[i] || 0,
+                percentual_receita: data.percentual_receita?.[i] || 0
+            }));
+            renderTabelaVendedoresSimples(_vendorsCache);
+            wireFiltroVendedores();
+        })
+        .catch(err => console.error('Erro ao carregar tabela de vendedores:', err));
+}
+
+function renderTabelaVendedoresSimples(rows) {
+    const tbody = document.querySelector('#tableVendedores tbody');
+    if (!tbody) return;
+    const fmtNum = n => Number(n).toLocaleString('pt-BR');
+    const fmtMoeda = n => formatarMoeda(n);
+    tbody.innerHTML = rows.map(r => `
+        <tr>
+            <td>${r.ranking}</td>
+            <td>${r.vendedor}</td>
+            <td>${fmtMoeda(r.valores)}</td>
+            <td>${fmtNum(r.quantidades)}</td>
+            <td>${fmtMoeda(r.ticket_medio)}</td>
+            <td>${Number(r.percentual_receita).toFixed(2)}%</td>
+        </tr>
+    `).join('');
+}
+
+function wireFiltroVendedores() {
+    const input = document.getElementById('vendorSearch');
+    if (!input || input._wired) return;
+    input.addEventListener('input', (e) => {
+        const q = (e.target.value || '').toLowerCase();
+        const filtradas = q ? _vendorsCache.filter(r => r.vendedor.toLowerCase().includes(q)) : _vendorsCache;
+        renderTabelaVendedoresSimples(filtradas);
+    });
+    input._wired = true;
 }
 
 // Carrega KPIs

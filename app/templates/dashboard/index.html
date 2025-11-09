@@ -119,18 +119,47 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Desempenho por Vendedor</h5>
-                    <canvas id="chartVendasVendedor"></canvas>
+                    <h5 class="card-title">Vendas por Dia da Semana</h5>
+                    <canvas id="chartVendasDiaSemana"></canvas>
                 </div>
             </div>
         </div>
     </div>
     <div class="row mb-4">
-        <div class="col-md-6">
+        <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Vendas por Dia da Semana</h5>
-                    <canvas id="chartVendasDiaSemana"></canvas>
+                    <h5 class="card-title">Vendas por Vendedor</h5>
+                    <canvas id="chartVendasVendedor"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- B5: Tabela simples de desempenho por vendedor -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+                        <h5 class="card-title mb-0">Desempenho por Vendedor (Tabela)</h5>
+                        <input id="vendorSearch" type="text" class="form-control" placeholder="Buscar vendedor..." style="max-width: 280px;">
+                    </div>
+                    <div class="table-responsive">
+                        <table id="tableVendedores" class="table table-sm table-striped align-middle">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Vendedor</th>
+                                    <th>Receita</th>
+                                    <th>Unidades</th>
+                                    <th>Ticket Médio</th>
+                                    <th>% Receita</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
