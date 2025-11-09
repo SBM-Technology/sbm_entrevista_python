@@ -1,3 +1,4 @@
+from typing import Dict, Any
 import pandas as pd
 from sqlalchemy import func
 from app import db
@@ -7,7 +8,7 @@ from .utils import aplicar_filtro_data
 
 class Series:
 
-    def calcular_vendas_ao_longo_tempo(self, data_inicio: str | None = None, data_fim: str | None = None):
+    def calcular_vendas_ao_longo_tempo(self, data_inicio: str | None = None, data_fim: str | None = None) -> Dict[str, Any]:
         """Retorna série temporal de vendas e médias móveis."""
         query = db.session.query(
             Venda.data,
@@ -40,7 +41,7 @@ class Series:
             'media_movel_30': [float(x) if x == x else None for x in mm30],
         }
 
-    def calcular_top_produtos(self, data_inicio: str | None = None, data_fim: str | None = None, limite: int = 10):
+    def calcular_top_produtos(self, data_inicio: str | None = None, data_fim: str | None = None, limite: int = 10) -> Dict[str, Any]:
         """Retorna top produtos mais vendidos."""
         query = db.session.query(
             Venda.produto,
@@ -59,7 +60,7 @@ class Series:
             'quantidades': [int(r.quantidade) for r in resultados]
         }
 
-    def calcular_kpis(self, data_inicio: str | None = None, data_fim: str | None = None):
+    def calcular_kpis(self, data_inicio: str | None = None, data_fim: str | None = None) -> Dict[str, Any]:
         """Retorna KPIs principais."""
         query = db.session.query(
             func.sum(Venda.valor_total).label('receita_total'),

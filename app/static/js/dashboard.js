@@ -1,5 +1,5 @@
 // Variáveis globais para os gráficos
-let chartVendasTempo, chartVendasCategoria, chartVendasRegiao, chartTopProdutos, chartMargemLucro, chartVendasDiaSemana;
+let chartVendasTempo, chartVendasCategoria, chartVendasRegiao, chartTopProdutos, chartMargemLucro, chartVendasDiaSemana, chartVendasVendedor;
 
 // Função principal para carregar dashboard
 function carregarDashboard() {
@@ -13,6 +13,68 @@ function carregarDashboard() {
     carregarGraficoTopProdutos(dataInicio, dataFim);
     carregarGraficoMargemLucro(dataInicio, dataFim);
     carregarGraficoVendasDiaSemana(dataInicio, dataFim);
+    carregarGraficoVendasVendedor(dataInicio, dataFim);
+}
+
+
+// Carrega gráfico de desempenho por vendedor
+function carregarGraficoVendasVendedor(dataInicio, dataFim) {
+    const baseUrl = '/data/vendas-vendedor?limite=10';
+    fetchJson(baseUrl, dataInicio, dataFim)
+        .then(data => {
+            const ctx = document.getElementById('chartVendasVendedor').getContext('2d');
+
+            if (chartVendasVendedor) {
+                chartVendasVendedor.destroy();
+            }
+
+            chartVendasVendedor = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: data.labels,
+                    datasets: [{
+                        label: 'Vendas (R$)',
+                        data: data.valores,
+                        backgroundColor: 'rgba(102, 16, 242, 0.8)'
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const i = context.dataIndex;
+                                    const receita = data.valores[i] || 0;
+                                    const qtd = data.quantidades?.[i] ?? 0;
+                                    const ticket = data.ticket_medio?.[i] ?? 0;
+                                    const perc = data.percentual_receita?.[i] ?? 0;
+                                    return [
+                                        `Receita: ${formatarMoeda(receita)}`,
+                                        `Unidades: ${Number(qtd).toLocaleString('pt-BR')}`,
+                                        `Ticket médio: ${formatarMoeda(ticket)}`,
+                                        `Participação: ${Number(perc).toFixed(2)}%`
+                                    ];
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    return 'R$ ' + value.toLocaleString('pt-BR');
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        })
+        .catch(error => console.error('Erro ao carregar gráfico de vendedores:', error));
 }
 
 // Carrega KPIs

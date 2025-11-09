@@ -102,3 +102,15 @@ def get_vendas_dia_semana() -> Response:
     dados = analytics.vendas_por_dia_semana(data_inicio, data_fim)
 
     return jsonify(dados)
+
+@dashboard_bp.route('/data/vendas-vendedor')
+def get_vendas_vendedor() -> Response:
+    """Retorna vendas agregadas por vendedor."""
+    data_inicio = request.args.get('data_inicio')
+    data_fim = request.args.get('data_fim')
+    limite = request.args.get('limite', 10, type=int)
+
+    analytics = Analytics()
+    dados = analytics.vendas_vendedor(data_inicio, data_fim, limite)
+
+    return jsonify(dados)

@@ -1,3 +1,4 @@
+from typing import Dict, Any
 from sqlalchemy import func
 from app import db
 from app.models import Venda
@@ -6,7 +7,7 @@ from .utils import aplicar_filtro_data
 
 class Categoria:
     
-    def calcular_vendas_categoria(self, data_inicio: str | None = None, data_fim: str | None = None):
+    def calcular_vendas_categoria(self, data_inicio: str | None = None, data_fim: str | None = None) -> Dict[str, Any]:
         """Retorna top vendas por categoria."""
         query = db.session.query(
             Venda.categoria,
