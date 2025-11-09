@@ -1,4 +1,5 @@
 import math
+from this import d
 
 def test_kpis_ok(client):
     resp = client.get('/data/kpis')
@@ -69,3 +70,20 @@ def test_vendas_dia_semana_labels_ordem(client):
     assert data['labels'] == ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb']
     for key in ['valores', 'quantidades']:
         assert key in data
+
+
+def test_vendas_desempenho_por_vendedor(client):
+    resp = client.get('/data/vendas-vendedor')
+    assert resp.status_code == 200
+    data = resp.get_json()
+    for key in ['labels', 'valores', 'quantidades', 'ticket_medio', 'percentual_receita', 'ranking']:
+        assert key in data
+    # verificar ordenação desc por receita
+    receita = data['valores']
+    if len(receita) >= 2:
+        assert receita == sorted(receita, reverse=True)
+    # verificar percentuais somam ~100 quando há dados
+    if data['percentual_receita']:
+        total = sum(data['percentual_receita'])
+        assert 98 <= total <= 102  # tolerância
+    
