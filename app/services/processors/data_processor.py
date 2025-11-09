@@ -19,4 +19,7 @@ class DataProcessor:
         Returns:
             int: Número de registros processados
         """
+        if not self.csv_processor.contem_ext_csv_ou_similar(file):
+            raise ValueError("Arquivo deve ser CSV ou similar")
+
         return self.csv_processor.processar_vendas_custos(file, tipo)

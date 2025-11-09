@@ -23,7 +23,7 @@ def upload_file():
     """
     if 'file' not in request.files:
         return jsonify({'error': 'Nenhum arquivo enviado'}), 400
-    
+
     file: FileStorage = request.files['file']
     if file.filename == '':
         return jsonify({'error': 'Arquivo sem nome'}), 400
@@ -83,6 +83,6 @@ def listar_uploads():
     uploads = Upload.query.order_by(Upload.created_at.desc()).limit(50).all()
     
     return jsonify({
-        'uploads': [u.to_dict() for u in uploads]
+        'uploads': [u.to_dict() for u in uploads],
     })
 

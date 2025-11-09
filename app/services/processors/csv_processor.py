@@ -2,7 +2,7 @@ from typing import List
 import pandas as pd
 from flask import current_app
 from werkzeug.datastructures import FileStorage
-from app import db
+from app import app, db
 from app.models import Venda
 
 class CsvProcessor:
@@ -19,7 +19,10 @@ class CsvProcessor:
         """Processa arquivo CSV de vendas ou custos"""
         try:
             # Lê CSV
-            df = pd.read_csv(file)
+            df = self._ler_arquivo(file)
+
+            if df.empty:
+                raise ValueError("Arquivo vazio")
             
             # Valida colunas obrigatórias
             if tipo == 'vendas':
@@ -76,3 +79,24 @@ class CsvProcessor:
             raise ValueError(
                 f"Colunas obrigatórias faltando: {', '.join(colunas_faltantes)}"
             )
+
+    def contem_ext_csv_ou_similar(self, file: FileStorage) -> bool:
+        """Valida se o arquivo enviado é um csv ou similar"""
+        if file.filename.split(".")[-1] in app.config['ALLOWED_EXTENSIONS']:
+            return True
+        return False
+    
+    def _ler_arquivo(self, file: FileStorage) -> pd.DataFrame:
+        """Lê arquivo CSV ou Excel"""
+        try:
+            ext = file.filename.split(".")[-1]
+            if ext == 'csv':
+                df = pd.read_csv(file)
+            elif ext == 'json':
+                df = pd.read_json(file)
+            elif ext in ['xlsx', 'xls']:
+                df = pd.read_excel(file)
+
+            return df
+        except Exception as e:
+            raise Exception(f"Erro ao ler arquivo: {e}")
