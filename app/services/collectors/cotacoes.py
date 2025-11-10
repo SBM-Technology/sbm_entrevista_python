@@ -1,0 +1,96 @@
+from typing import Dict, List, Any
+import requests
+from datetime import datetime
+from flask import current_app
+from app import db, cache
+from app.models import Cotacao
+
+
+class Cotacoes:
+    """Coleta dados de APIs externas."""
+    
+    def __init__(self):
+        """Url da API externa de cotacoes."""
+        self.awesome_api_url = current_app.config['AWESOMEAPI_BASE_URL']
+    
+    @cache.cached(timeout=300, key_prefix='cotacoes_usd_brl')
+    def cotacoes(self) -> int:
+        """Coleta cotações de moedas da AwesomeAPI."""
+        
+        try:
+            # Coleta USD-BRL e EUR-BRL
+            response = requests.get(f'{self.awesome_api_url}/last/USD-BRL,EUR-BRL', timeout=10)
+            response.raise_for_status()
+            
+            dados = response.json()
+            num_cotacoes = self._processa_salva_cotacao(dados)
+            return num_cotacoes
+            
+        except requests.RequestException as e:
+            current_app.logger.error(f"Erro ao coletar cotações: {e}")
+            raise
+
+    
+    def historico_cotacoes(self, moeda: str='USD', dias: int=30) -> List[Cotacao]:
+        """Coleta histórico de cotações."""
+        try:
+            response = requests.get(
+                f'{self.awesome_api_url}/json/daily/{moeda}-BRL/{dias}',
+                timeout=10
+            )
+            response.raise_for_status()
+            
+            dados = response.json()
+            cotacoes = []
+            
+            for item in dados:
+                cotacao = Cotacao(
+                    moeda=moeda,
+                    valor=float(item['bid']),
+                    data_hora=datetime.fromtimestamp(int(item['timestamp']))
+                )
+                cotacoes.append(cotacao)
+
+                if not self._existe_cotacao(cotacao):
+                    db.session.add(cotacao)
+            
+            db.session.commit()
+            return cotacoes
+            
+        except requests.RequestException as e:
+            current_app.logger.error(f"Erro ao coletar histórico: {e}")
+            raise
+
+    def _existe_cotacao(self, cotacao: Cotacao) -> bool:
+        return Cotacao.query.filter_by(
+            moeda=cotacao.moeda,
+            data_hora=cotacao.data_hora
+        ).first() is not None
+
+    def _processa_salva_cotacao(self, dados: Dict[str, Any]) -> int:
+        num_cotacoes = 0
+        
+        # Processa USD
+        if 'USDBRL' in dados:
+            usd_data = dados['USDBRL']
+            cotacao = Cotacao(
+                moeda='USD',
+                valor=float(usd_data['bid']),
+                data_hora=datetime.fromtimestamp(int(usd_data['timestamp']))
+            )
+            db.session.add(cotacao)
+            num_cotacoes += 1
+        
+        # Processa EUR
+        if 'EURBRL' in dados:
+            eur_data = dados['EURBRL']
+            cotacao = Cotacao(
+                moeda='EUR',
+                valor=float(eur_data['bid']),
+                data_hora=datetime.fromtimestamp(int(eur_data['timestamp']))
+            )
+            db.session.add(cotacao)
+            num_cotacoes += 1
+        
+        db.session.commit()
+        return num_cotacoes

@@ -3,10 +3,11 @@ Blueprint da API interna.
 """
 from flask import Blueprint, request, jsonify
 from werkzeug.utils import secure_filename
+from werkzeug.datastructures import FileStorage
 from app import db
 from app.models import Upload
-from app.services.data_processor import DataProcessor
-from app.services.data_collector import DataCollector
+from app.services.processors.data_processor import DataProcessor
+from app.services.collectors.data_collector import DataCollector
 
 api_bp = Blueprint('api', __name__)
 
@@ -22,8 +23,8 @@ def upload_file():
     """
     if 'file' not in request.files:
         return jsonify({'error': 'Nenhum arquivo enviado'}), 400
-    
-    file = request.files['file']
+
+    file: FileStorage = request.files['file']
     if file.filename == '':
         return jsonify({'error': 'Arquivo sem nome'}), 400
     
@@ -82,6 +83,6 @@ def listar_uploads():
     uploads = Upload.query.order_by(Upload.created_at.desc()).limit(50).all()
     
     return jsonify({
-        'uploads': [u.to_dict() for u in uploads]
+        'uploads': [u.to_dict() for u in uploads],
     })
 

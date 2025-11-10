@@ -107,6 +107,63 @@
             </div>
         </div>
     </div>
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Margem de lucro entre produtos</h5>
+                    <canvas id="chartMargemLucro"></canvas>
+                </div>           
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Vendas por Dia da Semana</h5>
+                    <canvas id="chartVendasDiaSemana"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Vendas por Vendedor</h5>
+                    <canvas id="chartVendasVendedor"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- B5: Tabela simples de desempenho por vendedor -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+                        <h5 class="card-title mb-0">Desempenho por Vendedor (Tabela)</h5>
+                        <input id="vendorSearch" type="text" class="form-control" placeholder="Buscar vendedor..." style="max-width: 280px;">
+                    </div>
+                    <div class="table-responsive">
+                        <table id="tableVendedores" class="table table-sm table-striped align-middle">
+                            <thead>
+                                <tr>
+                                    <th data-sort="0" style="cursor:pointer">#</th>
+                                    <th data-sort="1" style="cursor:pointer">Vendedor</th>
+                                    <th data-sort="2" style="cursor:pointer">Receita</th>
+                                    <th data-sort="3" style="cursor:pointer">Unidades</th>
+                                    <th data-sort="4" style="cursor:pointer">Ticket Médio</th>
+                                    <th data-sort="5" style="cursor:pointer">% Receita</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}
 

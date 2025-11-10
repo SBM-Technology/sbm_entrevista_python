@@ -42,6 +42,7 @@ class Config:
     
     # Scheduler (APScheduler)
     SCHEDULER_API_ENABLED = False
+    COTACOES_SCHEDULE_MINUTES = 360
     
     # Data files
     DATA_DIR = BASE_DIR / 'data'
