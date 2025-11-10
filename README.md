@@ -169,9 +169,97 @@ Notas
 
 ---
 
-## Como apresentar na entrevista
+## 5) Entregas do desafio (A/B/C/D) — detalhamento
 
-- Justificar escolhas de visualização (linha para tendência com MM7/MM30; barras para categorias/dias; horizontal para margem %).
-- Explicar cálculo da margem (join normalizado; ordenação por `lucro/receita`).
-- Comentar robustez: filtros centralizados, `NULLIF` para evitar divisão por zero, `None/NaN` em médias móveis.
-- Apontar roadmap de melhorias (metas, denormalização opcional, materialized views, testes).
+### A1) Margem de lucro (vendas − custos) no dashboard
+- Onde
+  - Backend: rota `/data/vendas-margem-lucro` (joins entre vendas e custos; ordenação por margem desc no SQL).
+  - Front: `static/js/dashboard.js` → `carregarGraficoMargemLucro`.
+  - UI: `templates/dashboard/index.html` → card “Margem de lucro entre produtos”.
+- O que faz
+  - Retorna `labels`, `lucro`, `receita`, `margem` e plota barras horizontais (%). Tooltip detalha lucro/receita/margem.
+- Validações
+  - Teste `test_vendas_margem_lucro_ordenado_por_margem`: chaves presentes e `margem` desc.
+- Observações
+  - Agregação adequada ao volume atual; pode evoluir para materialized views se necessário.
+
+### A4) Médias móveis (7 e 30 dias)
+- Onde
+  - Backend: `/data/vendas-tempo` inclui `media_movel_7` e `media_movel_30`.
+  - Front: `carregarGraficoVendasTempo` (Chart.js linha + duas séries de MM).
+- O que faz
+  - Suaviza série diária; `None` nos inícios de janela para Chart.js ignorar pontos.
+- Validações
+  - `test_vendas_tempo_ok`: chaves e tamanhos coerentes.
+
+### A5) Ranking de vendedores (métricas de performance)
+- Onde
+  - Backend: `/data/vendas-vendedor` → `labels`, `valores`, `quantidades`, `ticket_medio`, `percentual_receita`, `ranking`.
+  - Front: gráfico e tabela (seções abaixo B1 e B5).
+- O que faz
+  - Ordena por receita desc e calcula métricas auxiliares; percentuais somam ~100%.
+- Validações
+  - `test_vendas_desempenho_por_vendedor`: chaves, ordenação desc, soma de percentuais ~100.
+
+### B1) Gráfico de desempenho por vendedor
+- Onde
+  - Front: `carregarGraficoVendasVendedor` (barras horizontais, eixo X moeda, tooltip rico).
+  - UI: `index.html` → seção “Vendas por Vendedor”.
+- O que faz
+  - Compara vendedores por receita; tooltip mostra também quantidades, ticket e participação.
+- Observações
+  - Mantido 1 dataset para evitar poluição; demais métricas no tooltip e na tabela.
+
+### B5) Tabela interativa com ordenação e busca
+- Onde
+  - UI: `index.html` → tabela `#tableVendedores` com `table-responsive` e cabeçalhos com `data-sort`.
+  - Front: `dashboard.js`
+    - Busca: `wireFiltroVendedores` filtra `_vendorsCache` por nome.
+    - Ordenação: implementação DOM-only no final do arquivo (listener em `<thead>` reordena `<tr>` do `<tbody>`; alterna asc/desc via `data-dir`).
+- O que faz
+  - Busca incremental e ordenação por qualquer coluna sem estado adicional.
+- Observações
+  - Simples e eficiente para volume moderado; para grandes listas, considerar ordenação server-side.
+
+### B8) Responsividade mobile
+- Onde
+  - Base: `templates/layouts/base.html` com meta viewport e navbar colapsável (Bootstrap).
+  - Grid: `index.html` usa `col-12/col-md-*` para cards/gráficos.
+  - Tabela: `table-responsive` aplicado.
+  - CSS: `static/css/style.css`
+    - Media query ≤768px: `canvas { max-height: 300px }`.
+    - Media query ≤576px: `canvas { max-height: 260px }`, `#vendorSearch` full-width, cabeçalhos/células da tabela com quebra de linha, tipografia e padding reduzidos para evitar sobreposição.
+- O que faz
+  - Garante boa leitura em telas pequenas sem overflow de gráficos e sem títulos “um em cima do outro”.
+
+### C1) Validação do upload de CSV (todos os campos)
+- Onde
+  - UI: modal em `base.html`; front: `dashboard.js` (`#uploadButton` envia `multipart/form-data` para `/api/upload`).
+  - Backend: endpoint valida schema esperado e retorna `error`/`registros`.
+- O que faz
+  - Restringe tipo de arquivo, valida campos no backend, retorna feedback claro ao usuário.
+- Observações
+  - Pode evoluir para relatório por linha/coluna no front.
+
+### C3) Coleta automática de cotações (API)
+- Onde
+  - Backend: serviço/adaptador para normalizar moedas nos cálculos (margem/receita), com cache e fallback.
+- O que faz
+  - Busca taxa, aplica normalização de valores multi-moeda.
+- Observações
+  - Recomendações: cache com TTL, retry/backoff, circuit breaker, uso de env vars para chaves e agendamento diário.
+
+### D1) Refatoração para melhor organização
+- Onde
+  - Camadas: controllers finos, regras em `services`, adapters/repos isolando I/O.
+  - JS organizado por responsabilidade (funções por gráfico/tabela).
+- O que faz
+  - Reduz acoplamento, facilita testes e manutenção.
+
+### D2) Type hints nas funções principais
+- Onde
+  - Backend com anotações de tipo nas funções-chave (services/controllers).
+- O que faz
+  - Melhora leitura, autocompletar e segurança em refactors (possível integração com mypy/CI).
+
+---
