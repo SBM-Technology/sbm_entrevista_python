@@ -20,8 +20,9 @@ function carregarDashboard() {
 
 // Carrega gráfico de desempenho por vendedor
 function carregarGraficoVendasVendedor(dataInicio, dataFim) {
-    const baseUrl = '/data/vendas-vendedor?limite=10';
-    fetchJson(baseUrl, dataInicio, dataFim)
+    let url = '/data/vendas-vendedor';
+
+    fetchJson(url, dataInicio, dataFim, 10)
         .then(data => {
             const ctx = document.getElementById('chartVendasVendedor').getContext('2d');
 
@@ -33,11 +34,13 @@ function carregarGraficoVendasVendedor(dataInicio, dataFim) {
                 type: 'bar',
                 data: {
                     labels: data.labels,
-                    datasets: [{
+                    datasets: [
+                        {
                         label: 'Vendas (R$)',
                         data: data.valores,
                         backgroundColor: 'rgba(102, 16, 242, 0.8)'
-                    }]
+                    },
+                ]
                 },
                 options: {
                     indexAxis: 'y',
@@ -54,7 +57,7 @@ function carregarGraficoVendasVendedor(dataInicio, dataFim) {
                                     const perc = data.percentual_receita?.[i] ?? 0;
                                     return [
                                         `Receita: ${formatarMoeda(receita)}`,
-                                        `Unidades: ${Number(qtd).toLocaleString('pt-BR')}`,
+                                        `Quantidades: ${Number(qtd).toLocaleString('pt-BR')}`,
                                         `Ticket médio: ${formatarMoeda(ticket)}`,
                                         `Participação: ${Number(perc).toFixed(2)}%`
                                     ];
@@ -78,11 +81,11 @@ function carregarGraficoVendasVendedor(dataInicio, dataFim) {
         .catch(error => console.error('Erro ao carregar gráfico de vendedores:', error));
 }
 
-// B5 simples: tabela de vendedores com filtro de texto (sem ordenação)
+// B5 simples: tabela de vendedores com filtro de texto
 let _vendorsCache = [];
 function carregarTabelaVendedores(dataInicio, dataFim) {
-    const baseUrl = '/data/vendas-vendedor?limite=50';
-    fetchJson(baseUrl, dataInicio, dataFim)
+    const url = '/data/vendas-vendedor';
+    fetchJson(url, dataInicio, dataFim, 50)
         .then(data => {
             _vendorsCache = (data.labels || []).map((v, i) => ({
                 ranking: (data.ranking && data.ranking[i]) || (i + 1),
@@ -92,13 +95,13 @@ function carregarTabelaVendedores(dataInicio, dataFim) {
                 ticket_medio: data.ticket_medio?.[i] || 0,
                 percentual_receita: data.percentual_receita?.[i] || 0
             }));
-            renderTabelaVendedoresSimples(_vendorsCache);
+            renderTabelaVendedores(_vendorsCache);
             wireFiltroVendedores();
         })
         .catch(err => console.error('Erro ao carregar tabela de vendedores:', err));
 }
 
-function renderTabelaVendedoresSimples(rows) {
+function renderTabelaVendedores(rows) {
     const tbody = document.querySelector('#tableVendedores tbody');
     if (!tbody) return;
     const fmtNum = n => Number(n).toLocaleString('pt-BR');
@@ -121,7 +124,7 @@ function wireFiltroVendedores() {
     input.addEventListener('input', (e) => {
         const q = (e.target.value || '').toLowerCase();
         const filtradas = q ? _vendorsCache.filter(r => r.vendedor.toLowerCase().includes(q)) : _vendorsCache;
-        renderTabelaVendedoresSimples(filtradas);
+        renderTabelaVendedores(filtradas);
     });
     input._wired = true;
 }
@@ -146,10 +149,8 @@ function carregarKPIs(dataInicio, dataFim) {
 // Carrega gráfico de vendas ao longo do tempo
 function carregarGraficoVendasTempo(dataInicio, dataFim) {
     let url = '/data/vendas-tempo';
-    url = buildUrl(url, dataInicio, dataFim);
     
-    fetch(url)
-        .then(response => response.json())
+    fetchJson(url, dataInicio, dataFim)
         .then(data => {
             const ctx = document.getElementById('chartVendasTempo').getContext('2d');
             
@@ -218,9 +219,8 @@ function carregarGraficoVendasTempo(dataInicio, dataFim) {
 // Carrega gráfico de vendas por categoria
 function carregarGraficoVendasCategoria(dataInicio, dataFim) {
     let url = '/data/vendas-categoria';
-    url = buildUrl(url, dataInicio, dataFim)
     
-    fetchJson(url)
+    fetchJson(url, dataInicio, dataFim)
         .then(data => {
             const ctx = document.getElementById('chartVendasCategoria').getContext('2d');
             
@@ -270,9 +270,8 @@ function carregarGraficoVendasCategoria(dataInicio, dataFim) {
 // Carrega gráfico de vendas por região
 function carregarGraficoVendasRegiao(dataInicio, dataFim) {
     let url = '/data/vendas-regiao';
-    url = buildUrl(url, dataInicio, dataFim)
     
-    fetchJson(url)
+    fetchJson(url, dataInicio, dataFim)
         .then(data => {
             const ctx = document.getElementById('chartVendasRegiao').getContext('2d');
             
@@ -320,14 +319,9 @@ function carregarGraficoVendasRegiao(dataInicio, dataFim) {
 
 // Carrega gráfico de top produtos
 function carregarGraficoTopProdutos(dataInicio, dataFim) {
-    let url = '/data/top-produtos?limite=10';
-    const params = new URLSearchParams();
-    if (dataInicio) params.append('data_inicio', dataInicio);
-    if (dataFim) params.append('data_fim', dataFim);
-    params.append('limite', '10');
-    url += '&' + params.toString();
+    let url = '/data/top-produtos';
     
-    fetchJson(url)
+    fetchJson(url, dataInicio, dataFim, 10)
         .then(data => {
             const ctx = document.getElementById('chartTopProdutos').getContext('2d');
             
@@ -372,9 +366,8 @@ function carregarGraficoTopProdutos(dataInicio, dataFim) {
 // Carrega gráfico de margem de lucro
 function carregarGraficoMargemLucro(dataInicio, dataFim) {
     let url = '/data/vendas-margem-lucro';
-    url = buildUrl(url, dataInicio, dataFim)
 
-    fetchJson(url)
+    fetchJson(url, dataInicio, dataFim)
         .then(data => {
             const ctx = document.getElementById('chartMargemLucro').getContext('2d');
 
@@ -431,9 +424,8 @@ function carregarGraficoMargemLucro(dataInicio, dataFim) {
 
 function carregarGraficoVendasDiaSemana(dataInicio, dataFim) {
     let url = '/data/vendas-dia-semana';
-    url = buildUrl(url, dataInicio, dataFim)
 
-    fetchJson(url)
+    fetchJson(url, dataInicio, dataFim)
         .then(data => {
             const ctx = document.getElementById('chartVendasDiaSemana').getContext('2d');
             
@@ -515,9 +507,23 @@ function buildUrl(url, dataInicio, dataFim) {
     return url;
 }
 
+function buildUrlWithLimit(url, dataInicio, dataFim, limite) {
+    url += `?limite=${limite}`;
+    const params = new URLSearchParams();
+    if (dataInicio) params.append('data_inicio', dataInicio);
+    if (dataFim) params.append('data_fim', dataFim);
+    url += '&' + params.toString();
+    return url
+}
+    
+
 // Helper: fetch JSON com montagem de URL e tratamento básico de erro HTTP
-function fetchJson(baseUrl, dataInicio, dataFim) {
-    const url = buildUrl(baseUrl, dataInicio, dataFim);
+function fetchJson(url, dataInicio, dataFim, limite=0) {
+    if (limite) {
+        url = buildUrlWithLimit(url, dataInicio, dataFim, limite);
+    } else {
+        url = buildUrl(url, dataInicio, dataFim);
+    }
     return fetch(url).then(resp => {
         if (!resp.ok) {
             throw new Error(`HTTP ${resp.status} em ${url}`);
@@ -573,4 +579,47 @@ function formatarMoeda(valor) {
 function formatarNumero(valor) {
     return new Intl.NumberFormat('pt-BR').format(valor);
 }
+
+// B5: ordenação DOM-only na tabela de vendedores
+document.addEventListener('DOMContentLoaded', function() {
+    const thead = document.querySelector('#tableVendedores thead');
+    const tbody = document.querySelector('#tableVendedores tbody');
+    if (!thead || !tbody) return;
+    thead.addEventListener('click', (ev) => {
+        const th = ev.target.closest('th[data-sort]');
+        if (!th) return;
+        const colIndex = parseInt(th.getAttribute('data-sort'), 10);
+        const currentDir = th.getAttribute('data-dir') === 'asc' ? 'asc' : 'desc';
+        const newDir = currentDir === 'asc' ? 'desc' : 'asc';
+        th.setAttribute('data-dir', newDir);
+
+        const rows = Array.from(tbody.querySelectorAll('tr'));
+        const normalize = (txt) => {
+            if (txt == null) return '';
+            const s = String(txt).trim()
+                .replace(/^R\$\s*/,'')
+                .replace(/\.%/g,'')
+                .replace(/%/g,'')
+                .replace(/\./g,'')
+                .replace(/,/g,'.');
+            const num = Number(s);
+            return isNaN(num) ? txt.toLowerCase() : num;
+        };
+        rows.sort((a, b) => {
+            const aTxt = a.children[colIndex]?.textContent || '';
+            const bTxt = b.children[colIndex]?.textContent || '';
+            const av = normalize(aTxt);
+            const bv = normalize(bTxt);
+            let cmp;
+            if (typeof av === 'number' && typeof bv === 'number') {
+                cmp = av - bv;
+            } else {
+                cmp = String(av).localeCompare(String(bv), 'pt-BR', { sensitivity: 'base' });
+            }
+            return newDir === 'asc' ? cmp : -cmp;
+        });
+        // Reanexar linhas ordenadas
+        rows.forEach(tr => tbody.appendChild(tr));
+    });
+});
 

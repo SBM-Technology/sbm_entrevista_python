@@ -95,6 +95,7 @@ class Analytics:
         """
 
         return self.series.calcular_top_produtos(data_inicio, data_fim, limite)
+        
     def vendas_margem_lucro(self, data_inicio: str | None, data_fim: str | None) -> Dict[str, Any]:
         """
         Retorna a margem de lucro entre as Vendas

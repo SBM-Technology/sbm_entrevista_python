@@ -64,3 +64,29 @@ canvas {
     }
 }
 
+@media (max-width: 576px) {
+    canvas {
+        max-height: 260px;
+    }
+    #vendorSearch {
+        max-width: 100% !important;
+        width: 100%;
+    }
+    /* Ajustes de tabela no mobile: evitar sobreposição dos títulos e reduzir espaçamento */
+    #tableVendedores thead th {
+        white-space: normal;
+        word-break: break-word;
+        hyphens: auto;
+        font-size: 0.78rem;
+        line-height: 1.15;
+        padding: 0.35rem 0.4rem;
+        vertical-align: middle;
+    }
+    #tableVendedores tbody td {
+        font-size: 0.85rem;
+        line-height: 1.2;
+        padding: 0.35rem 0.4rem;
+        vertical-align: middle;
+    }
+}
+
