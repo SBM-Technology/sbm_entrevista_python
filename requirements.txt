@@ -14,7 +14,7 @@ numpy==1.26.2
 requests==2.31.0
 
 # Environment Variables
-python-dotenv==1.0.0
+python-dotenv==1.2.2
 
 # Forms and Validation (opcional)
 Flask-WTF==1.2.1
